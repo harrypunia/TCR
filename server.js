@@ -1,22 +1,67 @@
-// server.js
-// where your node app starts
+const express = require('express'),
+      app = express(),
+      bodyParser = require('body-parser'),
+      moment = require('moment');
 
-// init project
-const express = require('express');
-const app = express();
+const cors = require('cors');
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
-// we've started you off with Express, 
-// but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
-// http://expressjs.com/en/starter/static-files.html
+
+var testWords = ["the","of","and","to","a","in","for","is","on","that","by","this","with","i"];
+
+
+
+
 app.use(express.static('public'));
-
-// http://expressjs.com/en/starter/basic-routing.html
-app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/views/index.html');
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/views/index.html');
+});
+app.get('/api/test', (request, response) => {
+  return response.json("Hello, friend");
+});
+app.get('/api/words', (request, response) => {
+  //USAGE: /api/words?difficulty=hello
+  
+  console.dir(request.query);
+  var difficulty = request.query.difficulty;
+  var words = [];
+  
+  for (var i = 0; i < difficulty.length; i++) {
+    words[i] = testWords[i];
+  }
+  
+  return response.json(words);
 });
 
-// listen for requests :)
-const listener = app.listen(process.env.PORT, function() {
+
+
+// Not found middleware
+app.use((req, res, next) => {
+  return next({status: 404, message: 'not found'})
+});
+
+// Error Handling middleware.
+app.use((err, req, res, next) => {
+  let errCode, errMessage;
+
+  if (err.errors) {
+    // mongoose validation error
+    errCode = 400; // bad request
+    const keys = Object.keys(err.errors);
+    // report the first validation error
+    errMessage = err.errors[keys[0]].message;
+  } else {
+    // generic or custom error
+    errCode = err.status || 500;
+    errMessage = err.message || 'Internal Server Error';
+  }
+  res.status(errCode).type('txt')
+    .send(errMessage);
+});
+
+// listen for requests.
+var listener = app.listen(process.env.PORT, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });
