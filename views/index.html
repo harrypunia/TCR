@@ -10,17 +10,18 @@
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's client-side javascript file -->
-    <script src="/client.js" defer></script>
   </head>
   <body>
 
     <h1>Add a New Cat</h1>
     
     <main>
-      <form action="/api/exercise/new-cat" method="post">
+      <form action="/api/new-cat" method="post">
         <input name="shelterName" type="text" maxlength="100" placeholder="TCR East" required/>
+        <input name="catName" type="text" maxlength="100" placeholder="Mr Kittens"/>
+        <input name="primaryColor" type="text" maxlength="100" placeholder="Black"/>
+        <input name="weight" type="text" maxlength="100" placeholder="12.4 kg"/>
+        <input name="testedFIV" type="text" maxlength="100" placeholder="FIV Tested (+/-)"/>
         <input name="catName" type="text" maxlength="100" placeholder="Mr Kittens"/>
         <input type="submit" value="Add"/>
       </form>
