@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="lib/vue.min.js"></script>
+    <script src="../global_assets/lib/vue.min.js"></script>
     <link rel="stylesheet" href="../global_assets/css/globalContainer.css">
     <link rel="stylesheet" href="../global_assets/css/define-text.css">
     <link rel="stylesheet" href="../global_assets/css/fonts.css">
@@ -20,7 +20,7 @@
         <div class="header__logo" href="index.html">
         </div>
         <hr class="header__hr" />
-        <div class="header__addCat header__elements"><img src="/global_assets/SVG/addacat.svg">
+        <div class="header__addCat header__elements"><img src="../global_assets/SVG/addacat.svg">
         </div>
         <div class="header__profile header__elements">
             <img src="../global_assets/SVG/profile.svg" alt="Profile">
@@ -37,10 +37,10 @@
         <div class="header__logout"> Log Out
         </div>
     </div>
-    
-    
+
+
     <div class="container">
-       Add A Cat
+        Add A Cat
         <form action="addCat">
             <select name="shelterName" required>
                 <option value="tas">Toronto Animal Services</option>
@@ -84,27 +84,20 @@
             <input type="radio" name="bitten" value="no">No <br> Behaviour Traits and Other Characteristics
             <input type="text" name="behaviour" value="" required>
             <br> Medical History <input type="text" name="medHist" value="" required>
-
-
-
             <br> Comments <input type="text" name="comments" value="" required>
-
-
-
             <br>
             <input type="submit">
 
         </form>
 
     </div>
-    <script src="main.js"></script>
+    <script src="dev/js/main.js"></script>
     <script>
         const resizeContainer = () => {
             document.getElementsByClassName('container')[0].style.width = window.innerWidth - 80 + 'px'
         }
         window.addEventListener("resize", resizeContainer);
         window.addEventListener("load", resizeContainer);
-
     </script>
 </body>
 
