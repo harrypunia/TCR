@@ -1,11 +1,7 @@
 .contact-container {
-    background-color: #c2c4d6;
+    background-color: #d7d9ed;
     width: 90%;
     margin: 30px auto;
-}
-
-.container__title__heading {
-    margin-left: 150px;
 }
 
 .contact-infobox {
@@ -13,18 +9,14 @@
 }
 
 .contact-header {
-    background-color: #f7f7f7;
     width: 100%;
     padding: 10px 20px;
-    font-size: 3em;
 }
 
 .contact-information {
     padding: 10px 40px;
-    font-size: 2em;
 }
 
 .contact-information-smaller {
     padding: 5px 60px;
-    font-size: 1.5em;
 }
