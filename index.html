@@ -30,7 +30,7 @@
         <div class="header__foster header__elements">
             <img src="dev/assets/SVG/foster.svg" alt="Foster Homes">
         </div>
-         <div class="header__help header__elements">
+        <div class="header__help header__elements">
             <img src="dev/assets/SVG/help.svg" alt="Help">
         </div>
         <div class="header__settings header__elements">
@@ -57,6 +57,13 @@
         </div>
     </div>
     <script src="main.js"></script>
+    <script>
+        const resizeContainer = () => {
+            document.getElementsByClassName('container')[0].style.width = window.innerWidth - 80 + 'px'
+        }
+        window.addEventListener("resize", resizeContainer);
+        window.addEventListener("load", resizeContainer);
+    </script>
 </body>
 
 </html>

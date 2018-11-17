@@ -1,7 +1,6 @@
 .container {
-    position: absolute;
-    left: 5vw;
-    width: 95vw;
+    margin-left: 80px;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -16,7 +15,6 @@
     float: left;
     height: 100%;
     width: 20%;
-    background: Red;
 }
 
 /*Code for Container*/
@@ -28,13 +26,14 @@
     height: 200px;
     display: flex;
     align-items: center;
-    margin-left: 50px;
+    margin-left: 150px;
 }
 
 /*Code for Cat List*/
 .cat-list {
-    float: left;
-    width: 100%;
+    box-sizing: border-box !important;
+    width: 90%;
+    margin: 0 auto;
     height: auto;
     margin-top: 100px;
 }

@@ -4,7 +4,7 @@
     transform: translate3d(0);
     width: 80px;
     height: 100vh;
-    background: #2bae90;
+    background: rgba(43, 174, 144, 100);
     z-index: 2;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.30);
 }
