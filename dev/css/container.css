@@ -7,9 +7,20 @@
     height: 100vh;
 }
 
-.list {
+.cat-list {
     float: left;
-    width: 80%;
-    height: 400px;
-    background: gray;
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.cat-list__elements {
+    widtH: 100%;
+    height: 40px;
+    background: #c2c4d6;
+}
+
+.cat-list__white {
+    background: #d7d9ed !important;
+    z-index: 2;
 }
