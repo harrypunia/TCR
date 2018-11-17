@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="lib/vue.min.js"></script>
+    <link rel="stylesheet" href="../global_assets/css/globalContainer.css">
+    <link rel="stylesheet" href="../global_assets/css/define-text.css">
+    <link rel="stylesheet" href="../global_assets/css/fonts.css">
+    <link rel="stylesheet" href="../global_assets/css/globalHeader.css">
+    <link rel="stylesheet" href="../global_assets/css/global.css">
+        <link rel="stylesheet" href="../global_assets/css/globalLogIn.css">
+
+    <link rel="stylesheet" href="dev/css/container.css">
+    <link rel="stylesheet" href="dev/css/header.css">
+    <title>TCR</title>
+</head>
+
+<body>
+    <div class="container">
+        
+    </div>
+    <script src="main.js"></script>
+    <script>
+        const resizeContainer = () => {
+            document.getElementsByClassName('container')[0].style.width = window.innerWidth - 80 + 'px'
+        }
+        window.addEventListener("resize", resizeContainer);
+        window.addEventListener("load", resizeContainer);
+    </script>
+</body>
+
+</html>
