@@ -9,16 +9,3 @@
     height: 100%;
     width: 20%;
 }
-
-/*Code for Container*/
-
-.container__title {
-    background: #c1c4d9;
-}
-
-.container__title__heading {
-    height: 200px;
-    display: flex;
-    align-items: center;
-    margin-left: 150px;
-}
