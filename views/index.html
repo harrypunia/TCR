@@ -17,7 +17,11 @@
     
     <main>
       <form action="/api/new-cat" method="post">
-        <input name="shelterName" type="text" maxlength="100" placeholder="Shelter name" required/>
+        <select name="shelterName" type="text" placeholder="Shelter name">
+          <option value="TCREast">TCR East</option>
+          <option value="TCREast">TCR East</option>
+        </select>
+          
         <input name="catName" type="text" maxlength="100" placeholder="Cat name"/>
         <input name="primaryColor" type="text" maxlength="100" placeholder="Color"/>
         <input name="weight" type="text" maxlength="100" placeholder="Weight"/>
