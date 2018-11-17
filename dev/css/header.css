@@ -8,10 +8,13 @@
 }
 
 .header__elements {
-    margin: 20px 0 0 20px;
-    width: 40px;
+    margin: 50px 0 0 25px;
+    width: 30px;
     height: 40px;
     cursor: pointer;
+    background-color: red !important;
+    padding: 5px;
+    
 }
 
 .header__logo {
@@ -36,6 +39,18 @@
 
 .header__volunteers {
     background: url('../assets/SVG/volunteers.svg') no-repeat center;
+}
+
+.header__foster {
+    background: url('../assets/SVG/foster.svg') no-repeat center;
+}
+
+.header__cats {
+    background: url('../assets/SVG/cat.svg') no-repeat center;
+}
+
+.header__settings {
+    background: url('../assets/SVG/settings.svg') no-repeat center;
 }
 
 
