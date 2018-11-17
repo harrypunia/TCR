@@ -2,19 +2,20 @@ body {
     background-color: #f7f7f7;
 }
 
-input[type=text], select {
-      border-radius: 6px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    width: 200px;
-    padding: 5px;
+
+.catName {
+    border: none;
+
 }
 
-input[type=text] {
-      border-radius: 6px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    width: 200px;
-    padding: 5px;
+.catForm {
+    width: 500px;
+    margin: 0 auto;
 }
 
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 500px;
+}

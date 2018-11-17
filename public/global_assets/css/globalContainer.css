@@ -14,3 +14,8 @@
     align-items: center;
     margin-left: 150px;
 }
+
+.form__box {
+    text-align: center;
+    border: 1px #000 solid;
+}
