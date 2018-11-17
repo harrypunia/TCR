@@ -37,7 +37,7 @@ app.use(express.static('public'));
 app.get('/AddCat', (request, response) => {
   // Provides the form for adding a cat.
   //TODO: Provide the relevant UI. 
-  return response.json("Add a cat!");
+  return response.json("You've got to be kitten me.");
 });
 app.post('/AddCat', (request, response) => {
   // Handles submitting a new cat.
@@ -53,19 +53,7 @@ app.post('/AddCat', (request, response) => {
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
 });
-app.get('/api/words', (request, response) => {
-  //USAGE: /api/words?difficulty=hello
-  
-  console.dir(request.query);
-  var difficulty = request.query.difficulty;
-  var words = [];
-  
-  for (var i = 0; i < difficulty.length; i++) {
-    words[i] = testWords[i];
-  }
-  
-  return response.json(words);
-});
+
 
 
 
