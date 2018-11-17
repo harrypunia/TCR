@@ -7,12 +7,14 @@
     height: 100vh;
 }
 
+/*Code for filter*/
 .filter-bar {
     width: 100%;
     height: 40px;
-    background: #333333;
+    background: #333;
 }
 
+/*Code for Container*/
 .container__title {
     background: #c1c4d9;
 }
@@ -24,6 +26,7 @@
     margin-left: 50px;
 }
 
+/*Code for Cat List*/
 .cat-list {
     float: left;
     width: 100%;
