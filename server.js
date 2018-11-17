@@ -15,7 +15,7 @@ var testWords = ["the","of","and","to","a","in","for","is","on","that","by","thi
 
 
 app.use(express.static('public'));
-app.post('/api/new-cat', (request, response) => {
+app.post('/api/addCat', (request, response) => {
   const catObj = request.body;
   console.dir(catObj);
   return response.json("Hello");
