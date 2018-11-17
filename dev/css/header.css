@@ -1,5 +1,7 @@
 .header {
-    position: absolute;
+    position: fixed;
+    backface-visibility: hidden;
+    transform: translate3d(0);
     width: 80px;
     height: 100vh;
     background: #2bae90;
@@ -38,11 +40,15 @@
 }
 
 .header__hr {
-    widtH: 80%;
+    width: 80%;
     height: 1px !important;
     background: white;
     border: 0;
     margin: 25px 10% 0px 10%;
+}
+
+.header__help {
+    padding: 10px;
 }
 
 .header__logout {
@@ -64,6 +70,5 @@
 
 .header__logout:active {
     background-color: #23846e !important;
-        background-color: #175a4b !important;
-
+    background-color: #175a4b !important;
 }
