@@ -2,4 +2,18 @@ body {
     background-color: #f7f7f7;
 }
 
-input
+input[type=text], select {
+      border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 200px;
+    padding: 5px;
+}
+
+input[type=text] {
+      border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 200px;
+    padding: 5px;
+}
