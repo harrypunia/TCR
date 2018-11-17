@@ -16,13 +16,13 @@ var testWords = ["the","of","and","to","a","in","for","is","on","that","by","thi
 
 app.use(express.static('public'));
 app.post('/api/addCat', (request, response) => {
+  // Get AddCat request.
   const catObj = request.body;
   console.dir(catObj);
   
-  var shelterName = catObj.shelterName;
-  console.log("ShelterName: "+shelterName);
+  //TODO: Add to DB.
   
-  return response.json("Hello");
+  return response.json("Successfully added.\nThank you!");
 });
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
