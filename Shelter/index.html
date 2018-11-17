@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="lib/vue.min.js"></script>
+    <link rel="stylesheet" href="dev/css/fonts.css">
+    <link rel="stylesheet" href="dev/css/define-text.css">
+    <link rel="stylesheet" href="dev/css/global.css">
+    <link rel="stylesheet" href="dev/css/header.css">
+    <link rel="stylesheet" href="dev/css/container.css">
+    <title>TCR</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__logo" href="index.html">
+        </div>
+        <hr class="header__hr" />
+        <div class="header__profile header__elements">
+            <img src="dev/assets/SVG/profile.svg" alt="Profile">
+        </div>
+        <div class="header__volunteers header__elements">
+            <img src="dev/assets/SVG/volunteers.svg" alt="Volunteers">
+        </div>
+        <div class="header__cats header__elements">
+            <img src="dev/assets/SVG/cat.svg" alt="Cats">
+        </div>
+        <div class="header__foster header__elements">
+            <img src="dev/assets/SVG/foster.svg" alt="Foster Homes">
+        </div>
+        <div class="header__help header__elements">
+            <img src="dev/assets/SVG/help.svg" alt="Help">
+        </div>
+        <div class="header__settings header__elements">
+            <img src="dev/assets/SVG/settings.svg" alt="Settings">
+        </div>
+
+        <div class="header__logout"> Log Out
+        </div>
+    </div>
+    <div class="container">
+        <div class="container__title">
+            <div class="container__title__heading define-text text-dark text__heading-jumbo">CATS</div>
+        </div>
+        <div class="cat-list">
+            <div class="filter-bar">
+                <p class="filter-bar--text define-text">Id</p>
+                <p class="filter-bar--text define-text">Id</p>
+            </div>
+            <div class="cat-list__elements"></div>
+            <div class="cat-list__elements cat-list__white"></div>
+            <div class="cat-list__elements"></div>
+            <div class="cat-list__elements cat-list__white"></div>
+            <div class="cat-list__elements"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script>
+        const resizeContainer = () => {
+            document.getElementsByClassName('container')[0].style.width = window.innerWidth - 80 + 'px'
+        }
+        window.addEventListener("resize", resizeContainer);
+        window.addEventListener("load", resizeContainer);
+    </script>
+</body>
+
+</html>
