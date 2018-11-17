@@ -51,8 +51,7 @@ app.post('/AddCat', (request, response) => {
   return response.json("Successfully added.\nThank you!");
 });
 app.get('/', (req, res) => {
-  console.dir(__dirname);
-  res.sendFile(__dirname);
+  res.sendFile(__dirname + '/views/index.html');
 });
 
 
