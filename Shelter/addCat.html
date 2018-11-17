@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--    <script src="lib/vue.min.js"></script>-->
+    <!--    <script src="lib/vue.min.js"></script>-->
     <link rel="stylesheet" href="../global_assets/css/globalContainer.css">
     <link rel="stylesheet" href="../global_assets/css/define-text.css">
     <link rel="stylesheet" href="../global_assets/css/fonts.css">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../global_assets/css/global.css">
     <link rel="stylesheet" href="dev/css/container.css">
     <link rel="stylesheet" href="dev/css/header.css">
+    <link rel="stylesheet" href="dev/css/addcat.css">
     <title>Shelter</title>
 </head>
 
@@ -40,7 +41,7 @@
 
 
     <div class="container">
-        Add A Cat
+        <p class="define-text text-bold text-regular text-dark text__size-jumbo text__size-large text__size-regular text__small">Add A Cat</p>
         <form action="addCat">
             <select name="shelterName" required>
                 <option value="tas">Toronto Animal Services</option>
@@ -48,7 +49,7 @@
                 <option value="nas">North Animal Shelter</option>
             </select>
             <br>Cat Name
-            <input type="text" class="textbox" name="catName" value="" required><br> Age
+            <input type="text" class="catName" name="catName" value="" required><br> Age
             <input type="number" name="catAge" value="" required><br> Primary Colour
             <input type="text" name="primaryColour" value="" required><br> Secondary Colour
             <input type="text" name="secondaryColour" value="" required><br> Weight
