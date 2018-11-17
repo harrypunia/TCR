@@ -42,21 +42,23 @@
     </div>
     <div class="container">
         <div class="container__title">
-            <div class="container__title__heading define-text text-dark text__heading-jumbo">Contact Us</div>
+            <div class="container__title__heading define-text text-bold text-dark text__heading-jumbo">Contact Us</div>
         </div>
         <div class="contact-information">
             <div class="contact-header">How can we help?</div>
-            <div class="contact-paragraph">Call us at ###</div>
+            <div class="contact__container">
+                <div class="contact-header">How can we help?</div>
+                <div class="contact-container">Call us at ###</div>
+            </div>
         </div>
-    </div>
-    <script src="main.js"></script>
-    <script>
-        const resizeContainer = () => {
-            document.getElementsByClassName('container')[0].style.width = window.innerWidth - 80 + 'px'
-        }
-        window.addEventListener("resize", resizeContainer);
-        window.addEventListener("load", resizeContainer);
-    </script>
+        <script src="main.js"></script>
+        <script>
+            const resizeContainer = () => {
+                document.getElementsByClassName('container')[0].style.width = window.innerWidth - 80 + 'px'
+            }
+            window.addEventListener("resize", resizeContainer);
+            window.addEventListener("load", resizeContainer);
+        </script>
 </body>
 
 </html>
