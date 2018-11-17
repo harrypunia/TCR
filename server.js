@@ -1,17 +1,30 @@
 const express = require('express'),
       app = express(),
       bodyParser = require('body-parser'),
-      moment = require('moment');
+      moment = require('moment'),
+      mysql = require('mysql');
 
 const cors = require('cors');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+// var con = mysql.createConnection({
+//   host: "localhost",
+//   user: "yourusername",
+//   password: "yourpassword",
+//   database: "mydb"
+// });
 
 
-var testWords = ["the","of","and","to","a","in","for","is","on","that","by","this","with","i"];
-
-
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted");
+  });
+});
 
 
 app.use(express.static('public'));
