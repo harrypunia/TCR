@@ -17,3 +17,7 @@ input[type=text] {
     width: 200px;
     padding: 5px;
 }
+
+.primColour {
+    margin: 20px;
+}
