@@ -16,7 +16,6 @@
 
 .text__size-jumbo {
     font-size: 10em;
-    font-weight: 800;
 }
 
 .text__size-large {
@@ -25,5 +24,8 @@
 
 .text__size-regular {
     font-size: 2em;
-    font-weight: 400;
+}
+
+.text__size-small {
+    font-size: 1.6em;
 }
