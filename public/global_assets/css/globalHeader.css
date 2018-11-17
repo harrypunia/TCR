@@ -77,14 +77,10 @@
     background-color: #175a4b !important;
 }
 
-.header__current {
+.header__active {
     background-color: #23846e;
 }
 
-.header__current:hover {
-    background-color: #1a6c61 !important;
-}
-
-a{
+a {
     text-align: center;
 }
