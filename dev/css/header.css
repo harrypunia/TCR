@@ -8,13 +8,25 @@
 }
 
 .header__elements {
-    margin: 50px 0 0 25px;
-    width: 30px;
-    height: 40px;
+    width: 100%;
+    height: 80px;
     cursor: pointer;
-    background-color: red !important;
-    padding: 5px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__elements img {
+    width: 30%;
+    margin: 0px;
+}
+
+.header__elements:hover {
+    background-color: #23846e !important;
+}
+
+.header__elements:active {
+    background-color: #175a4b !important;
 }
 
 .header__logo {
@@ -30,27 +42,28 @@
     height: 1px !important;
     background: white;
     border: 0;
-    margin: 20px 10% 50px 10%;
+    margin: 25px 10% 0px 10%;
 }
 
-.header__profile {
-    background: url('../assets/SVG/profile.svg') no-repeat center;
+.header__logout {
+    text-align: center;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    width: 80px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0px;
+    padding: 25px 0;
 }
 
-.header__volunteers {
-    background: url('../assets/SVG/volunteers.svg') no-repeat center;
+.header__logout:hover {
+    background-color: #23846e !important;
 }
 
-.header__foster {
-    background: url('../assets/SVG/foster.svg') no-repeat center;
+.header__logout:active {
+    background-color: #23846e !important;
+        background-color: #175a4b !important;
+
 }
-
-.header__cats {
-    background: url('../assets/SVG/cat.svg') no-repeat center;
-}
-
-.header__settings {
-    background: url('../assets/SVG/settings.svg') no-repeat center;
-}
-
-
