@@ -1,9 +1,7 @@
 .container {
     position: absolute;
-    left: 50vw;
-    transform: translateX(-50%);
-    width: 80vw;
-    min-width: 1200px;
+    left: 5vw;
+    width: 95vw;
     height: 100vh;
 }
 
@@ -12,6 +10,13 @@
     width: 100%;
     height: 40px;
     background: #333;
+}
+
+.filter-bar--text {
+    float: left;
+    height: 100%;
+    width: 20%;
+    background: Red;
 }
 
 /*Code for Container*/
