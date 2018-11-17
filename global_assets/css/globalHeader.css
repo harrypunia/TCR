@@ -28,7 +28,7 @@
 }
 
 .header__elements:active {
-    background-color: #175a4b !important;
+    background-color: #103e34 !important;
 }
 
 .header__logo {
@@ -74,6 +74,17 @@
 }
 
 .header__logout:active {
-    background-color: #23846e !important;
     background-color: #175a4b !important;
+}
+
+.header__current {
+    background-color: #23846e;
+}
+
+.header__current:hover {
+    background-color: #1a6c61 !important;
+}
+
+a{
+    text-align: center;
 }
