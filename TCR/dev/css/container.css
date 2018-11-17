@@ -22,25 +22,3 @@
     align-items: center;
     margin-left: 150px;
 }
-
-/*Code for Cat List*/
-
-.cat-list {
-    box-sizing: border-box !important;
-    width: 90%;
-    margin: 0 auto;
-    height: auto;
-    margin-top: 100px;
-}
-
-.cat-list__elements {
-    widtH: 100%;
-    height: 30px;
-    background: #c2c4d6;
-    cursor: pointer;
-}
-
-.cat-list__white {
-    background: #d7d9ed !important;
-    z-index: 2;
-}

@@ -1,5 +1,8 @@
 .define-text {
     color: white;
+}
+
+.text-bold {
     font-family: 'proxima_nova_altbold', sans-serif;
 }
 
@@ -13,5 +16,10 @@
 }
 
 .text__heading {
-    font-size:5em;
+    font-size: 5em;
+}
+
+.text__heading-regular {
+    font-size: 5em;
+    font-weight: 400;
 }

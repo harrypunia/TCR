@@ -1,0 +1,32 @@
+.define-list {
+    box-sizing: border-box !important;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 100px;
+}
+
+.list-filter {
+    width: 100%;
+    height: 40px;
+    background: #333;
+}
+
+.list-filter p {
+    background: Red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-elements {
+    width: 100%;
+    height: 30px;
+    background: #c2c4d6;
+    cursor: pointer;
+}
+
+.list-elements:nth-child(odd) {
+    background: #d7d9ed;
+    z-index: 2;
+}
