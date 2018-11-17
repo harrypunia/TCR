@@ -9,8 +9,8 @@
 
 .filter-bar {
     width: 100%;
-    height: 20px;
-    background: Red;
+    height: 40px;
+    background: #333333;
 }
 
 .container__title {
