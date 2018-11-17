@@ -84,3 +84,7 @@
 .header__current:hover {
     background-color: #1a6c61 !important;
 }
+
+a{
+    text-align: center;
+}
