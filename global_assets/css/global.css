@@ -1,0 +1,19 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #d7d9ed;
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
