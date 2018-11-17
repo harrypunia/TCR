@@ -8,6 +8,7 @@ const cors = require('cors');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+//TODO: Fill in DB credientials.
 var con = mysql.createConnection({
   host: "localhost",
   user: "yourusername",
@@ -19,9 +20,10 @@ con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
   
-  var sql = "INSERT INTO CAT VALUES ( PetID, IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, ‘2014-09-20’, ‘IDK’, ‘brown’, 10.2, ‘Male’, 11.2, 0, ‘2018-01-02’, ‘COolbEANS’, ‘NO STORY’, false, ‘Nuh’, ‘N notes’ )"
+  //TODO: Parse HTML, pass into sql.
   
-  //var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
+  var sql = "INSERT INTO CAT VALUES ( PetID, IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES )"
+  
   con.query(sql, function (err, result) {
     if (err) throw err;
     console.log("1 record inserted");
