@@ -3,10 +3,17 @@ body {
     background-color: #f7f7f7;
 }
 
-.signUp__container {}
+.signUp__container {
+}
 
 .signUp__box {
     text-align: center;
     width: 300px;
-    margin: 0 auto;
+    height: 500px;
+    margin: 200px auto;
+    background-color: white;
+    padding: 50px;
 }
+
+
+
