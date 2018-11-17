@@ -1,3 +1,21 @@
 body {
     background-color: #f7f7f7;
 }
+
+
+.catName {
+    border: none;
+
+}
+
+.catForm {
+    width: 500px;
+    margin: 0 auto;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 500px;
+}
