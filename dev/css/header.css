@@ -31,6 +31,11 @@
 }
 
 .header__profile {
-    background: url('../assets/SVG/default_profile.svg') no-repeat center;
-    border-radius: 50%;
+    background: url('../assets/SVG/profile.svg') no-repeat center;
 }
+
+.header__volunteers {
+    background: url('../assets/SVG/volunteers.svg') no-repeat center;
+}
+
+
