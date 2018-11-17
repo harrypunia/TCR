@@ -6,3 +6,10 @@
     min-width: 1200px;
     height: 100vh;
 }
+
+.list {
+    float: left;
+    width: 80%;
+    height: 400px;
+    background: gray;
+}
