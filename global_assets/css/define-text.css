@@ -1,5 +1,8 @@
 .define-text {
     color: white;
+}
+
+.text-bold {
     font-family: 'proxima_nova_altbold', sans-serif;
 }
 
@@ -10,4 +13,9 @@
 .text__heading-jumbo {
     font-size: 10em;
     font-weight: 800;
+}
+
+.text__heading-regular {
+    font-size: 5em;
+    font-weight: 400;
 }

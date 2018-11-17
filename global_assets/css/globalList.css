@@ -14,6 +14,9 @@
 
 .list-filter p {
     background: Red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .list-elements {
