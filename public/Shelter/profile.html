@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="lib/vue.min.js"></script>
+    <script src="../global_assets/lib/vue.min.js"></script>
     <link rel="stylesheet" href="../global_assets/css/globalContainer.css">
     <link rel="stylesheet" href="../global_assets/css/define-text.css">
     <link rel="stylesheet" href="../global_assets/css/fonts.css">
@@ -17,7 +17,7 @@
 </head>
 
 <body>
-   <div class="header">
+    <div class="header">
         <a href="index.html">
             <div class="header__logo">
             </div>
@@ -35,28 +35,15 @@
         <div class="header__foster header__elements header__current">
             <a href="foster.html"><img src="../global_assets/SVG/foster.svg" alt="Foster Homes"></a>
         </div>
-          <div class="header__help header__elements">
+        <div class="header__help header__elements">
             <img src="../global_assets/SVG/help.svg" alt="Help">
         </div>
 
         <div class="header__logout"> Log Out
         </div>
     </div>
-      
-
-
-        <div class="header__logout"> Log Out
-        </div>
-    </div>
-    <script src="main.js"></script>
-    <script>
-        const resizeContainer = () => {
-            document.getElementsByClassName('container')[0].style.width = window.innerWidth - 80 + 'px'
-        }
-        window.addEventListener("resize", resizeContainer);
-        window.addEventListener("load", resizeContainer);
-
-    </script>
+    <div class="header__logout"> Log Out</div>
+    <script src="dev/js/main.js"></script>
 </body>
 
 </html>
