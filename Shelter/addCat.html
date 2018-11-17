@@ -41,7 +41,9 @@
 
 
     <div class="container">
-        <p class="define-text text-bold text-regular text-dark text__size-jumbo text__size-large text__size-regular text__small">Add A Cat</p>
+        <div class="container__title">
+            <p class="container__title__heading title define-text text-bold text-dark text__size-jumbo">Add A Cat</p>
+        </div>
         <form action="addCat">
             <select name="shelterName" required>
                 <option value="tas">Toronto Animal Services</option>
@@ -85,13 +87,7 @@
             <input type="radio" name="bitten" value="no">No <br> Behaviour Traits and Other Characteristics
             <input type="text" name="behaviour" value="" required>
             <br> Medical History <input type="text" name="medHist" value="" required>
-
-
-
             <br> Comments <input type="text" name="comments" value="" required>
-
-
-
             <br>
             <input type="submit">
 
