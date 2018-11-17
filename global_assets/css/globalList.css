@@ -1,9 +1,11 @@
 .define-list {
+    float: left;
     box-sizing: border-box !important;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     height: auto;
     margin-top: 100px;
+    margin-left: 150px;
 }
 
 .list-filter {
