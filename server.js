@@ -34,6 +34,7 @@ app.use(bodyParser.json());
 
 
 app.use(express.static('public'));
+
 app.get('/AddCat', (request, response) => {
   // Provides the form for adding a cat.
   //TODO: Provide the relevant UI.
@@ -51,7 +52,7 @@ app.post('/AddCat', (request, response) => {
   return response.json("Successfully added.\nThank you!");
 });
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/index.html');
+  res.sendFile(__dirname + '/public/TCR/index.html');
 });
 
 
