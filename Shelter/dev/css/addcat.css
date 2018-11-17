@@ -2,8 +2,6 @@ body {
     background-color: #f7f7f7;
 }
 
-/*
-.textbox {
-    color: red;
+input[name="catName"] {
+    height: 50px;
 }
-*/
