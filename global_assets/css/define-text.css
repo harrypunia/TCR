@@ -10,16 +10,16 @@
     color: #333 !important;
 }
 
-.text__heading-jumbo {
+.text__size-jumbo {
     font-size: 10em;
     font-weight: 800;
 }
 
-.text__heading {
+.text__size-large {
     font-size: 5em;
 }
 
-.text__heading-regular {
+.text__size-regular {
     font-size: 5em;
     font-weight: 400;
 }
