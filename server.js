@@ -2,37 +2,46 @@ const express = require('express'),
       app = express(),
       bodyParser = require('body-parser'),
       moment = require('moment'),
-      mysql = require('mysql');
+      mysql = require('mysql'),
+      cors = require('cors');
 
-const cors = require('cors');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 //TODO: Fill in DB credientials.
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "yourusername",
-  password: "yourpassword",
-  database: "mydb"
-});
+// var con = mysql.createConnection({
+//   host: "localhost",
+//   user: "yourusername",
+//   password: "yourpassword",
+//   database: "mydb"
+// });
 
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
+// con.connect(function(err) {
+//   if (err) {
+//     console.log("Cannot connect to DB:\n"+err);
+//   };
+//   console.log("Connected!");
   
-  //TODO: Parse HTML, pass into sql.
+//   //TODO: Parse HTML, pass into sql.
   
-  var sql = "INSERT INTO CAT VALUES ( PetID, IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES )"
+//   var sql = "INSERT INTO CAT VALUES ( PetID, IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES )"
   
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-    console.log("1 record inserted");
-  });
-});
+//   con.query(sql, function (err, result) {
+//     if (err) throw err;
+//     console.log("1 record inserted");
+//   });
+// });
 
 
 app.use(express.static('public'));
-app.post('/api/addCat', (request, response) => {
+app.get('/AddCat', (request, response) => {
+  // Provides the form for adding a cat.
+  //TODO: Provide the relevant UI. 
+  return response.json("Add a cat!");
+});
+app.post('/AddCat', (request, response) => {
+  // Handles submitting a new cat.
+  
   // Get AddCat request.
   const catObj = request.body;
   console.dir(catObj);
@@ -43,9 +52,6 @@ app.post('/api/addCat', (request, response) => {
 });
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
-});
-app.get('/api/test', (request, response) => {
-  return response.json("Hello, friend");
 });
 app.get('/api/words', (request, response) => {
   //USAGE: /api/words?difficulty=hello
