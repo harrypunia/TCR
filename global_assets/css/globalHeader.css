@@ -47,6 +47,11 @@
     margin: 25px 10% 0px 10%;
 }
 
+.header__profile {
+    padding: 8px;
+}
+
+
 .header__help {
     padding: 15px;
 }
