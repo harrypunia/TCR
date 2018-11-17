@@ -6,6 +6,10 @@
     font-family: 'proxima_nova_altbold', sans-serif;
 }
 
+.text-regular {
+    font-family: 'Proxima Nova', sans-serif;
+}
+
 .text-dark {
     color: #333 !important;
 }
@@ -20,6 +24,6 @@
 }
 
 .text__size-regular {
-    font-size: 5em;
+    font-size: 2em;
     font-weight: 400;
 }
