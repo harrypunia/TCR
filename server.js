@@ -18,6 +18,10 @@ app.use(express.static('public'));
 app.post('/api/addCat', (request, response) => {
   const catObj = request.body;
   console.dir(catObj);
+  
+  var shelterName = catObj.shelterName;
+  console.log("ShelterName: "+shelterName);
+  
   return response.json("Hello");
 });
 app.get('/', (req, res) => {
