@@ -1,17 +1,20 @@
-/*margin 150*/
-
-.header-margin-push {
-    margin-left: 150px;
-}
-
 .contact-container {
     background-color: #c2c4d6;
     width: 90%;
-    margin: 50px auto;
+    margin: 30px auto;
+}
+
+.container__title__heading {
+    margin-left: 150px;
+}
+
+.contact-infobox {
+    padding: 30px 0 40px;
+    ;
 }
 
 .contact-header {
-    background-color: #d7d9ed;
+    background-color: #f7f7f7;
     width: 100%;
     padding: 10px 20px;
     font-size: 3em;
