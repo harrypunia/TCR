@@ -1,11 +1,11 @@
-.contact-container {
+.contact__container {
     background-color: #d7d9ed;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.contact-infobox {
+.contact__infobox {
     background-color: #3d3d3d;
     width: 50%;
     height: 100;
@@ -20,13 +20,14 @@
 }
 */
 
-.contact-information {
+.contact__information {
     padding: 10px 50px;
 }
 
-.contact-information-smaller {
+.contact__information-smaller {
     padding: 5px 50px;
     font-size: 0.7em;
+    text-align: right;
 }
 
 .contact__form {
@@ -34,7 +35,7 @@
     padding: 50px 50px;
 }
 
-.contact-information img {
+.contact__information img {
     margin-right: 20px;
 }
 
