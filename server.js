@@ -21,11 +21,11 @@ app.use(bodyParser.json());
 //     console.log("Cannot connect to DB:\n"+err);
 //   };
 //   console.log("Connected!");
-  
+
 //   //TODO: Parse HTML, pass into sql.
-  
+
 //   var sql = "INSERT INTO CAT VALUES ( PetID, IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES )"
-  
+
 //   con.query(sql, function (err, result) {
 //     if (err) throw err;
 //     console.log("1 record inserted");
@@ -36,18 +36,18 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 app.get('/AddCat', (request, response) => {
   // Provides the form for adding a cat.
-  //TODO: Provide the relevant UI. 
+  //TODO: Provide the relevant UI.
   return response.json("You've got to be kitten me.");
 });
 app.post('/AddCat', (request, response) => {
   // Handles submitting a new cat.
-  
+
   // Get AddCat request.
   const catObj = request.body;
   console.dir(catObj);
-  
+
   //TODO: Add to DB.
-  
+
   return response.json("Successfully added.\nThank you!");
 });
 app.get('/', (req, res) => {

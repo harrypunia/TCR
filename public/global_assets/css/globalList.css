@@ -1,0 +1,47 @@
+.define-list {
+    float: left;
+    box-sizing: border-box !important;
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 150px;
+}
+
+.list-filter {
+    width: 100%;
+    height: 40px;
+    background: #333;
+    display: flex;
+}
+
+.list-filter p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.list-elements {
+    width: 100%;
+    height: 40px;
+    background: #c2c4d6;
+    cursor: pointer;
+    display: flex;
+}
+
+.list-elements p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.list-elements img {
+    width: 25px;
+}
+
+.list-elements:nth-child(odd) {
+    background: #d7d9ed;
+    z-index: 2;
+}

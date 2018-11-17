@@ -1,0 +1,16 @@
+.container {
+    margin-left: 80px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container__title {
+    background: #c1c4d9;
+}
+
+.container__title__heading {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+}

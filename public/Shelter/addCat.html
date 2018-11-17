@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="lib/vue.min.js"></script>
+    <link rel="stylesheet" href="../global_assets/css/globalContainer.css">
+    <link rel="stylesheet" href="../global_assets/css/define-text.css">
+    <link rel="stylesheet" href="../global_assets/css/fonts.css">
+    <link rel="stylesheet" href="../global_assets/css/globalHeader.css">
+    <link rel="stylesheet" href="../global_assets/css/global.css">
+    <link rel="stylesheet" href="dev/css/container.css">
+    <link rel="stylesheet" href="dev/css/header.css">
+    <title>Shelter</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__logo" href="index.html">
+        </div>
+        <hr class="header__hr" />
+        <div class="header__addCat header__elements"><img src="/global_assets/SVG/addacat.svg">
+        </div>
+        <div class="header__profile header__elements">
+            <img src="../global_assets/SVG/profile.svg" alt="Profile">
+        </div>
+        <div class="header__cats header__elements">
+            <img src="../global_assets/SVG/cat.svg" alt="Cats">
+        </div>
+        <div class="header__help header__elements">
+            <img src="../global_assets/SVG/help.svg" alt="Help">
+        </div>
+        <div class="header__settings header__elements">
+            <img src="../global_assets/SVG/settings.svg" alt="Settings">
+        </div>
+        <div class="header__logout"> Log Out
+        </div>
+    </div>
+    
+    
+    <div class="container">
+       Add A Cat
+        <form action="addCat">
+            <select name="shelterName" required>
+                <option value="tas">Toronto Animal Services</option>
+                <option value="ths">Toronto Humane Society</option>
+                <option value="nas">North Animal Shelter</option>
+            </select>
+            <br>Cat Name
+            <input type="text" name="catName" value="" required><br> Age
+            <input type="number" name="catAge" value="" required><br> Primary Colour
+            <input type="text" name="primaryColour" value="" required><br> Secondary Colour
+            <input type="text" name="secondaryColour" value="" required><br> Weight
+            <input type="number" name="catWeight" value="" required><br>
+
+            <select name="gender" required>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+            </select>
+
+            <br> FIV Tested
+            <select name="fivTested" required>
+                <option value="yes">Tested Positive</option>
+                <option value="no">Tested Negative</option>
+                <option value="notTested">Not Tested</option>
+            </select>
+            <br> FLV Tested
+            <select name="fivTested" required>
+                <option value="yes">Tested Positive</option>
+                <option value="no">Tested Negative</option>
+                <option value="notTested">Not Tested</option>
+            </select>
+            <br> FVRCP Date
+            <input type="date" name="fvrcpdate" value="FVRCP Vaccination Date" required>
+
+            <br> Rabies Vaccination Date
+            <input type="date" name="fvrcpdate" value="Rabies Vaccination Date" required>
+
+            <br> Vaccine up to date?
+            <input type="radio" name="vaccineUpToDate" value="yes" checked>Yes <br>
+            <input type="radio" name="vaccineUpToDate" value="no">No <br> Spayed/Neutered? <input type="radio" name="spayneut" value="yes" checked>Yes <br>
+            <input type="radio" name="spayneut" value="no">No <br> History of being bitten? <input type="radio" name="bitten" value="yes" checked>Yes <br>
+            <input type="radio" name="bitten" value="no">No <br> Behaviour Traits and Other Characteristics
+            <input type="text" name="behaviour" value="" required>
+            <br> Medical History <input type="text" name="medHist" value="" required>
+
+
+
+            <br> Comments <input type="text" name="comments" value="" required>
+
+
+
+            <br>
+            <input type="submit">
+
+        </form>
+
+    </div>
+    <script src="main.js"></script>
+    <script>
+        const resizeContainer = () => {
+            document.getElementsByClassName('container')[0].style.width = window.innerWidth - 80 + 'px'
+        }
+        window.addEventListener("resize", resizeContainer);
+        window.addEventListener("load", resizeContainer);
+
+    </script>
+</body>
+
+</html>
