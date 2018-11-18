@@ -111,7 +111,7 @@ var app = new Vue({
   },
   computed: {
     test() {
-      fetch('http://localhost:3000/api/allcats').then(response => response.json())
+      fetch('https://giftthecode.glitch.me/api/allcats').then(response => response.json())
         .then((data) => {
           let catList = [];
           for (let i = 0; i < data.length; i++) {
