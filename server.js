@@ -31,47 +31,20 @@ app.use(express.static('public'));
 
 app.post('/AddCat', (request, response) => {
   // Handles submitting a new cat.
-    //DB connected - parse request.
-    const catObj = request.body;
-    console.dir(catObj);
-    var shelterName = catObj.shelterName,
-        catname = catObj.catName,
-        primaryColour = catObj.primaryColour,
-        catWeight = catObj.catWeight,
-        fivTested = catObj.fivTested,
-        fvrcpdate = catObj.fvrcpdate,
-        catAge = catObj.catAge,
-        secondaryColour = catObj.secondaryColour,
-        gender = catObj.gender,
-        vaccineUpToDate = catObj.vaccineUpToDate,
-        spayneut = catObj.spayneut,
-        behaviour = catObj.behaviour,
-        medHist = catObj.medHist,
-        comments = catObj.comments;
+  //DB connected - parse request.
+  const catObj = request.body;
+  console.dir(catObj);
 
-    var columnNames = "intakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES";
-    var values = `shelterName,
-                  catname,
-                  primaryColour,
-                  catWeight,
-                  fivTested,
-                  fvrcpdate,
-                  catAge,
-                  secondaryColour,
-                  gender,
-                  vaccineUpToDate,
-                  spayneut,
-                  behaviour,
-                  medHist,
-                  comments
-                 `;
+  var values = `${catObj.shelterName}, ${catObj.catName}, ${catObj.primaryColour}, ${catObj.catWeight}, ${catObj.fivTested}, ${catObj.fvrcpdate}, ${catObj.catAge}, ${catObj.secondaryColour}, ${catObj.gender}, ${catObj.vaccineUpToDate}, ${catObj.spayneut}, ${catObj.behaviour}, ${catObj.medHist}, ${catObj.comments}`;
 
-    var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
+  var columnNames = "intakeDate, name, photo, primaryColor, secondaryColor, weight, age, sex, spayNeut, breed, vaccinesUpToDate, behaviour, fivTested, furcpDate, medHist, bittenHistory, comments";
 
-    con.query(sql, function (err, result) {
-      if (err) throw err;
-        console.log(result);
-      });
+  var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
+
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+      console.log(result);
+    });
    response.sendFile(__dirname + '/public/Shelter/index.html');
   // return response.json("Looks like the cat's out of the bag now.");
 });
