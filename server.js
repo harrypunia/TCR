@@ -49,7 +49,7 @@ app.post('/AddCat', (request, response) => {
         medHist = catObj.medHist,
         comments = catObj.comments;
 
-    var columnNames = "IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES";
+    var columnNames = "intakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES";
     var values = `shelterName,
                   catname,
                   primaryColour,
