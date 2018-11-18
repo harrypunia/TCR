@@ -42,3 +42,7 @@
 .text__size-nano {
     font-size: 1em;
 }
+
+.text-light {
+    font-color: #e5e5e5;
+}

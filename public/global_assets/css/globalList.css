@@ -41,7 +41,7 @@
 
 .open {
     display: block;
-    height: 600px;
+    height: 720px;
     z-index: 10;
 }
 
@@ -88,7 +88,7 @@
 
 .list__detail {
     width: 100%;
-    height: 550px;
+    height: 650px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,7 +181,7 @@
 .detail__text1 {
     /*    background-color: #fff;*/
     border-bottom: 1px #ccc solid;
-    height: 30px;
+    height: 50px;
     width: 275px;
     clear: both;
     display: block;
@@ -191,7 +191,7 @@
 
 .detail__shelterInfo {
     border-bottom: 1px #ccc solid;
-    height: 90px;
+    height: 120px;
     width: 560px;
     float: left;
     display: block;
@@ -232,4 +232,8 @@
 .fosterLink {
     margin:0;
     width: 200px;
+}
+
+.detail__pos1 {
+    font-size: 20px;
 }
