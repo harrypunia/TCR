@@ -34,6 +34,7 @@ app.use(bodyParser.json());
 
 
 app.use(express.static('public'));
+
 app.get('/AddCat', (request, response) => {
   // Provides the form for adding a cat.
   //TODO: Provide the relevant UI.
@@ -45,13 +46,19 @@ app.post('/AddCat', (request, response) => {
   // Get AddCat request.
   const catObj = request.body;
   console.dir(catObj);
-
+  
+  alert("Successfully added!");
+  
+  response.sendFile(__dirname + '/public/Shelter/index.html');
   //TODO: Add to DB.
-
-  return response.json("Successfully added.\nThank you!");
+  
+  // return response.json("Looks like the cat's out of the bag now.");
 });
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/TCR/index.html');
+  res.sendFile(__dirname + '/public/Shelter/addCat.html');
+});
+app.post('/', (req, res) => {
+  res.sendFile(__dirname + '/public/Shelter/addCat.html');
 });
 
 
