@@ -15,10 +15,14 @@
 .staff__text{
     background-color: white;
     padding: 10px;
+    height: 100px;
+    margin: px 0 ;
 }
 
+.staff__Na
 .messageButton {
     width: 100px;
     background-color: #902323;
     height: 20px;
+    margin: 10px 0 0 0;
 }
