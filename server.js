@@ -3,7 +3,8 @@ const express = require('express'),
       bodyParser = require('body-parser'),
       moment = require('moment'),
       mysql = require('mysql'),
-      cors = require('cors');
+      cors = require('cors'),
+      nodemailer = require('nodemailer');
 
 
 app.use(bodyParser.urlencoded({extended: false}));
@@ -87,7 +88,7 @@ app.get('/email', (request, response) => {
       user: 'thomas-d@hotmail.ca',
       pass: 'RdUA@doAzoPiTUsAqD@K2Xi*s$r9T4'
     }
-})
+  })
 
 
 var mailOptions = {
