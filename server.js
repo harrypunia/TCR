@@ -9,28 +9,28 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 //TODO: Fill in DB credientials.
-// var con = mysql.createConnection({
-//   host: "localhost",
-//   user: "yourusername",
-//   password: "yourpassword",
-//   database: "mydb"
-// });
+var con = mysql.createConnection({
+  host: "catrescue.ccuxgnxok5zx.us-east-1.rds.amazonaws.com",
+  user: "root",
+  password: "Password1234",
+  database: "catrescue"
+});
 
-// con.connect(function(err) {
-//   if (err) {
-//     console.log("Cannot connect to DB:\n"+err);
-//   };
-//   console.log("Connected!");
+con.connect(function(err) {
+  if (err) {
+    console.log("Cannot connect to DB:\n"+err);
+  };
+  console.log("Connected!");
 
-//   //TODO: Parse HTML, pass into sql.
+  //TODO: Parse HTML, pass into sql.
 
-//   var sql = "INSERT INTO CAT VALUES ( PetID, IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES )"
+  var sql = "INSERT INTO CAT VALUES ( PetID, IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES )"
 
-//   con.query(sql, function (err, result) {
-//     if (err) throw err;
-//     console.log("1 record inserted");
-//   });
-// });
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted");
+  });
+});
 
 
 app.use(express.static('public'));
