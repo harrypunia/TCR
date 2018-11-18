@@ -3,13 +3,9 @@ const express = require('express'),
       bodyParser = require('body-parser'),
       moment = require('moment'),
       mysql = require('mysql'),
-<<<<<<< HEAD
       cors = require('cors'),
-      nodemailer = require('nodemailer');
-=======
-      cors = require('cors');
+      nodemailer = require('nodemailer'),
       axios = require('axios');
->>>>>>> 14894872651e6babb86684915d981a152b93baaf
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -28,9 +24,7 @@ con.connect(function(err) {
     console.error('Database connection failed: ' + err.stack);
     return;
   }
-<<<<<<< HEAD
-    
-=======
+
 
   var intakeTime = moment.valueOf();
 
@@ -47,7 +41,6 @@ con.connect(function(err) {
     console.log("Successfully inserting into DB: "+result);
   });
 
->>>>>>> 14894872651e6babb86684915d981a152b93baaf
 });
 
 
@@ -63,7 +56,6 @@ app.post('/Shelter/addCat', (request, response) => {
   //var values = `'${intakeTime}', '${catObj.catName}', '${catObj.primaryColour}', ${catObj.catWeight}, ${catObj.fivTested}, '${catObj.fvrcpdate}', ${catObj.catAge}, '${catObj.secondaryColour}', '${catObj.gender}', ${catObj.vaccineUpToDate}, ${catObj.spayneut}, '${catObj.behaviour}', '${catObj.medHist}', '${catObj.comments}'`;
   var values = "'2018-05-12', 'Not my cat', 'Brown', 5, true, '2019-05-23', 5, 'Black', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3'";
   var columnNames = "intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments";
-<<<<<<< HEAD
   var sql = `INSERT INTO Cat (intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments) VALUES ('2018-05-12', 'Devon', 'Brown', 5, true, '2019-05-23', 5, 'Black', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3')`; 
   
   con.query(sql, function (err, result) {
@@ -73,7 +65,6 @@ app.post('/Shelter/addCat', (request, response) => {
   });
     
     
-=======
   var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
 
   console.dir(sql);
@@ -84,12 +75,10 @@ app.post('/Shelter/addCat', (request, response) => {
     });
 
     con.close();
->>>>>>> 14894872651e6babb86684915d981a152b93baaf
     console.log("Successfully inserted into DB.");
     response.sendFile(__dirname + '/public/Shelter/index.html');
 });
 
-<<<<<<< HEAD
 app.get('/email', (request, response) => {
   var transporter = nodemailer.createTransport({
     service: 'outlook.com',
@@ -115,7 +104,7 @@ transporter.sendMail(mailOptions, function(error, info){
     console.log('Email sent: ' + info.response);
   }
 });
-=======
+
 app.get('/api/allcats', (req,res)=>{
   const selectAll = `SELECT * FROM Cat`;
 
@@ -124,7 +113,7 @@ app.get('/api/allcats', (req,res)=>{
     console.log(result);
     res.json(result);
   });
->>>>>>> 14894872651e6babb86684915d981a152b93baaf
+
 });
 
 app.get('/', (req, res) => {
