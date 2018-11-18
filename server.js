@@ -45,7 +45,7 @@ app.post('/Shelter/addCat', (request, response) => {
   });
 
   // Close database.
-    con.close();
+    con.end();
 
     // Redirect.
     response.sendFile(__dirname + '/public/Shelter/index.html');
