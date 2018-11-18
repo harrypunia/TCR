@@ -171,10 +171,6 @@
 
 }
 
-/*
-
-default style
-
 .detail__photo {
     height: 250px;
     width: 175px;
@@ -183,7 +179,7 @@ default style
     margin: 15px 10px 10px 15px;
 }
 
-.detail__name {
+.detail__location {
     background-color: #fff;
     height: 50px;
     width: 200px;
@@ -191,6 +187,7 @@ default style
     display: block;
     margin: 15px 5px 5px 5px;
 }
+/*
 
 .detail__bio {
     background-color: #ccc;
@@ -201,32 +198,3 @@ default style
     margin: 10px 5px 5px 5px;
 }
 */
-
-
-/*    FROM HERE ON OUT, CUSTOMIZED DIVS DEPENDING ON LIST*/
-
-.detail__photo {
-    height: 250px;
-    width: 175px;
-    background-color: #000;
-    float: left;
-    margin: 15px 10px 10px 15px;
-}
-
-.detail__name {
-    background-color: #fff;
-    height: 50px;
-    width: 200px;
-    float: left;
-    display: block;
-    margin: 15px 5px 5px 5px;
-}
-
-.detail__bio {
-    background-color: #ccc;
-    height: 200px;
-    width: 200px;
-    float: left;
-    display: block;
-    margin: 10px 5px 5px 5px;
-}

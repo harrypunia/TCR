@@ -40,7 +40,7 @@
             <div class="container__title__heading define-text text-dark text__size-jumbo text-bold">Cats</div>
         </div>
         <div id="define-list" class="define-list">
-            <div class="list-filter text-regular text__size-regular">
+            <div class="list-filter text-bold text__size-regular">
                 <p class="filter-bar--text">Name</p>
                 <p class="filter-bar--text">#ID</p>
                 <p class="filter-bar--text">Age Group</p>
@@ -52,7 +52,10 @@
             </div>
             <div v-for="info in infoList" class="list-elements define-text text-regular text-dark text__size-small">
                 <list_bars :info="info">
-                    <div class="info__catName"></div>
+                    <div class="list__detail__wrapper">
+                        <div class="detail__photo"></div>
+                        <div class="detail__name"></div>
+                        <div class="detail__bio"></div>
                 </list_bars>
             </div>
         </div>
