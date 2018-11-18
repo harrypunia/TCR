@@ -44,19 +44,18 @@ app.post('/Shelter/addCat', (request, response) => {
 
   var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
 
-    console.dir(sql);
+  console.dir(sql);
 
-    con.query(sql, function (err, result) {
-      if (err) throw err;
-        console.log("Failure inserting into DB: "+result);
-      });
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+      console.log("Failure inserting into DB: "+result);
+    });
 
-      con.close();
-      console.log("Successfully inserted into DB.");
-      response.sendFile(__dirname + '/public/Shelter/index.html');
-  });
+    con.close();
+    console.log("Successfully inserted into DB.");
+    response.sendFile(__dirname + '/public/Shelter/index.html');
+});
 
-  
 
 app.get('/api/allcats', (req,res)=>{
   const selectAll = `SELECT * FROM Cat`;
@@ -77,7 +76,7 @@ app.post('/', (req, res) => {
 });
 
 function sendEmail() {
-  app.get('/email', (request, response) => {
+  
     var transporter = nodemailer.createTransport({
       service: 'outlook.com',
       secureConnection: false, // TLS requires secureConnection to be false
@@ -102,7 +101,6 @@ function sendEmail() {
         console.log('Email sent: ' + info.response);
       }
     });
-  });
 
 };
 
