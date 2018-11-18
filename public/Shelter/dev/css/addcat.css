@@ -54,11 +54,12 @@ form {
 input[type="radio"] {
     display: inline-flex;
     margin-top: 30px;
+    margin-left: 20px;
 }
 
 
 .containers__all > textarea {
     height: 100px;
     width: 800px;
-    padding-top: 20px;
+    padding: 20px;
 }
