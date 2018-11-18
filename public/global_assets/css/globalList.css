@@ -28,20 +28,49 @@
     background: #c2c4d6;
     cursor: pointer;
     display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
 }
+
+.catInfo {
+  display: flex;
+  height: 40px;
+  align-items: flex-start;
+}
+
+.open {
+  display: block;
+  height: 200px;
+  z-index: 10;
+}
+
+
+/* .list-elements:last-child {
+  flex-direction: column;
+  flex-wrap: nowrap;
+} */
 
 .list-elements p {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
 }
 
 .list-elements img {
+    will-change: transform;
     width: 25px;
 }
 
 .list-elements:nth-child(odd) {
     background: #d7d9ed;
     z-index: 2;
+}
+
+.up-caret {
+  transform: rotate(-180deg);
+  transition: transform .2s ease-out;
+}
+
+.down-caret {
+  transition: transform .2s ease-out;
 }
