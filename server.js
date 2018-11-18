@@ -22,6 +22,23 @@ con.connect(function(err) {
     console.error('Database connection failed: ' + err.stack);
     return;
   }
+  
+  var intakeTime = moment.valueOf();
+  
+  //var values = `'${intakeTime}', '${catObj.catName}', '${catObj.primaryColour}', ${catObj.catWeight}, ${catObj.fivTested}, '${catObj.fvrcpdate}', ${catObj.catAge}, '${catObj.secondaryColour}', '${catObj.gender}', ${catObj.vaccineUpToDate}, ${catObj.spayneut}, '${catObj.behaviour}', '${catObj.medHist}', '${catObj.comments}'`;
+  var values = "'2018-05-12', 'Kitty', 'Brown', 5, true, '2019-05-23', 5, 'Black', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3'";
+  var columnNames = "intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments";
+  var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
+
+  console.dir(sql);
+  
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+      console.log("Failure inserting into DB: "+result);
+    });
+    
+    
+    console.log("Successfully inserted into DB.");
 
   console.log('Connected to database.');
 });
@@ -34,8 +51,10 @@ app.post('/Shelter/addCat', (request, response) => {
   
   //DB connected - parse request.
   const catObj = request.body;
+  var intakeTime = moment.valueOf();
   
-  var values = `'${(moment().valueOf()).format("YYYY-MM-DD")}', '${catObj.catName}', '${catObj.primaryColour}', ${catObj.catWeight}, ${catObj.fivTested}, '${catObj.fvrcpdate}', ${catObj.catAge}, '${catObj.secondaryColour}', '${catObj.gender}', ${catObj.vaccineUpToDate}, ${catObj.spayneut}, '${catObj.behaviour}', '${catObj.medHist}', '${catObj.comments}'`;
+  //var values = `'${intakeTime}', '${catObj.catName}', '${catObj.primaryColour}', ${catObj.catWeight}, ${catObj.fivTested}, '${catObj.fvrcpdate}', ${catObj.catAge}, '${catObj.secondaryColour}', '${catObj.gender}', ${catObj.vaccineUpToDate}, ${catObj.spayneut}, '${catObj.behaviour}', '${catObj.medHist}', '${catObj.comments}'`;
+  var values = "'2018-05-12', 'Kitty', 'Brown', 5, true, '2019-05-23', 5, 'Black', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3'";
   var columnNames = "intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments";
   var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
 
@@ -46,7 +65,7 @@ app.post('/Shelter/addCat', (request, response) => {
       console.log("Failure inserting into DB: "+result);
     });
     
-    mysql.close;
+    
     console.log("Successfully inserted into DB.");
     response.sendFile(__dirname + '/public/Shelter/index.html');  
 });
@@ -89,3 +108,5 @@ app.use((err, req, res, next) => {
 var listener = app.listen(3000, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });
+
+mysql.close;
