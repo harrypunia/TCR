@@ -1,5 +1,5 @@
 Vue.component('list_bars', {
-    template: `
+  template: `
     <div class="reset">
      <div class="list_bars">
         <p class="filter-bar--text">{{info.name}}</p>
@@ -12,174 +12,68 @@ Vue.component('list_bars', {
         <p @click="showDetails" ref="test" :class="caret" class="filter-bar--text"><img src="../global_assets/SVG/arrow.svg" alt=""></p>
       </div>
       <div class="list__detail" v-show="show">
-
-          <slot></slot>
+        <slot></slot>
       </div>
       </div>
     </div>
   `,
-    props: ['info'],
-    data() {
-        return {
-            show: false,
-            caret: "down-caret"
-        }
-    },
-    methods: {
-        showDetails(e) {
-            this.$refs.test.parentElement.parentElement.parentElement.classList.add('open');
-            this.show = !this.show;
-            if (this.show) {
-                this.caret = "up-caret";
-                // app.onShow = 'open'
-            } else {
-                this.caret = "down-caret";
-                this.$refs.test.parentElement.parentElement.parentElement.classList.remove('open');
-                app.onShow = ''
-            }
-        }
+  props: ['info'],
+  data() {
+    return {
+      show: false,
+      caret: "down-caret"
     }
+  },
+  methods: {
+    showDetails(e) {
+      this.$refs.test.parentElement.parentElement.parentElement.classList.add('open');
+      this.show = !this.show;
+      if (this.show) {
+        this.caret = "up-caret";
+        // app.onShow = 'open'
+      } else {
+        this.caret = "down-caret";
+        this.$refs.test.parentElement.parentElement.parentElement.classList.remove('open');
+
+      }
+    }
+  }
 });
 
 var app = new Vue({
-    el: '#define-list',
-    data: {
-        infoList: [
-            {
-                id: 001,
-                name: 'Tom',
-                ageGroup: 10,
-                vaccinated: 'noVaccinated',
-                neutered: 'yesSpayed',
-                breed: 'Persian',
-                status: 'statusRed'
-       },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'yesVaccinated',
-                neutered: 'noSpayed',
-                breed: 'Siamese',
-                status: 'statusGreen'
-      },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'noVaccinated',
-                neutered: 'yesSpayed',
-                breed: 'British Shorthair',
-                status: 'statusYellow'
-      },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'yesVaccinated',
-                neutered: 'yesSpayed',
-                breed: 'American Curl',
-                status: 'statusGreen'
-      },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'yesVaccinated',
-                neutered: 'yesSpayed',
-                breed: 'Bengal',
-                status: 'statusYellow'
-      },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'yesVaccinated',
-                neutered: 'noSpayed',
-                breed: 'Ragdoll',
-                status: 'statusYellow'
-      },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'noVaccinated',
-                neutered: 'noSpayed',
-                breed: 'Scotish Fold',
-                status: 'statusRed'
-      },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'noVaccinated',
-                neutered: 'yesSpayed',
-                breed: 'Ragamuffin',
-                status: 'statusRed'
-      },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'yesVaccinated',
-                neutered: 'yesSpayed',
-                breed: 'Bengal',
-                status: 'statusGreen'
-      },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'yesVaccinated',
-                neutered: 'noSpayed',
-                breed: 'American Curl',
-                status: 'statusYellow'
-      },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'yesVaccinated',
-                neutered: 'yesSpayed',
-                breed: 'Black',
-                status: 'statusGreen'
-      },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'yesVaccinated',
-                neutered: 'yesSpayed',
-                breed: 'Tabby',
-                status: 'statusGreen'
-      },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'noVaccinated',
-                neutered: 'noSpayed',
-                breed: 'Scottish Fold',
-                status: 'statusRed'
-      },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'noVaccinated',
-                neutered: 'noSpayed',
-                breed: 'American Shorthair',
-                status: 'statusYellow'
-      }
-    ],
-        onShow: ''
-    },
-    computed: {
-      weedTest() {
-        fetch('http://localhost:3000/api/allCats').then((res)=>{
-          console.log(res.body);
-          res.json();
+  el: '#define-list',
+  data: {
+    infoList: [],
+    foster: [{
+      name: 'Omar',
+      phone: '416-799-6xy',
+      address: 'Univeristy Avenue Toronto',
+      contact: ''
+    }],
+    onShow: ''
+  },
+  computed: {
+    test() {
+      fetch('http://localhost:3000/api/allcats').then(response => response.json())
+        .then((data) => {
+          let catList = [];
+          for (let i = 0; i < data.length; i++) {
+            (data[i].spayNeut) ? (data[i].spayNeut = 'yesSpayed') : (data[i].spayNeut = 'noSpayed');
+            (data[i].vaccinesUpToDate) ? (data[i].vaccinesUpToDate = 'yesVaccinated') : (data[i].vaccinesUpToDate = 'noVaccinated');
+            catList.push({
+              name: data[i].name,
+              id: data[i].catID,
+              ageGroup: data[i].age,
+              vaccinated: data[i].vaccinesUpToDate,
+              neutered: data[i].spayNeut,
+              breed: data[i].Breed,
+              status: 'statusYellow'
+            });
+          }
+          this.infoList = catList;
+        }).catch((err) => {
+          console.log(err);
         });
-      }
     }
+  }
 });
