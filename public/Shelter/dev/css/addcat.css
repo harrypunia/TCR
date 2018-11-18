@@ -2,11 +2,34 @@ body {
     background-color: #f7f7f7;
 }
 
-.catForm {
-    width: 500px;
-    margin: 0 auto;
+.addCat {
+    width: 1000px;
+    height: auto;
+    background: Red;
+    margin: 20px auto;
 }
 
 form {
     border: none;
+}
+
+.containers__all {
+    width: 100%;
+    padding: 20px;
+}
+
+.container__top-half {
+    display: flex;
+}
+
+.container__top-half-left {
+    background: gray;
+}
+
+.container__top-half-right {
+    background: blue;
+}
+
+.container__bottom-half {
+    background: wheat;
 }

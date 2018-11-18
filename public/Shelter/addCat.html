@@ -36,14 +36,12 @@
         </div>
     </div>
     <div class="container">
-
-
         <div class="container__title">
             <p class="container__title__heading title define-text text-bold text-dark text__size-jumbo">Add A Cat</p>
         </div>
-        <form action="addCat">
-            <div id="container__top-half">
-                <div id="container__top-half-left">
+        <form class="addCat" action="addCat">
+            <div class="containers__all container__top-half">
+                <div class="containers__all container__top-half-left">
                     <select name="shelterName" required>
                         <option value="tas">Toronto Animal Services</option>
                         <option value="ths">Toronto Humane Society</option>
@@ -67,7 +65,7 @@
                     </p>
                 </div>
 
-                <div id="container__top-half-right">
+                <div class="containers__all container__top-half-right">
                     <p class="text-regular text__size-regular cat-name-text">
                         Age
                         <input type="number" name="catAge" value="" required><br> Secondary Colour
@@ -90,25 +88,20 @@
                         <input type="date" name="fvrcpdate" value="Rabies Vaccination Date">
                 </div>
             </div>
-        </form>
-
-
-
-        <form action="addCat">
-            <div id="">
-                <br> Vaccine up to date?
-                <input type="radio" name="vaccineUpToDate" value="yes" checked>Yes <br>
-                <input type="radio" name="vaccineUpToDate" value="no">No <br> Spayed/Neutered? <input type="radio" name="spayneut" value="yes" checked>Yes <br>
-                <input type="radio" name="spayneut" value="no">No <br> History of being bitten? <input type="radio" name="bitten" value="yes" checked>Yes <br>
-                <input type="radio" name="bitten" value="no">No <br> Behaviour Traits and Other Characteristics
-                <input type="text" name="behaviour" value="" required>
-                <br> Medical History <input type="text" name="medHist" value="" required>
-                <br> Comments <input type="text" name="comments" value="" required>
-                <br>
-                <input type="submit">
+            <div class="containers__all container__bottom-half">
+                <p class="text-regular text__size-regular cat-name-text">
+                    <br> Vaccine up to date?
+                    <input type="radio" name="vaccineUpToDate" value="yes" checked>Yes <br>
+                    <input type="radio" name="vaccineUpToDate" value="no">No <br> Spayed/Neutered? <input type="radio" name="spayneut" value="yes" checked>Yes <br>
+                    <input type="radio" name="spayneut" value="no">No <br> History of being bitten? <input type="radio" name="bitten" value="yes" checked>Yes <br>
+                    <input type="radio" name="bitten" value="no">No <br> Behaviour Traits and Other Characteristics
+                    <input type="text" name="behaviour" value="" required>
+                    <br> Medical History <input type="text" name="medHist" value="" required>
+                    <br> Comments <input type="text" name="comments" value="" required>
+                    <br>
+                    <input type="submit">
             </div>
         </form>
-
     </div>
 
 
