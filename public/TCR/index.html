@@ -51,7 +51,9 @@
                 <p class="filter-bar--text"><img src="" alt=""></p>
             </div>
             <div v-for="info in infoList" class="list-elements define-text text-regular text-dark text__size-small">
-                <list_bars :info="info"></list_bars>
+                <list_bars :info="info">
+                <div class="info__catName"></div>
+                </list_bars>
             </div>
         </div>
         <script src="../global_assets/js/list.js"></script>
