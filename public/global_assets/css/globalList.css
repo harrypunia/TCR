@@ -20,6 +20,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    padding-bottom: 200px;
 }
 
 .list-elements {
@@ -94,6 +95,38 @@
     align-items: center;
 }
 
+.yesSpayed:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url(../../TCR/dev/css/check-green.svg);
+}
+
+.noSpayed:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url(../../TCR/dev/css/x-red.svg);
+}
+
+.yesVaccinated:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url(../../TCR/dev/css/check-green.svg);
+}
+
+.noVaccinated:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url(../../TCR/dev/css/x-red.svg);
+}
+
 .statusRed:after {
     content: '';
     width: 20px;
@@ -125,8 +158,9 @@
     width: 90%;
     height: 100%;
     background: Red;
-    
+
 }
+
 /*
 
 default style
