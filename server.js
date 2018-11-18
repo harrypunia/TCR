@@ -46,7 +46,7 @@ app.post('/Shelter/addCat', (request, response) => {
       console.log("Failure inserting into DB: "+result);
     });
     
-    con.close();
+    mysql.close;
     console.log("Successfully inserted into DB.");
     response.sendFile(__dirname + '/public/Shelter/index.html');  
 });
