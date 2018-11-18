@@ -9,6 +9,18 @@ body {
     margin: 20px auto;
 }
 
+.shelterSelect select {
+    width: 150px;
+}
+
+input {
+    margin-top: 20px;
+}
+
+select {
+    margin-top: 20px;
+}
+
 form {
     border: none;
 }
@@ -32,4 +44,8 @@ form {
 
 .container__bottom-half {
     background: wheat;
+}
+
+input[type="radio"] {
+    display: inline-block;
 }
