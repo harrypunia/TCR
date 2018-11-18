@@ -16,6 +16,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform .2s ease-in;
+}
+
+.header__elements:hover {
+    transform: scale3d(1.1, 1.1, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform .2s ease-out;
+}
+
+.header__active {
+    pointer-events: none;
 }
 
 .header__elements img {
