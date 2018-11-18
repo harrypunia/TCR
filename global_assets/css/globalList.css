@@ -25,21 +25,40 @@
     height: 40px;
     background: #c2c4d6;
     cursor: pointer;
-    display: flex;
+    display: block;
 }
+
+.catInfo {
+  display: flex;
+  height: 100%;
+}
+
+/* .list-elements:last-child {
+  flex-direction: column;
+  flex-wrap: nowrap;
+} */
 
 .list-elements p {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
 }
 
 .list-elements img {
+    will-change: transform;
     width: 25px;
 }
 
 .list-elements:nth-child(odd) {
     background: #d7d9ed;
     z-index: 2;
+}
+
+.up-caret {
+  transform: rotate(-180deg);
+  transition: transform .2s ease-out;
+}
+
+.down-caret {
+  transition: transform .2s ease-out;
 }

@@ -47,9 +47,9 @@
         <div class="container__title">
             <div class="container__title__heading define-text text-dark text__size-jumbo text-bold">CATS</div>
         </div>
-        <div class="define-list">
+        <div id="define-list" class="define-list">
             <div class="list-filter define-text text-regular text__size-regular">
-                <p class="filter-bar--text">Name</p>
+                <p class="filter-bar--text">name</p>
                 <p class="filter-bar--text">ID</p>
                 <p class="filter-bar--text">Age Group</p>
                 <p class="filter-bar--text">Vaccinated</p>
@@ -58,23 +58,12 @@
                 <p class="filter-bar--text">Status</p>
                 <p class="filter-bar--text"><img src="" alt=""></p>
             </div>
-            <div class="list-elements define-text text-regular text-dark text__size-small">
-                <p class="filter-bar--text">Name</p>
-                <p class="filter-bar--text">ID</p>
-                <p class="filter-bar--text">Age Group</p>
-                <p class="filter-bar--text">Vaccinated</p>
-                <p class="filter-bar--text">Spayed/Neutered</p>
-                <p class="filter-bar--text">Breed</p>
-                <p class="filter-bar--text">Status</p>
-                <p class="filter-bar--text"><img src="../global_assets/SVG/arrow.svg" alt=""></p>
+            <div v-for="cat in catsList" class="list-elements define-text text-regular text-dark text__size-small">
+              <cat-Info  :cat="cat"><cat-Info/>
             </div>
-            <div class="list-elements"></div>
-            <div class="list-elements"></div>
-            <div class="list-elements"></div>
-            <div class="list-elements"></div>
         </div>
+        <script src="./dev/js/main.js"></script>
     </div>
-    <script src="../global_assets/js/global.js"></script>
 </body>
 
 </html>
