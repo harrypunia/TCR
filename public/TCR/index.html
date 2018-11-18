@@ -52,7 +52,10 @@
             </div>
             <div v-for="info in infoList" class="list-elements define-text text-regular text-dark text__size-small">
                 <list_bars :info="info">
-                    <div class="info__catName"></div>
+                      <div class="list__detail__wrapper">
+                      <div class="detail__photo"></div>
+                      <div class="detail__name"></div>
+                      <div class="detail__bio"></div>
                 </list_bars>
             </div>
         </div>
