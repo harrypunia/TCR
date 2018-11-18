@@ -14,7 +14,15 @@ Vue.component('list_bars', {
       <div class="list__detail" v-show="show">
         <div class="list__detail__wrapper">
         <div class="detail__photo"></div>
-        <div class="detail__name"></div>
+<div class="detail__location>"</div>
+
+<div class="detail__colour"></div>
+<div class="detail__dob>"</div>
+<div class="detail__gender"></div>
+<div class="detail__weight"></div>
+<div class="detail__bitten"></div>
+<div class="detail__proposal"></div>
+
         <div class="detail__bio"></div>
             </div>
       </div>
