@@ -50,7 +50,6 @@ Vue.component('list_bars_fosters', {
         <p class="filter-bar--text">{{info.address}}</p>
         <p class="filter-bar--text">{{info.emial}}</p>
         <p class="filter-bar--text">{{info.city}}</p>
-        <p @click="showDetails" ref="test" :class="caret" class="filter-bar--text"><img src="../global_assets/SVG/arrow.svg" alt=""></p>
       </div>
       <div class="list__detail" v-show="show">
         <slot></slot>
@@ -111,7 +110,7 @@ var app = new Vue({
   },
   computed: {
     test() {
-      fetch('http://localhost:3000/api/allcats').then(response => response.json())
+      fetch('https://giftthecode.glitch.me/api/allcats').then(response => response.json())
         .then((data) => {
           let catList = [];
           for (let i = 0; i < data.length; i++) {
