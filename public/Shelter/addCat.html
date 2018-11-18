@@ -17,23 +17,23 @@
 
 <body>
     <div class="header">
-        <div class="header__logo" href="index.html">
-        </div>
+        <a href="index.html">
+            <div class="header__logo">
+            </div>
+        </a>
         <hr class="header__hr" />
-
-        <div class="header__cats header__elements">
-            <a href="Shelter/index.html"><img src="../global_assets/SVG/cat.svg" alt="Cats"></a>
-        </div>
-        <div class="header__addcat header__elements header__active">
-            <a href="Shelter/addCat.html"><img src="../global_assets/SVG/addacat.svg" alt="Add Cat"></a>
-        </div>
-        <div class="header__profile header__elements">
-            <a href="Shelter/profile.html"><img src="../global_assets/SVG/profile.svg" alt="Profile" href="profile.html"></a>
-        </div>
-        <div class="header__help header__elements">
-            <a href="Shelter/contact.html"><img src="../global_assets/SVG/help.svg" alt="Help"></a>
-        </div>
-
+        <a href="index.html" class="header__cats header__elements">
+            <img src="../global_assets/SVG/cat.svg" alt="Cats">
+        </a>
+        <a href="addCat.html" class="header__addcat header__elements header__active">
+            <img src="../global_assets/SVG/addacat.svg" alt="Add Cat">
+        </a>
+        <a href="profile.html" class="header__profile header__elements">
+            <img src="../global_assets/SVG/profile.svg" alt="Profile" href="profile.html">
+        </a>
+        <a href="contact.html" class="header__help header__elements">
+            <img src="../global_assets/SVG/help.svg" alt="Help">
+        </a>
         <div class="header__logout"> Log Out
         </div>
     </div>
@@ -70,14 +70,6 @@
                     <input type="number" name="catWeight" value="" required>
                 </div>
                 <div class="input_section">
-                    <p class="text-regular text__size-small">FIV Tested</p>
-                    <select name="fivTested" required>
-                        <option value="yes">Tested Positive</option>
-                        <option value="no">Tested Negative</option>
-                        <option value="notTested">Not Tested</option>
-                    </select>
-                </div>
-                <div class="input_section">
                     <p class="text-regular text__size-small">FVRCP Date</p>
                     <input type="date" name="fvrcpdate" value="FVRCP Vaccination Date" required>
                 </div>
@@ -105,7 +97,7 @@
                 </div>
                 <div class="input_section">
                     <p class="text-regular text__size-small">Rabies Vaccination Date</p>
-                    <input type="date" name="fvrcpdate" value="Rabies Vaccination Date">
+                    <input type="date" name="vaccine" value="Rabies Vaccination Date">
                 </div>
             </div>
             <div class="containers__all container__bottom-half text-regular text__size-regular">
@@ -117,11 +109,11 @@
                     <input type="radio" name="spayneut" value="no">No </div>
                 <br> History of being bitten? <input type="radio" name="bitten" value="yes" checked>Yes
                 <input type="radio" name="bitten" value="no">No <br><br><br><br><br> Behaviour Traits and Other Characteristics <br><br>
-                <textarea name="" class="behaviour" placeholder="Write here"></textarea>
+                <textarea name="behaviour" class="behaviour" placeholder="Write here"></textarea>
                 <br><br>Medical History <br><br>
-                <textarea name="" class="medical" placeholder="Write here"></textarea>
+                <textarea name="medHist" class="medical" placeholder="Write here"></textarea>
                 <br><br> Comments <br><br>
-                <textarea name="" class="comments" placeholder="Write here"></textarea>
+                <textarea name="comments" class="comments" placeholder="Write here"></textarea>
                 <br>
                 <input class="define-button button__size-medium" type="submit">
             </div>

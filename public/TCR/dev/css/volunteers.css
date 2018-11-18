@@ -12,18 +12,19 @@
 
 .staff__container {
     width: 300px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .staff__picture {
-    background-color: #336196;
+/*    background-color: #336196;*/
     height: 200px;
+    border: none;
 }
 
 .staff__text {
     background-color: white;
     padding: 10px;
-    height: 130px;
+    height: 135px;
     margin: 0;
     padding-left: 20px;
 }

@@ -17,48 +17,44 @@
 <body>
     <div class="header">
         <a href="index.html">
-            <div class="header__logo">
-            </div>
+            <div class="header__logo"></div>
         </a>
         <hr class="header__hr" />
-        <div class="header__cats header__elements">
-            <a href="index.html"><img src="../global_assets/SVG/cat.svg" alt="Cats"></a>
-        </div>
-        <div class="header__foster header__elements header__active">
-            <a href="foster.html"><img src="../global_assets/SVG/foster.svg" alt="Foster Homes"></a>
-        </div>
-        <div class="header__mail header__elements">
-            <a href="mail.html"><img src="../global_assets/SVG/mail.svg" alt="Mail"></a>
-        </div>
-        <div class="header__volunteers header__elements">
-            <a href="volunteers.html"><img src="../global_assets/SVG/volunteers.svg" alt="Volunteers"></a>
-        </div>
-        <div class="header__profile header__elements">
-            <a href="profile.html"><img src="../global_assets/SVG/profile.svg" alt="Profile" href="profile.html"></a>
-        </div>
+        <a href="index.html" class="header__cats header__elements"><img src="../global_assets/SVG/cat.svg" alt="Cats"></a>
+        <a href="foster.html" class="header__foster header__elements header__active">
+            <img src="../global_assets/SVG/foster.svg" alt="Foster Homes">
+        </a>
+        <a href="mail.html" class="header__mail header__elements">
+            <img src="../global_assets/SVG/mail.svg" alt="Mail">
+        </a>
+        <a href="volunteers.html" class="header__volunteers header__elements">
+            <img src="../global_assets/SVG/volunteers.svg" alt="Volunteers">
+        </a>
+        <a href="profile.html" class="header__profile header__elements">
+            <img src="../global_assets/SVG/profile.svg" alt="Profile" href="profile.html">
+        </a>
+        <div class="header__logout">Log Out</div>
     </div>
     <div class="container">
         <div class="container__title">
-            <div class="container__title__heading define-text text-dark text__size-jumbo text-bold">CATS</div>
+            <div class="container__title__heading define-text text-dark text__size-jumbo text-bold">Foster</div>
         </div>
         <div id="define-list" class="define-list">
             <div class="list-filter define-text text-regular text__size-regular">
-                <p class="filter-bar--text">name</p>
-                <p class="filter-bar--text">ID</p>
-                <p class="filter-bar--text">Age Group</p>
-                <p class="filter-bar--text">Vaccinated</p>
-                <p class="filter-bar--text">Spayed/Neutered</p>
-                <p class="filter-bar--text">Breed</p>
-                <p class="filter-bar--text">Status</p>
+                <p class="filter-bar--text">Name</p>
+                <p class="filter-bar--text">Phone</p>
+                <p class="filter-bar--text">Address</p>
+                <p class="filter-bar--text">Contact</p>
                 <p class="filter-bar--text"><img src="" alt=""></p>
             </div>
-            <div v-for="cat in catsList" class="list-elements define-text text-regular text-dark text__size-small">
-                <cat-Info :cat="cat">
-                    <cat-Info />
+            <div v-for="info in infoList" class="list-elements define-text text-regular text-dark text__size-small">
+                <list_bars :info="info"></list_bars>
             </div>
         </div>
     </div>
     <script src="../global_assets/js/global.js"></script>
+    <script src="../global_assets/js/list.js"></script>
+    <script src="dev/js/localList.js"></script>
 </body>
 
 </html>
