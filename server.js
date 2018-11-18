@@ -48,14 +48,14 @@ app.post('/AddCat', (request, response) => {
   console.dir(catObj);
 
   //TODO: Add to DB.
-
-  return response.json("Successfully added.\nThank you!");
+  
+  return response.json("Looks like the cat's out of the bag now.");
 });
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/Shelter/addCat.html');
 });
 app.post('/', (req, res) => {
-  res.json("Looks like the cat's out of the bag now.");
+  res.sendFile(__dirname + '/public/Shelter/addCat.html');
 });
 
 
