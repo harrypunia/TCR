@@ -37,9 +37,8 @@
     width: 49%;
 }
 
-
-
 .profile__button {
+    text-align: center;
     margin: 20px auto;
 }
 
