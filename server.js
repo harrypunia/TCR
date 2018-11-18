@@ -68,7 +68,7 @@ app.post('/Shelter/addCat', (request, response) => {
     response.sendFile(__dirname + '/public/Shelter/index.html');
 });
 
-app.get('/api/allCats', (req,res)=>{
+app.get('/api/allcats', (req,res)=>{
   const selectAll = `SELECT * FROM Cat`;
 
   con.query(selectAll, (err, result)=>{
