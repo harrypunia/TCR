@@ -63,7 +63,7 @@ app.get('/api/allcats', (req,res)=>{
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/Shelter/index.html');
+  res.sendFile(__dirname + '/public/Shelter/');
 });
 app.post('/', (req, res) => {
   res.sendFile(__dirname + '/public/Shelter/index.html');
