@@ -46,6 +46,9 @@ app.post('/AddCat', (request, response) => {
   // Get AddCat request.
   const catObj = request.body;
   console.dir(catObj);
+  
+  alert("Successfully added!");
+  
   response.sendFile(__dirname + '/public/Shelter/index.html');
   //TODO: Add to DB.
   
