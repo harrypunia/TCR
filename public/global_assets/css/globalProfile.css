@@ -23,7 +23,6 @@
 }
 
 .profile__info p {
-
     padding: 15px 20px;
     margin-bottom: 10px;
 }
@@ -39,12 +38,11 @@
 
 
 
-.profile__button {
-    margin: 20px auto;
-}
+
 
 .comments {
     height: 200px;
     width: 715px;
     border: none;
+    background: white;
 }
