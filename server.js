@@ -82,9 +82,9 @@ function sendEmail() {
 
     var mailOptions = {
       from: 'thomas-d@hotmail.ca',
-      to: 'umbralsoul13@live.ca, isabelle.vohsemer@gmail.com, laurenblack042699@gmail.com, harry@punias.com, Omarelbanby.guitarist@gmail.com',
+      to: 'umbralsoul13@live.ca',
       subject: 'New Cats in Shelter',
-      html: '<h1>Welcome</h1><p>Email message</p>'
+      html: '<p>A new kitten arrived at the South Street Shelter.<bold>PLEASE</bold></p>'
     };
 
     transporter.sendMail(mailOptions, function(error, info){
