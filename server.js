@@ -63,6 +63,7 @@ app.get('/api/allcats', (req,res)=>{
 });
 
 app.get('/', (req, res) => {
+  console.log(__dirname+"/public/Shelter/index.html");
   res.sendFile(__dirname + '/public/Shelter/index.html');
 });
 app.post('/', (req, res) => {
@@ -127,5 +128,3 @@ app.use((err, req, res, next) => {
 var listener = app.listen(3000, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });
-
-mysql.close;
