@@ -1,1 +1,31 @@
+.foster__col {
+    height: 100%;
+    margin: 20px 0;
+    padding: 20px;
+}
 
+.foster__col-left {
+    width: 30%;
+    float: left;
+}
+
+.foster__col-right {
+    width: 100%;
+    float: right;
+}
+
+.foster__col__image {
+    background-color: #000;
+    width: 250px;
+    height: 350px;
+    padding: 20px;
+    margin-right: 20px;
+    background: url(../../../global_assets/SVG/placeholder.svg) no-repeat;
+}
+
+.foster__biography {
+    margin-top: 20px;
+    width: 80%;
+    float: left;
+    text-align: left;
+}

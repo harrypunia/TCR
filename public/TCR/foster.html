@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../global_assets/css/globalHeader.css">
     <link rel="stylesheet" href="../global_assets/css/global.css">
     <link rel="stylesheet" href="../global_assets/css/globalList.css">
+    <link rel="stylesheet" href="../global_assets/css/globalButtons.css">
+    <link rel="stylesheet" href="dev/css/foster.css">
     <title>TCR</title>
 </head>
 
@@ -51,7 +53,13 @@
             <div v-for="foster in fosters" class="list-elements define-text text-regular text-dark text__size-small">
                 <list_bars_fosters :info="foster">
 
-
+                    <div class="foster__col foster__col-left">
+                        <div class="foster__col__image"></div>
+                    </div>
+                    <div class="foster__col foster__col-right">
+                        <p class="text-bold text__size-regular text-dark" style="float:left;">Biography of Foster</p>
+                        <p class="foster__biography define-text text-dark ">Has been working with Toronto Cat Rescue for over 1 year and tends to specializes with small kittens and cats with special care needs. Only has a capacity of about 4 cats in total. Currently has 3 cats staying in their foster care and 2 of which require lots of attention and love.</p>
+                    </div>
 
                 </list_bars_fosters>
             </div>
