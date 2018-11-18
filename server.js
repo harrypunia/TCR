@@ -17,19 +17,6 @@ var con = mysql.createConnection({
 }); 
 
 
-
-
-// con.connect(function(err) {
-//   if (err) {
-//     console.log("Cannot connect to DB:\n"+err);
-//   };
-//   console.log("Connected!");
-
-//   //TODO: Parse HTML, pass into sql.
-
-
-
-
 app.use(express.static('public'));
 
 app.post('/AddCat', (request, response) => {
@@ -77,21 +64,23 @@ app.post('/AddCat', (request, response) => {
                   medHist, 
                   comments
                  ];
-    var sql = "INSERT ("+columnNames+") CAT VALUES ("++")";
+    var sql = "INSERT ("+columnNames+") CAT VALUES ("+values+")";
 
     con.query(sql, function (err, result) {
       if (err) throw err;
         console.log("1 record inserted");
       });
+    con.end();
 
     response.sendFile(__dirname + '/public/Shelter/index.html');
   });
 
-  con.end();
+  
   
   
   // return response.json("Looks like the cat's out of the bag now.");
 });
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/Shelter/addCat.html');
 });
