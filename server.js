@@ -7,16 +7,8 @@ const express = require('express'),
       nodemailer = require('nodemailer');
 
 
-app.use(express.static('public'));
-app.get('/', (req, res) => {
-  res.sendFile('giftthecode.glitch.me/index.html');
-});
-app.post('/', (req, res) => {
-  res.sendFile(__dirname + '/public/Shelter/index.html');
-});
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-
 
 // Database connection.
 var con = mysql.createConnection({
@@ -28,6 +20,7 @@ var con = mysql.createConnection({
 });
 
 
+app.use(express.static('public'));
 
 app.post('/Shelter/addCat', (request, response) => {
   // Handles submitting a new cat.
@@ -69,35 +62,12 @@ app.get('/api/allcats', (req,res)=>{
 
 });
 
-
-
-// Not found middleware
-app.use((req, res, next) => {
-  return next({status: 404, message: 'not found'})
+app.get('/', (req, res) => {
+  console.log(__dirname+"/public/Shelter/index.html");
+  res.sendFile(__dirname + '/public/Shelter/index.html');
 });
-
-// Error Handling middleware.
-app.use((err, req, res, next) => {
-  let errCode, errMessage;
-
-  if (err.errors) {
-    // mongoose validation error
-    errCode = 400; // bad request
-    const keys = Object.keys(err.errors);
-    // report the first validation error
-    errMessage = err.errors[keys[0]].message;
-  } else {
-    // generic or custom error
-    errCode = err.status || 500;
-    errMessage = err.message || 'Internal Server Error';
-  }
-  res.status(errCode).type('txt')
-    .send(errMessage);
-});
-
-// listen for requests.
-var listener = app.listen(3000, function() {
-  console.log('Your app is listening on port ' + listener.address().port);
+app.post('/', (req, res) => {
+  res.sendFile(__dirname + '/public/Shelter/index.html');
 });
 
 function sendEmail() {
@@ -128,3 +98,33 @@ function sendEmail() {
     });
 
 };
+
+
+// Not found middleware
+app.use((req, res, next) => {
+  return next({status: 404, message: 'not found'})
+});
+
+// Error Handling middleware.
+app.use((err, req, res, next) => {
+  let errCode, errMessage;
+
+  if (err.errors) {
+    // mongoose validation error
+    errCode = 400; // bad request
+    const keys = Object.keys(err.errors);
+    // report the first validation error
+    errMessage = err.errors[keys[0]].message;
+  } else {
+    // generic or custom error
+    errCode = err.status || 500;
+    errMessage = err.message || 'Internal Server Error';
+  }
+  res.status(errCode).type('txt')
+    .send(errMessage);
+});
+
+// listen for requests.
+var listener = app.listen(3000, function() {
+  console.log('Your app is listening on port ' + listener.address().port);
+});
