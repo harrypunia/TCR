@@ -9,6 +9,7 @@
     width: 50%;
     height: 100;
     padding: 50px 0 50px;
+    z-index: 50;
 }
 
 .contact__information {
@@ -18,7 +19,6 @@
 .contact__information-smaller {
     padding: 5px 50px;
     font-size: 0.7em;
-    text-align: right;
 }
 
 .contact__form {
@@ -36,4 +36,8 @@
     margin: auto;
     padding: 10px;
     margin-top: 10px;
+}
+
+.contact__form textarea {
+    z-index: 100;
 }

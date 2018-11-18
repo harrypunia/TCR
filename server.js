@@ -13,24 +13,25 @@ var con = mysql.createConnection({
   host     : 'catrescue.ccuxgnxok5zx.us-east-1.rds.amazonaws.com',
   user     : 'root',
   password : 'Password1234',
-  port     : 3306
-}); 
+  port     : 3306,
+  database : 'catrescue'
+});
+
+con.connect(function(err) {
+  if (err) {
+    console.error('Database connection failed: ' + err.stack);
+    return;
+  }
+
+  console.log('Connected to database.');
+});
 
 
 app.use(express.static('public'));
 
 app.post('/AddCat', (request, response) => {
   // Handles submitting a new cat.
-
-  con.connect(function(err) {
-    // Connection failed - cancel.
-    if (err) {
-      console.error('Database connection failed: ' + err.stack);
-      return;
-    }
-    console.log('Connected to database.');
-
-    // DB connected - parse request.
+    //DB connected - parse request.
     const catObj = request.body;
     console.dir(catObj);
     var shelterName = catObj.shelterName,
@@ -49,35 +50,29 @@ app.post('/AddCat', (request, response) => {
         comments = catObj.comments;
 
     var columnNames = "IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES";
-    var values = [shelterName, 
-                  catname, 
-                  primaryColour, 
-                  catWeight, 
-                  fivTested, 
-                  fvrcpdate, 
-                  catAge, 
-                  secondaryColour, 
-                  gender, 
-                  vaccineUpToDate, 
-                  spayneut, 
-                  behaviour, 
-                  medHist, 
+    var values = `shelterName,
+                  catname,
+                  primaryColour,
+                  catWeight,
+                  fivTested,
+                  fvrcpdate,
+                  catAge,
+                  secondaryColour,
+                  gender,
+                  vaccineUpToDate,
+                  spayneut,
+                  behaviour,
+                  medHist,
                   comments
-                 ];
-    var sql = "INSERT ("+columnNames+") CAT VALUES ("+values+")";
+                 `;
+
+    var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
 
     con.query(sql, function (err, result) {
       if (err) throw err;
-        console.log("1 record inserted");
+        console.log(result);
       });
-    con.end();
-
-    response.sendFile(__dirname + '/public/Shelter/index.html');
-  });
-
-  
-  
-  
+   response.sendFile(__dirname + '/public/Shelter/index.html');
   // return response.json("Looks like the cat's out of the bag now.");
 });
 
@@ -116,6 +111,6 @@ app.use((err, req, res, next) => {
 });
 
 // listen for requests.
-var listener = app.listen(process.env.PORT, function() {
+var listener = app.listen(3000, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });

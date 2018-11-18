@@ -2,6 +2,13 @@
     background-color: #2bae9d;
     color: white;
     border-radius: 6px;
+    transition: transform .1s ease-in;
+}
+
+.define-button:hover {
+    transform: scale3d(1.05, 1.05, 1);
+    cursor: pointer;
+    transition: transform .1s ease-out;
 }
 
 .button__size-medium {
@@ -9,7 +16,6 @@
     padding: 5px;
     height: 40px;
 }
-
 
 /*Inputs*/
 
@@ -22,7 +28,6 @@ input {
 }
 
 input[type="radio"] {
-    /*    display: inline-flex;*/
     margin-top: 30px;
     margin-left: 20px;
     color: #29ae9c;
@@ -32,19 +37,15 @@ input[type="submit"] {
     width: 100px;
 }
 
-
-/*Select*/
-
 select {
     border: none;
-    background: #eee;
+    background: #fff;
     font-size: 14px;
     height: 30px;
     width: 200px;
     padding: 6px 60px 6px 0;
     margin-top: 30px;
 }
-
 
 /*Textarea*/
 
@@ -54,5 +55,5 @@ textarea {
     margin-bottom: 40px;
     padding: 20px;
     border: none;
-    background: #eee;
+    background: #e6e6e6;
 }

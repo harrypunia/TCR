@@ -1,6 +1,14 @@
-.staff__profiles {
+.container__staff {
+    width: 100%;
+    margin: 50px;
     display: flex;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
+
+.staff__profile {}
 
 .staff__container {
     width: 300px;
@@ -12,18 +20,20 @@
     height: 200px;
 }
 
-.staff__text{
+.staff__text {
     background-color: white;
     padding: 10px;
     height: 130px;
-    margin: 0 ;
+    margin: 0;
     padding-left: 20px;
 }
 
-.staff__name, .staff__phoneNo {
+.staff__name,
+.staff__phoneNo {
     margin: 10px 0 10px 0;
 }
 
 .container__staff {
     padding: 10px;
+    display: flex;
 }
