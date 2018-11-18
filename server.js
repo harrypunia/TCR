@@ -31,26 +31,24 @@ app.use(express.static('public'));
 
 app.post('/Shelter/addCat', (request, response) => {
   // Handles submitting a new cat.
+  
   //DB connected - parse request.
   const catObj = request.body;
-  console.dir(catObj);
-
-  // fivTested: ['yes', 'yes']
-  // fvrcpdate: ['2014-05-04', '2015-04-05']
   
   var values = `${moment().valueOf()}, ${catObj.catName}, ${catObj.primaryColour}, ${catObj.catWeight}, ${catObj.fivTested}, ${catObj.fvrcpdate}, ${catObj.catAge}, ${catObj.secondaryColour}, ${catObj.gender}, ${catObj.vaccineUpToDate}, ${catObj.spayneut}, ${catObj.behaviour}, ${catObj.medHist}, ${catObj.comments}`;
-  console.dir(values);
   var columnNames = "intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments";
-
   var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
 
+  console.dir(sql);
+  
   con.query(sql, function (err, result) {
     if (err) throw err;
       console.log("Failure inserting into DB: "+result);
     });
+    
+    con.close();
     console.log("Successfully inserted into DB.");
-   response.sendFile(__dirname + '/public/Shelter/index.html');
-  con.close();
+    response.sendFile(__dirname + '/public/Shelter/index.html');  
 });
 
 app.get('/', (req, res) => {
