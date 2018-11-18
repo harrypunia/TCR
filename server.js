@@ -37,51 +37,26 @@ app.post('/Shelter/addCat', (request, response) => {
   con.query(sql, function (err, result) {
     if (err) throw err;
 
-    console.log(result);
+    console.log("Successfully inserted into DB.");
+    
   });
 
 
   var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
 
-  console.dir(sql);
+    console.dir(sql);
 
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-      console.log("Failure inserting into DB: "+result);
-    });
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+        console.log("Failure inserting into DB: "+result);
+      });
 
-    con.close();
-    console.log("Successfully inserted into DB.");
-    response.sendFile(__dirname + '/public/Shelter/index.html');
-});
+      con.close();
+      console.log("Successfully inserted into DB.");
+      response.sendFile(__dirname + '/public/Shelter/index.html');
+  });
 
-app.get('/email', (request, response) => {
-  var transporter = nodemailer.createTransport({
-    service: 'outlook.com',
-    secureConnection: false, // TLS requires secureConnection to be false
-    port: 587, // port for secure SMTP
-    auth: {
-      user: 'thomas-d@hotmail.ca',
-      pass: 'RdUA@doAzoPiTUsAqD@K2Xi*s$r9T4'
-    }
-  })
-
-
-var mailOptions = {
-  from: 'thomas-d@hotmail.ca',
-  to: 'umbralsoul13@live.ca, isabelle.vohsemer@gmail.com, laurenblack042699@gmail.com, harry@punias.com, Omarelbanby.guitarist@gmail.com',
-  subject: 'Sending Email using Node.js',
-  html: '<h1>Welcome</h1><p>Email message</p>'
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
-});
+  
 
 app.get('/api/allcats', (req,res)=>{
   const selectAll = `SELECT * FROM Cat`;
@@ -101,7 +76,35 @@ app.post('/', (req, res) => {
   res.sendFile(__dirname + '/public/Shelter/index.html');
 });
 
+function sendEmail() {
+  app.get('/email', (request, response) => {
+    var transporter = nodemailer.createTransport({
+      service: 'outlook.com',
+      secureConnection: false, // TLS requires secureConnection to be false
+      port: 587, // port for secure SMTP
+      auth: {
+        user: 'thomas-d@hotmail.ca',
+        pass: 'RdUA@doAzoPiTUsAqD@K2Xi*s$r9T4'
+      }
+    })
 
+    var mailOptions = {
+      from: 'thomas-d@hotmail.ca',
+      to: 'umbralsoul13@live.ca, isabelle.vohsemer@gmail.com, laurenblack042699@gmail.com, harry@punias.com, Omarelbanby.guitarist@gmail.com',
+      subject: 'Sending Email using Node.js',
+      html: '<h1>Welcome</h1><p>Email message</p>'
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
+  });
+
+};
 
 
 // Not found middleware
