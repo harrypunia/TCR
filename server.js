@@ -7,8 +7,16 @@ const express = require('express'),
       nodemailer = require('nodemailer');
 
 
+app.use(express.static('public'));
+app.get('/', (req, res) => {
+  res.sendFile('giftthecode.glitch.me/index.html');
+});
+app.post('/', (req, res) => {
+  res.sendFile(__dirname + '/public/Shelter/index.html');
+});
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
 
 // Database connection.
 var con = mysql.createConnection({
@@ -20,7 +28,6 @@ var con = mysql.createConnection({
 });
 
 
-app.use(express.static('public'));
 
 app.post('/Shelter/addCat', (request, response) => {
   // Handles submitting a new cat.
@@ -62,41 +69,6 @@ app.get('/api/allcats', (req,res)=>{
 
 });
 
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/Shelter/');
-});
-app.post('/', (req, res) => {
-  res.sendFile(__dirname + '/public/Shelter/index.html');
-});
-
-function sendEmail() {
-
-    var transporter = nodemailer.createTransport({
-      service: 'outlook.com',
-      secureConnection: false, // TLS requires secureConnection to be false
-      port: 587, // port for secure SMTP
-      auth: {
-        user: 'thomas-d@hotmail.ca',
-        pass: 'RdUA@doAzoPiTUsAqD@K2Xi*s$r9T4'
-      }
-    })
-
-    var mailOptions = {
-      from: 'thomas-d@hotmail.ca',
-      to: 'umbralsoul13@live.ca',
-      subject: 'New Cats in Shelter',
-      html: '<p>A new kitten arrived at the South Street Shelter. <bold>PLEASE</bold></p>'
-    };
-
-    transporter.sendMail(mailOptions, function(error, info){
-      if (error) {
-        console.log(error);
-      } else {
-        console.log('Email sent: ' + info.response);
-      }
-    });
-
-};
 
 
 // Not found middleware
@@ -128,4 +100,31 @@ var listener = app.listen(3000, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });
 
-mysql.close;
+function sendEmail() {
+
+    var transporter = nodemailer.createTransport({
+      service: 'outlook.com',
+      secureConnection: false, // TLS requires secureConnection to be false
+      port: 587, // port for secure SMTP
+      auth: {
+        user: 'thomas-d@hotmail.ca',
+        pass: 'RdUA@doAzoPiTUsAqD@K2Xi*s$r9T4'
+      }
+    })
+
+    var mailOptions = {
+      from: 'thomas-d@hotmail.ca',
+      to: 'umbralsoul13@live.ca',
+      subject: 'New Cats in Shelter',
+      html: '<p>A new kitten arrived at the South Street Shelter. <bold>PLEASE</bold></p>'
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
+
+};
