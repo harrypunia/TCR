@@ -35,7 +35,7 @@ app.post('/Shelter/addCat', (request, response) => {
   //DB connected - parse request.
   const catObj = request.body;
   
-  var values = `${moment().valueOf()}, ${catObj.catName}, ${catObj.primaryColour}, ${catObj.catWeight}, ${catObj.fivTested}, ${catObj.fvrcpdate}, ${catObj.catAge}, ${catObj.secondaryColour}, ${catObj.gender}, ${catObj.vaccineUpToDate}, ${catObj.spayneut}, ${catObj.behaviour}, ${catObj.medHist}, ${catObj.comments}`;
+  var values = `'${(moment().valueOf()).format("YYYY-MM-DD")}', '${catObj.catName}', '${catObj.primaryColour}', ${catObj.catWeight}, ${catObj.fivTested}, '${catObj.fvrcpdate}', ${catObj.catAge}, '${catObj.secondaryColour}', '${catObj.gender}', ${catObj.vaccineUpToDate}, ${catObj.spayneut}, '${catObj.behaviour}', '${catObj.medHist}', '${catObj.comments}'`;
   var columnNames = "intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments";
   var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
 
