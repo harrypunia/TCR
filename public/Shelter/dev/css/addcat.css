@@ -8,17 +8,21 @@
 select {
     border: none;
     background: #eee;
-    height: 20px;
+    font-size: 14px;
+    height: 30px;
     width: 200px;
+    padding: 6px 60px 6px 0;
+    margin-top: 30px;
 }
 
 input {
     margin-top: 30px;
+    width: auto;
+    overflow: hidden;
+    padding: 6px 6px 6px 0;
+    clear: both;
 }
 
-select {
-    margin-top: 30px;
-}
 
 form {
     /*    border: none;*/
@@ -48,10 +52,11 @@ form {
 }
 
 input[type="radio"] {
-    display: inline-flex;
+/*    display: inline-flex;*/
     margin-top: 30px;
     margin-left: 20px;
     color: #29ae9c;
+    
 }
 
 input[type="submit"] {

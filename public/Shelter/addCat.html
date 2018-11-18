@@ -21,16 +21,16 @@
         <hr class="header__hr" />
 
         <div class="header__cats header__elements">
-            <a href="index.html"><img src="../global_assets/SVG/cat.svg" alt="Cats"></a>
+            <a href="Shelter/index.html"><img src="../global_assets/SVG/cat.svg" alt="Cats"></a>
         </div>
         <div class="header__addcat header__elements header__active">
-            <a href="addCat.html"><img src="../global_assets/SVG/addacat.svg" alt="Add Cat"></a>
+            <a href="Shelter/addCat.html"><img src="../global_assets/SVG/addacat.svg" alt="Add Cat"></a>
         </div>
         <div class="header__profile header__elements">
-            <a href="profile.html"><img src="../global_assets/SVG/profile.svg" alt="Profile" href="profile.html"></a>
+            <a href="Shelter/profile.html"><img src="../global_assets/SVG/profile.svg" alt="Profile" href="profile.html"></a>
         </div>
         <div class="header__help header__elements">
-            <a href="contact.html"><img src="../global_assets/SVG/help.svg" alt="Help"></a>
+            <a href="Shelter/contact.html"><img src="../global_assets/SVG/help.svg" alt="Help"></a>
         </div>
 
         <div class="header__logout"> Log Out
@@ -40,7 +40,7 @@
         <div class="container__title">
             <p class="container__title__heading title define-text text-bold text-dark text__size-jumbo">Add A Cat</p>
         </div>
-        <form class="addCat" action="addCat">
+        <form class="addCat" action="addCat" method="POST">
             <div class="containers__all container__top-half">
                 <div class="containers__all container__top-half-left">
                     <select class="shelterSelect" name="shelterName" required>
@@ -93,8 +93,10 @@
                 <p class=" cat-name-text"></p>
                 Vaccine up to date?
                 <input type="radio" name="vaccineUpToDate" value="yes" checked>Yes
-                <input type="radio" name="vaccineUpToDate" value="no">No <br> Spayed/Neutered? <input type="radio" name="spayneut" value="yes" checked>Yes
-                <input type="radio" name="spayneut" value="no">No <br> History of being bitten? <input type="radio" name="bitten" value="yes" checked>Yes
+                <input type="radio" name="vaccineUpToDate" value="no">No <br>
+                <div class="spayed">Spayed/Neutered? <input type="radio" name="spayneut" value="yes" checked>Yes
+                    <input type="radio" name="spayneut" value="no">No </div>
+                <br> History of being bitten? <input type="radio" name="bitten" value="yes" checked>Yes
                 <input type="radio" name="bitten" value="no">No <br><br><br><br><br> Behaviour Traits and Other Characteristics <br><br>
                 <textarea name="" class="behaviour" placeholder="Write here"></textarea>
                 <br><br>Medical History <br><br>

@@ -8,52 +8,79 @@ const express = require('express'),
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-//TODO: Fill in DB credientials.
-// var con = mysql.createConnection({
-//   host: "localhost",
-//   user: "yourusername",
-//   password: "yourpassword",
-//   database: "mydb"
-// });
 
-// con.connect(function(err) {
-//   if (err) {
-//     console.log("Cannot connect to DB:\n"+err);
-//   };
-//   console.log("Connected!");
-
-//   //TODO: Parse HTML, pass into sql.
-
-//   var sql = "INSERT INTO CAT VALUES ( PetID, IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES )"
-
-//   con.query(sql, function (err, result) {
-//     if (err) throw err;
-//     console.log("1 record inserted");
-//   });
-// });
+var con = mysql.createConnection({
+  host     : 'catrescue.ccuxgnxok5zx.us-east-1.rds.amazonaws.com',
+  user     : 'root',
+  password : 'Password1234',
+  port     : 3306
+}); 
 
 
 app.use(express.static('public'));
 
-app.get('/AddCat', (request, response) => {
-  // Provides the form for adding a cat.
-  //TODO: Provide the relevant UI.
-  return response.json("You've got to be kitten me.");
-});
 app.post('/AddCat', (request, response) => {
   // Handles submitting a new cat.
 
-  // Get AddCat request.
-  const catObj = request.body;
-  console.dir(catObj);
+  con.connect(function(err) {
+    // Connection failed - cancel.
+    if (err) {
+      console.error('Database connection failed: ' + err.stack);
+      return;
+    }
+    console.log('Connected to database.');
+
+    // DB connected - parse request.
+    const catObj = request.body;
+    console.dir(catObj);
+    var shelterName = catObj.shelterName,
+        catname = catObj.catName,
+        primaryColour = catObj.primaryColour,
+        catWeight = catObj.catWeight,
+        fivTested = catObj.fivTested,
+        fvrcpdate = catObj.fvrcpdate,
+        catAge = catObj.catAge,
+        secondaryColour = catObj.secondaryColour,
+        gender = catObj.gender,
+        vaccineUpToDate = catObj.vaccineUpToDate,
+        spayneut = catObj.spayneut,
+        behaviour = catObj.behaviour,
+        medHist = catObj.medHist,
+        comments = catObj.comments;
+
+    var columnNames = "IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES";
+    var values = [shelterName, 
+                  catname, 
+                  primaryColour, 
+                  catWeight, 
+                  fivTested, 
+                  fvrcpdate, 
+                  catAge, 
+                  secondaryColour, 
+                  gender, 
+                  vaccineUpToDate, 
+                  spayneut, 
+                  behaviour, 
+                  medHist, 
+                  comments
+                 ];
+    var sql = "INSERT ("+columnNames+") CAT VALUES ("+values+")";
+
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+        console.log("1 record inserted");
+      });
+    con.end();
+
+    response.sendFile(__dirname + '/public/Shelter/index.html');
+  });
+
   
-  alert("Successfully added!");
   
-  response.sendFile(__dirname + '/public/Shelter/index.html');
-  //TODO: Add to DB.
   
   // return response.json("Looks like the cat's out of the bag now.");
 });
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/Shelter/addCat.html');
 });
