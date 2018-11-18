@@ -5,12 +5,15 @@ body {
 .addCat {
     width: 1000px;
     height: auto;
-    background: Red;
+    /*    background: Red;*/
     margin: 20px auto;
 }
 
-.shelterSelect select {
-    width: 150px;
+select {
+    border: none;
+    background: #eee;
+    height: 20px;
+    width: 200px;
 }
 
 input {
@@ -18,11 +21,11 @@ input {
 }
 
 select {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 form {
-    border: none;
+    /*    border: none;*/
 }
 
 .containers__all {
@@ -31,29 +34,40 @@ form {
 }
 
 .container__top-half {
-    display: flex;
+    display: inline-flex;
 }
 
 .container__top-half-left {
-    background: gray;
+    /*    background: gray;*/
 }
 
 .container__top-half-right {
-    background: blue;
+    /*    background: blue;*/
 }
 
 .container__bottom-half {
-    background: wheat;
+    /*    background: wheat;*/
+    padding: 20px;
+    margin-left: 20px;
 }
 
 input[type="radio"] {
     display: inline-flex;
     margin-top: 30px;
+    margin-left: 20px;
+    color: #29ae9c;
+}
+
+input[type="submit"] {
+    width: 100px;
+
 }
 
 
-/*
-.containers__all > input {
-    height: 90px;
+.containers__all > textarea {
+    height: 100px;
+    width: 800px;
+    padding: 20px;
+    border: none;
+    background: #eee;
 }
-*/
