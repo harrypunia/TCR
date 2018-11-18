@@ -40,16 +40,73 @@ Vue.component('list_bars', {
   }
 });
 
+
+Vue.component('list_bars_fosters', {
+  template: `
+    <div class="reset">
+     <div class="list_bars">
+        <p class="filter-bar--text">{{info.name}}</p>
+        <p class="filter-bar--text">{{info.phone}}</p>
+        <p class="filter-bar--text">{{info.address}}</p>
+        <p class="filter-bar--text">{{info.emial}}</p>
+        <p class="filter-bar--text">{{info.city}}</p>
+        <p @click="showDetails" ref="test" :class="caret" class="filter-bar--text"><img src="../global_assets/SVG/arrow.svg" alt=""></p>
+      </div>
+      <div class="list__detail" v-show="show">
+        <slot></slot>
+      </div>
+      </div>
+    </div>
+  `,
+  props: ['info'],
+  data() {
+    return {
+      show: false,
+      caret: "down-caret"
+    }
+  },
+  methods: {
+    showDetails(e) {
+      this.$refs.test.parentElement.parentElement.parentElement.classList.add('open');
+      this.show = !this.show;
+      if (this.show) {
+        this.caret = "up-caret";
+        // app.onShow = 'open'
+      } else {
+        this.caret = "down-caret";
+        this.$refs.test.parentElement.parentElement.parentElement.classList.remove('open');
+      }
+    }
+  }
+});
+
 var app = new Vue({
   el: '#define-list',
   data: {
     infoList: [],
-    foster: [{
+    fosters: [
+      {
       name: 'Omar',
-      phone: '416-799-6xy',
-      address: 'Univeristy Avenue Toronto',
-      contact: ''
-    }],
+      phone: '416-799-600',
+      address: 'Univeristy Avenue',
+      emial: 'omar@gmail.com',
+      city: 'Toronto'
+      },
+      {
+      name: 'DEVON',
+      phone: '416-799-600',
+      address: 'Univeristy Avenue',
+      emial: 'devon@gmail.com',
+      city: 'Toronto'
+    },
+    {
+    name: 'Harry',
+    phone: '416-799-600',
+    address: 'Univeristy Avenue',
+    emial: 'harry@gmail.com',
+    city: 'Toronto'
+    }
+  ],
     onShow: ''
   },
   computed: {
