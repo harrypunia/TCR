@@ -65,9 +65,9 @@ app.get('/email', (request, response) => {
 
 var mailOptions = {
   from: 'thomas-d@hotmail.ca',
-  to: 'umbralsoul13@live.ca, isabelle.vohsemer@gmail.com, laurenblack042699@gmail.com',
+  to: 'umbralsoul13@live.ca, isabelle.vohsemer@gmail.com, laurenblack042699@gmail.com, harry@punias.com, Omarelbanby.guitarist@gmail.com',
   subject: 'Sending Email using Node.js',
-  html: '<h1>Welcome</h1><p>Looking for some pussy?</p>'
+  html: '<h1>Welcome</h1><p>Email message</p>'
 };
 
 transporter.sendMail(mailOptions, function(error, info){
