@@ -34,54 +34,6 @@ app.post('/AddCat', (request, response) => {
     //DB connected - parse request.
     const catObj = request.body;
     console.dir(catObj);
-<<<<<<< HEAD
-    
-    
-    
-    // var intakeDate = moment.toDate(),
-    //     shelterName = catObj.shelterName,
-    //     catname = catObj.catName,
-    //     primaryColour = catObj.primaryColour,
-    //     catWeight = catObj.catWeight,
-    //     fivTested = catObj.fivTested,
-    //     fvrcpdate = catObj.fvrcpdate,
-    //     catAge = catObj.catAge,
-    //     secondaryColour = catObj.secondaryColour,
-    //     gender = catObj.gender,
-    //     vaccineUpToDate = catObj.vaccineUpToDate,
-    //     spayneut = catObj.spayneut,
-    //     behaviour = catObj.behaviour,
-    //     medHist = catObj.medHist,
-    //     comments = catObj.comments;
-
-//     var columnNames = "catID, IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES";
-//     var values = `${intakeDate}, ${shelterName}, ${catname}, ${primaryColour}, ${catWeight}, 
-//                   fivTested, 
-//                   fvrcpdate, 
-//                   catAge, 
-//                   secondaryColour, 
-//                   gender, 
-//                   vaccineUpToDate, 
-//                   spayneut, 
-//                   behaviour, 
-//                   medHist, 
-//                   comments
-//                  ];
-//     var sql = "INSERT ("+columnNames+") CAT VALUES ("+values+")";
-
-//     con.query(sql, function (err, result) {
-//       if (err) throw err;
-//         console.log("1 record inserted");
-//       });
-//     con.end();
-
-    response.sendFile(__dirname + '/public/Shelter/index.html');
-  });
-
-  
-  
-  
-=======
     var shelterName = catObj.shelterName,
         catname = catObj.catName,
         primaryColour = catObj.primaryColour,
@@ -121,7 +73,6 @@ app.post('/AddCat', (request, response) => {
         console.log(result);
       });
    response.sendFile(__dirname + '/public/Shelter/index.html');
->>>>>>> b0baa8b971ac377bd43dc94f2903fd0c7ffcad12
   // return response.json("Looks like the cat's out of the bag now.");
 });
 
