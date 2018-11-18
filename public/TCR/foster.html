@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="../global_assets/css/globalHeader.css">
     <link rel="stylesheet" href="../global_assets/css/global.css">
     <link rel="stylesheet" href="../global_assets/css/globalList.css">
-    <link rel="stylesheet" href="dev/css/container.css">
-    <link rel="stylesheet" href="dev/css/header.css">
     <title>TCR</title>
 </head>
 
@@ -35,8 +33,8 @@
         <div class="header__profile header__elements">
             <a href="profile.html"><img src="../global_assets/SVG/profile.svg" alt="Profile" href="profile.html"></a>
         </div>
-
-         <div class="container">
+    </div>
+    <div class="container">
         <div class="container__title">
             <div class="container__title__heading define-text text-dark text__size-jumbo text-bold">CATS</div>
         </div>
@@ -51,12 +49,13 @@
                 <p class="filter-bar--text">Status</p>
                 <p class="filter-bar--text"><img src="" alt=""></p>
             </div>
-            <div v-for="cat in catsList"  class="list-elements define-text text-regular text-dark text__size-small">
-              <cat-Info  :cat="cat"><cat-Info/>
+            <div v-for="cat in catsList" class="list-elements define-text text-regular text-dark text__size-small">
+                <cat-Info :cat="cat">
+                    <cat-Info />
             </div>
         </div>
-        <script src="./dev/js/main.js"></script>
     </div>
+    <script src="../global_assets/js/global.js"></script>
 </body>
 
 </html>

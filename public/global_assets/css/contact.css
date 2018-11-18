@@ -1,5 +1,4 @@
 .contact__container {
-    background-color: #d7d9ed;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -12,14 +11,6 @@
     padding: 50px 0 50px;
 }
 
-/*
-.contact-header {
-    background-color: #d7d9ed;
-    color: white;
-    padding: 10px 150px;
-}
-*/
-
 .contact__information {
     padding: 10px 50px;
 }
@@ -27,7 +18,6 @@
 .contact__information-smaller {
     padding: 5px 50px;
     font-size: 0.7em;
-    text-align: right;
 }
 
 .contact__form {
