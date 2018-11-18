@@ -54,16 +54,18 @@ app.post('/Shelter/addCat', (request, response) => {
 
 app.get('/email', (request, response) => {
   var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'fazekade@sheridancollege.ca',
-    pass: 'Vk4tcp2HfZ6L'
-  }
+    service: 'outlook.com',
+    secureConnection: false, // TLS requires secureConnection to be false
+    port: 587, // port for secure SMTP
+    auth: {
+      user: 'thomas-d@hotmail.ca',
+      pass: 'RdUA@doAzoPiTUsAqD@K2Xi*s$r9T4'
+    }
 });
 
 var mailOptions = {
-  from: 'fazekade@sheridancollege.ca',
-  to: 'thomas-d@hotmail.ca',
+  from: 'thomas-d@hotmail.ca',
+  to: 'fazekade@sheridancollege.ca',
   subject: 'Sending Email using Node.js',
   text: 'Looking for pussy.'
 };
