@@ -50,6 +50,7 @@ app.post('/Shelter/addCat', (request, response) => {
     });
     console.log("Successfully inserted into DB.");
    response.sendFile(__dirname + '/public/Shelter/index.html');
+  con.close();
 });
 
 app.get('/', (req, res) => {
