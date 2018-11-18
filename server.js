@@ -31,7 +31,7 @@ app.post('/Shelter/addCat', (request, response) => {
   var name = catObj.catName;
   var breed = catObj.breed;
 
-  var sql = "INSERT INTO Cat (intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, breed, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments) VALUES ('2018-05-12', '"+name+"', 'Brown', 5, true, '2019-05-23', 5, '"+breed+"', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3')";
+  var sql = "INSERT INTO Cat (intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, breed, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments) VALUES ('2018-05-12', '"+name+"', 'Brown', 5, false, '2019-05-23', 5, '"+breed+"', 'Male', false, true, 'Nothing1', 'Nothing2', 'Nothing3')";
 
   // Execute command.
   con.query(sql, function (err, result) {
@@ -48,7 +48,8 @@ app.post('/Shelter/addCat', (request, response) => {
     con.end();
 
     // Redirect.
-    response.sendFile(__dirname + '/public/Shelter/index.html');
+    window.location = 
+    response.sendFile(__dirname + '/public/TCR/index.html');
 });
 
 app.get('/api/allcats', (req,res)=>{
