@@ -1,0 +1,234 @@
+
+
+
+
+.profilecont {
+    width: 100vmin;
+    height: 490px;
+    background-color:#F0F4F6;
+}
+
+
+p {
+    font-family: "Arial"  
+}
+
+h2 {
+    font-family: "Arial"  
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr ;
+    grid-template-rows: 20px, 100px 100px 100px;
+  grid-gap: 10px;
+
+  padding: 10px;
+}
+.grid-container > div {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.myinfo {
+     
+    background-color:#ACDCD5;
+    height:20px;
+    padding: 10px
+}
+
+.myinfo h2 {
+    margin:0;
+    font-size: 20px;
+    float:left;
+}
+
+.myinfo p {
+    float:right;
+    margin-top: 0px;
+    
+    
+}
+
+
+.profileimg {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    grid-column-start: 0;
+  grid-column-end: 1;
+    margin-top: 20px;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+    
+   
+}
+
+.fullname 
+input[type=text]{
+   width: 360px;
+    margin-bottom: 10px;
+    outline: none;
+  border: 0px;
+  background-color: rgba(255, 255, 255, 0.0);
+    border-bottom: 1px solid #707070;
+    color:#707070;
+    padding-top: 10px;
+}
+
+.address 
+input[type=text] {
+    width: 360px;
+    margin-top: 10px;
+    color:#707070;
+     border: 0px;
+  background-color: rgba(255, 255, 255, 0.0);
+    border-bottom: 1px solid #707070;
+    color:#707070;
+}
+
+.phoneemail input[type=text], .aptcity input[type=text], .password input[type=text], .companyname input[type=text] {
+    border:0;
+    background-color: rgba(255,255,255,0.0);
+    border-bottom: 1px solid #707070;
+    color:#707070 ; 
+    
+}
+
+.companyname input[type=text]{
+    margin-top:10px;
+    width: 360px;
+    outline: none;
+  border: 0px;
+  background-color: rgba(255, 255, 255, 0.0);
+    border-bottom: 1px solid #707070;
+    color:#707070;
+    padding-top: 10px;
+}
+.email, .passwordc, .city {
+    float:right;
+    margin-right: 106px;
+    
+}
+
+    
+
+
+
+
+.item2 {
+      grid-column-start: 1;
+  grid-column-end: 4;
+    
+}
+
+.bio textarea {
+     width: 338px;
+    margin-top: 10px;
+    font: arial;
+}
+
+.item3 {
+      grid-column-start: 1;
+  grid-column-end: 4;
+    
+}
+
+.item4 {
+ grid-column-start: 1;
+  grid-column-end: 4;
+    
+}
+
+.button__profile {
+width: 110px;
+    height: 15px;
+    padding:12px;
+background-color: #2BAE9D;
+    border-radius: 5px;
+    color:white;
+    text-align:center;
+    float:right;
+    margin-right: 100px;
+    
+}
+
+
+
+/* MOBILE */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      
+      .profilecont {
+    width: 90vmin;
+    height: 570px;
+    background-color:#F0F4F6;
+}
+      
+      body { background-color:blue;}
+      .fullname 
+input[type=text] {
+   width: 165px;
+    margin-bottom: 10px;
+}
+    
+      .address
+input[type=text] {
+   width: 165px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+      
+      .bio textarea {
+     width: 165px;
+    margin-top: 10px;
+    color:white;
+}
+      
+      textarea::-webkit-input-placeholder {
+font-family: "Arial"  
+}
+
+textarea:-moz-placeholder { /* Firefox 18- */
+font-family: "Arial"   
+}
+
+textarea::-moz-placeholder {  /* Firefox 19+ */
+font-family: "Arial"    
+}
+
+textarea:-ms-input-placeholder {
+font-family: "Arial"  
+}
+      
+.phoneemail, .aptcity, .password
+input[type=text] {
+   width: 165px;
+    margin-bottom: 10px;
+    
+    
+}
+      .email {
+          padding-top: 10px;
+      }
+     
+
+      .button__profile {
+
+    margin-right: 30px;
+    
+}
+
+      .passwordc {
+          float:left;
+      }
+      
+      .button__profile {
+          float:left;
+      }
+
