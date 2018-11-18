@@ -25,13 +25,23 @@
     height: 40px;
     background: #c2c4d6;
     cursor: pointer;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
 }
 
 .catInfo {
   display: flex;
-  height: 100%;
+  height: 40px;
+  align-items: flex-start;
 }
+
+.open {
+  display: block;
+  height: 200px;
+  z-index: 10;
+}
+
 
 /* .list-elements:last-child {
   flex-direction: column;
