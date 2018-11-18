@@ -161,8 +161,8 @@
 }
 
 .detail__photo {
-    height: 350px;
-    width: 300px;
+    height: 330px;
+    width: 275px;
     background-color: #000;
     float: left;
     margin: 15px 10px 10px 15px;
@@ -189,18 +189,19 @@
     font-size: 15px;
 }
 
-.detail__proposal {
+.detail__shelterInfo {
     border-bottom: 1px #ccc solid;
-    height: 80px;
+    height: 70px;
     width: 560px;
     float: left;
     display: block;
     margin: 15px 5px 5px 5px;
 }
 
-.detail__shelterInfo {
+
+.detail__proposal {
     border-bottom: 1px #ccc solid;
-    height: 70px;
+    height: 100px;
     width: 560px;
     float: left;
     display: block;
