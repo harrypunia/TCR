@@ -5,12 +5,15 @@ body {
 .addCat {
     width: 1000px;
     height: auto;
-    background: Red;
+    /*    background: Red;*/
     margin: 20px auto;
 }
 
-.shelterSelect select {
-    width: 150px;
+select {
+    border: none;
+    background: white;
+    height: 20px;
+    width: 200px;
 }
 
 input {
@@ -35,15 +38,17 @@ form {
 }
 
 .container__top-half-left {
-    background: gray;
+    /*    background: gray;*/
 }
 
 .container__top-half-right {
-    background: blue;
+    /*    background: blue;*/
 }
 
 .container__bottom-half {
-    background: wheat;
+    /*    background: wheat;*/
+    padding: 20px;
+    margin-left: 20px;
 }
 
 input[type="radio"] {
@@ -52,8 +57,8 @@ input[type="radio"] {
 }
 
 
-/*
-.containers__all > input {
-    height: 90px;
+.containers__all > textarea {
+    height: 100px;
+    width: 800px;
+    padding-top: 20px;
 }
-*/
