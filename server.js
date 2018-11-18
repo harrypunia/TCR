@@ -34,6 +34,7 @@ app.use(bodyParser.json());
 
 
 app.use(express.static('public'));
+
 app.get('/AddCat', (request, response) => {
   // Provides the form for adding a cat.
   //TODO: Provide the relevant UI.
