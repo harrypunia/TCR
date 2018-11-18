@@ -44,96 +44,16 @@
         <div class="container__title">
             <div class="container__title__heading define-text text-dark text__size-large text-bold">Volunteers and Employees</div>
         </div>
-        <div class="container__staff">
-            <div class="staff__profile">
-                <div class="staff__container">
-                    <div class="staff__picture"><img src="../global_assets/SVG/placeholder.svg"></div>
-                    <div class="staff__text text-regular text-dark text__size-regular">
-                        <div class="staff__name">
-                            Thomas Everton
-                        </div>
-                        <div class="staff__phoneNo">
-                            123-456-7890
-                        </div>
-                        <div class="button-wrapper">
-                            <button class=" define-button button__size-medium">Message</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="staff__profile">
+        <div id="staff" class="container__staff">
+            <div v-for="v in volunteers" id="staff" class="staff__profile">
                 <div class="staff__container">
                     <div class="staff__picture"><img src="../global_assets/SVG/placeholder.svg"> </div>
-                    <div class="staff__text text-regular text-dark text__size-regular">
-                        <div class="staff__name">
-                            Thomas Everton
+                    <div class="staff__text define-text text-dark">
+                        <div class="staff__name text-bold text__size-medium">
+                            {{v.name}}
                         </div>
-                        <div class="staff__phoneNo">
-                            123-456-7890
-                        </div>
-                        <div class="button-wrapper">
-<button class=" define-button button__size-medium">Message</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="staff__profile">
-                <div class="staff__container">
-                    <div class="staff__picture"><img src="../global_assets/SVG/placeholder.svg"></div>
-                    <div class="staff__text text-regular text-dark text__size-regular">
-                        <div class="staff__name">
-                            Thomas Everton
-                        </div>
-                        <div class="staff__phoneNo">
-                            123-456-7890
-                        </div>
-                        <div class="button-wrapper">
-                            <button class=" define-button button__size-medium">Message</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="staff__profile">
-                <div class="staff__container">
-                    <div class="staff__picture"><img src="../global_assets/SVG/placeholder.svg"></div>
-                    <div class="staff__text text-regular text-dark text__size-regular">
-                        <div class="staff__name">
-                            Thomas Everton
-                        </div>
-                        <div class="staff__phoneNo">
-                            123-456-7890
-                        </div>
-                        <div class="button-wrapper">
-                            <button class=" define-button button__size-medium">Message</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="staff__profile">
-                <div class="staff__container">
-                    <div class="staff__picture"><img src="../global_assets/SVG/placeholder.svg"></div>
-                    <div class="staff__text text-regular text-dark text__size-regular">
-                        <div class="staff__name">
-                            Thomas Everton
-                        </div>
-                        <div class="staff__phoneNo">
-                            123-456-7890
-                        </div>
-                        <div class="button-wrapper">
-                            <button class=" define-button button__size-medium">Message</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="staff__profile">
-                <div class="staff__container">
-                    <div class="staff__picture"><img src="../global_assets/SVG/placeholder.svg"></div>
-                    <div class="staff__text text-regular text-dark text__size-regular">
-                        <div class="staff__name">
-                            Thomas Everton
-                        </div>
-                        <div class="staff__phoneNo">
-                            123-456-7890
+                        <div class="staff__phoneNo text-regular text__size-tiny">
+                            {{v.phone}}
                         </div>
                         <div class="button-wrapper">
                             <button class=" define-button button__size-medium">Message</button>
@@ -144,6 +64,28 @@
         </div>
     </div>
     <script src="../global_assets/js/global.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#staff',
+            data: {
+                volunteers: [{
+                    name: 'Devon',
+                    phone: 1234567890
+                }, {
+                    name: 'Devon',
+                    phone: 1234567890
+                }, {
+                    name: 'Devon',
+                    phone: 1234567890
+                }, {
+                    name: 'Devon',
+                    phone: 1234567890
+                }, {
+                    name: 'Devon',
+                    phone: 1234567890
+                }, ]
+            }
+        })
+    </script>
 </body>
-
 </html>

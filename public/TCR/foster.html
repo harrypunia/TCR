@@ -48,10 +48,10 @@
                 <p class="filter-bar--text">Address</p>
                 <p class="filter-bar--text">Email</p>
                 <p class="filter-bar--text">City</p>
-                <p class="filter-bar--text"><img src="" alt=""></p>
             </div>
             <div v-for="foster in fosters" class="list-elements define-text text-regular text-dark text__size-small">
                 <list_bars_fosters :info="foster">
+
 
                     <div class="foster__col foster__col-left">
                         <div class="foster__col__image"></div>
@@ -59,9 +59,11 @@
                     <div class="foster__col foster__col-right">
                         <p class="text-bold text__size-regular text-dark" style="float:left;">Biography of Foster</p>
                         <p class="foster__biography define-text text-dark ">Has been working with Toronto Cat Rescue for over 1 year and tends to specializes with small kittens and cats with special care needs. Only has a capacity of about 4 cats in total. Currently has 3 cats staying in their foster care and 2 of which require lots of attention and love.</p>
+                        <input class="foster__col__button define-button button-medium" value="Email Foster">
                     </div>
 
                 </list_bars_fosters>
+
             </div>
         </div>
     </div>
