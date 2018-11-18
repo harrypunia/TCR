@@ -1,3 +1,11 @@
+.container__title {
+    font-family: 'omnes-pro', serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
 .define-list {
     float: left;
     box-sizing: border-box !important;
@@ -6,6 +14,7 @@
     height: auto;
     margin-top: 100px;
     margin-left: 150px;
+
 }
 
 .list-filter {
@@ -21,7 +30,7 @@
     align-items: center;
     flex-wrap: nowrap;
     padding-bottom: 200px;
-    font-weight: 500;
+
 }
 
 .list-elements {
