@@ -8,23 +8,26 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/globalLogIn.css">
+    <link rel="stylesheet" href="css/globalButtons.css">
     <title>TCR</title>
 </head>
 
 <body>
     <div class="logIn__box">
-        <div class="text-bold__heading text-dark">
+        <div class="text-bold text-dark text__size-regular logIn-text">
             LOG IN
-            <div class="text-bold__heading logIn__text">
-                <input type="text" value="" placeholder="Email/Username" required>
-                <br>
-                <input type="password" value="" password="Password" required>
-                <br>
-                <input type="submit">
-            </div>
         </div>
+        <div class="text-bold__heading logIn__text">
+            <input class="textField" type="text" value="" placeholder="Email/Username" required>
+            <br>
+            <input class="textField" type="password" value="" placeholder="Password" required>
+            <br>
+            <input class="define-button logIn__button" type="submit">
+        </div>
+        <div class="text-regular smolText">Create an Account</div>
+        <div class="text-regular smolText">Forgot Password</div>
+
     </div>
-    <script src="main.js"></script>
 </body>
 
 </html>
