@@ -48,7 +48,6 @@ app.post('/Shelter/addCat', (request, response) => {
     con.end();
 
     // Redirect.
-    window.location = 
     response.sendFile(__dirname + '/public/TCR/index.html');
 });
 
