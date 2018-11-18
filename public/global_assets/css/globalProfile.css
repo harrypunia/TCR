@@ -2,16 +2,16 @@
     width: 90%;
     padding: 70px;
     margin: 50px auto 0;
-    background-color: yellowgreen;
+    background-color: #bababa;
     display: flex;
     justify-content: center;
 }
 
 
 .profile__image {
-    background-color: firebrick;
-    width: 250px;
-    height: 250px;
+    background-color: #e6e6e6;
+    width: 200px;
+    height: 200px;
     padding: 20px;
 }
 
@@ -24,8 +24,8 @@
 
 
 .profile__info p {
-    background-color: aquamarine;
-    padding: 10px 10px;
+    background-color: #e6e6e6;
+    padding: 15px 20px;
     margin-bottom: 10px;
 
 }
@@ -39,8 +39,20 @@
     width: 49%;
 }
 
-.profile__info p:nth-child(4) {
-    background-color: purple;
-    width: 49%;
-    text-align: left;
+.profile__info p:nth-child(5) {
+    height: 150px;
+}
+
+.profile__edit-info-button {
+    text-align: center;
+    margin: 20px auto 0;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #2bae9d;
+    color: black;
+}
+
+.profile__edit-info-button:hover {
+    cursor: pointer;
 }
