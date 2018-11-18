@@ -23,21 +23,6 @@ con.connect(function(err) {
     console.error('Database connection failed: ' + err.stack);
     return;
   }
-  
-  var intakeTime = moment.valueOf();
-  
-  //var values = `'${intakeTime}', '${catObj.catName}', '${catObj.primaryColour}', ${catObj.catWeight}, ${catObj.fivTested}, '${catObj.fvrcpdate}', ${catObj.catAge}, '${catObj.secondaryColour}', '${catObj.gender}', ${catObj.vaccineUpToDate}, ${catObj.spayneut}, '${catObj.behaviour}', '${catObj.medHist}', '${catObj.comments}'`;
-  var values = "'2018-05-12', 'Not my cat', 'Brown', 5, true, '2019-05-23', 5, 'Black', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3'";
-  var columnNames = "intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments";
-  var sql = `INSERT INTO Cat (intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments) VALUES ('2018-05-12', 'Devon', 'Brown', 5, true, '2019-05-23', 5, 'Black', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3')`; 
-
-  console.dir(sql);
-  
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-    
-    console.log(result);
-  });
     
 });
 
@@ -52,16 +37,15 @@ app.post('/Shelter/addCat', (request, response) => {
   var intakeTime = moment.valueOf();
   
   //var values = `'${intakeTime}', '${catObj.catName}', '${catObj.primaryColour}', ${catObj.catWeight}, ${catObj.fivTested}, '${catObj.fvrcpdate}', ${catObj.catAge}, '${catObj.secondaryColour}', '${catObj.gender}', ${catObj.vaccineUpToDate}, ${catObj.spayneut}, '${catObj.behaviour}', '${catObj.medHist}', '${catObj.comments}'`;
-  var values = "'2018-05-12', 'Kitty', 'Brown', 5, true, '2019-05-23', 5, 'Black', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3'";
+  var values = "'2018-05-12', 'Not my cat', 'Brown', 5, true, '2019-05-23', 5, 'Black', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3'";
   var columnNames = "intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments";
-  var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
-
-  console.dir(sql);
+  var sql = `INSERT INTO Cat (intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments) VALUES ('2018-05-12', 'Devon', 'Brown', 5, true, '2019-05-23', 5, 'Black', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3')`; 
   
   con.query(sql, function (err, result) {
     if (err) throw err;
-      console.log("Failure inserting into DB: "+result);
-    });
+    
+    console.log(result);
+  });
     
     
     console.log("Successfully inserted into DB.");
@@ -72,16 +56,16 @@ app.get('/email', (request, response) => {
   var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'youremail@gmail.com',
-    pass: 'yourpassword'
+    user: 'fazekade@sheridancollege.ca',
+    pass: 'Vk4tcp2HfZ6L'
   }
 });
 
 var mailOptions = {
-  from: 'youremail@gmail.com',
-  to: 'myfriend@yahoo.com',
+  from: 'fazekade@sheridancollege.ca',
+  to: 'thomas-d@hotmail.ca',
   subject: 'Sending Email using Node.js',
-  text: 'That was easy!'
+  text: 'Looking for pussy.'
 };
 
 transporter.sendMail(mailOptions, function(error, info){
