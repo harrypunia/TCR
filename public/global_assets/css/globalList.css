@@ -32,7 +32,7 @@
     justify-content: flex-start;
 }
 
-.catInfo {
+.list_bars {
     display: flex;
     height: 40px;
     align-items: flex-start;
