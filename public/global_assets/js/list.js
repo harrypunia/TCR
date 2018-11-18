@@ -111,8 +111,9 @@ var app = new Vue({
   },
   computed: {
     test() {
-      fetch('https://giftthecode.glitch.me/api/allcats').then(response => response.json())
+      fetch('https://giftthecode.glitch.me/public/api/allcats').then(response => response.json())
         .then((data) => {
+          console.log("Devon was here");
           let catList = [];
           for (let i = 0; i < data.length; i++) {
             (data[i].spayNeut) ? (data[i].spayNeut = 'yesSpayed') : (data[i].spayNeut = 'noSpayed');
