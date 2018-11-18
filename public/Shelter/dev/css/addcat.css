@@ -56,11 +56,11 @@ form {
 }
 
 input[type="radio"] {
-/*    display: inline-flex;*/
+    /*    display: inline-flex;*/
     margin-top: 30px;
     margin-left: 20px;
     color: #29ae9c;
-    
+
 }
 
 input[type="submit"] {
@@ -68,10 +68,20 @@ input[type="submit"] {
 
 }
 
+.spayed {
+    margin-top: 30px;
+    padding-left: 8px;
+
+    width: 800px;
+    height: 70px;
+    background: #eee;
+}
+
 
 .containers__all > textarea {
     height: 100px;
     width: 800px;
+    margin-bottom: 40px;
     padding: 20px;
     border: none;
     background: #eee;
