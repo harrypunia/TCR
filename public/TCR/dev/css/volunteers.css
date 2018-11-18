@@ -1,8 +1,11 @@
 .container__staff {
+    width: 100%;
+    margin: 50px;
     display: flex;
     align-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
+
 }
 
 .staff__profile {}
