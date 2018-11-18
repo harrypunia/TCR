@@ -51,7 +51,7 @@ input[type="radio"] {
 }
 
 input[type="submit"] {
-    width: 100px;
+    min-width: 100px;
 }
 
 select {
