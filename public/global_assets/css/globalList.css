@@ -42,7 +42,7 @@
 
 .open {
     display: block;
-    height: 400px;
+    height: 750px;
     z-index: 10;
 }
 
@@ -89,7 +89,7 @@
 
 .list__detail {
     width: 100%;
-    height: 350px;
+    height: 700px;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -156,10 +156,9 @@
 }
 
 .list__detail__wrapper {
-    width: 90%;
+    width: 100%;
     height: 100%;
     background: Red;
-
 }
 
 .detail__photo {
@@ -168,24 +167,39 @@
     background-color: #000;
     float: left;
     margin: 15px 10px 10px 15px;
+    display: block;
 }
 
-.detail__location {
-    background-color: #fff;
+.detail__col1, .detail__col2 {
+    display: block;
+    float: left;
+}
+
+.detail__text1 {
+    background-color: blue;
     height: 50px;
-    width: 200px;
+    width: 275px;
+    clear: both;
+    display: block;
+    margin: 15px 5px 5px 5px;
+}
+
+.detail__proposal {
+    background-color: blue;
+    height: 50px;
+    width: 500px;
     float: left;
     display: block;
     margin: 15px 5px 5px 5px;
 }
-/*
 
 .detail__bio {
     background-color: #ccc;
     height: 200px;
-    width: 200px;
+    width: 500px;
     float: left;
-    display: block;
-    margin: 10px 5px 5px 5px;
+    clear: both;
+    margin: 5px 10px 10px 15px;
+    display: block;a
 }
-*/
+
