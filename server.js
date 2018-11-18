@@ -25,37 +25,30 @@ app.use(express.static('public'));
 app.post('/Shelter/addCat', (request, response) => {
   // Handles submitting a new cat.
 
-  //DB connected - parse request.
   const catObj = request.body;
   var intakeTime = moment.valueOf();
 
-  //var values = `'${intakeTime}', '${catObj.catName}', '${catObj.primaryColour}', ${catObj.catWeight}, ${catObj.fivTested}, '${catObj.fvrcpdate}', ${catObj.catAge}, '${catObj.secondaryColour}', '${catObj.gender}', ${catObj.vaccineUpToDate}, ${catObj.spayneut}, '${catObj.behaviour}', '${catObj.medHist}', '${catObj.comments}'`;
   var values = "'2018-05-12', 'Not my cat', 'Brown', 5, true, '2019-05-23', 5, 'Black', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3'";
   var columnNames = "intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments";
   var sql = `INSERT INTO Cat (intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments) VALUES ('2018-05-12', 'Devon', 'Brown', 5, true, '2019-05-23', 5, 'Black', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3')`;
 
+  // Execute command.
   con.query(sql, function (err, result) {
     if (err) throw err;
 
     console.log("Successfully inserted into DB.");
     
+    // Send email.
+    sendEmail();
+    
   });
 
-
-  var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
-
-  console.dir(sql);
-
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-      console.log("Failure inserting into DB: "+result);
-    });
-
-    con.close();
-    console.log("Successfully inserted into DB.");
+  // Close database.
+    con.close;
+  
+    // Redirect.
     response.sendFile(__dirname + '/public/Shelter/index.html');
 });
-
 
 app.get('/api/allcats', (req,res)=>{
   const selectAll = `SELECT * FROM Cat`;
@@ -90,7 +83,7 @@ function sendEmail() {
     var mailOptions = {
       from: 'thomas-d@hotmail.ca',
       to: 'umbralsoul13@live.ca, isabelle.vohsemer@gmail.com, laurenblack042699@gmail.com, harry@punias.com, Omarelbanby.guitarist@gmail.com',
-      subject: 'Sending Email using Node.js',
+      subject: 'New Cats in Shelter',
       html: '<h1>Welcome</h1><p>Email message</p>'
     };
 
