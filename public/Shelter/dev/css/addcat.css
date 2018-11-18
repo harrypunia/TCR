@@ -1,13 +1,10 @@
 .addCat {
     width: 1000px;
     height: auto;
-    /*    background: Red;*/
     margin: 20px auto;
 }
 
-form {
-    /*    border: none;*/
-}
+form {}
 
 .containers__all {
     width: 100%;
