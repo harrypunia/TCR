@@ -13,9 +13,9 @@ Vue.component('list_bars', {
       </div>
       <div class="list__detail" v-show="show">
         <div class="list__detail__wrapper">
- <div class="detail__photo"></div>
+        <div class="detail__photo"></div>
         <div class="detail__name"></div>
-    <div class="detail__bio"></div>
+        <div class="detail__bio"></div>
             </div>
       </div>
     </div>
