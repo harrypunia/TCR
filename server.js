@@ -3,7 +3,8 @@ const express = require('express'),
       bodyParser = require('body-parser'),
       moment = require('moment'),
       mysql = require('mysql'),
-      cors = require('cors');
+      cors = require('cors'),
+      nodemailer = require('nodemailer');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -65,6 +66,31 @@ app.post('/Shelter/addCat', (request, response) => {
     
     console.log("Successfully inserted into DB.");
     response.sendFile(__dirname + '/public/Shelter/index.html');  
+});
+
+app.get('/email', (request, response) => {
+  var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'youremail@gmail.com',
+    pass: 'yourpassword'
+  }
+});
+
+var mailOptions = {
+  from: 'youremail@gmail.com',
+  to: 'myfriend@yahoo.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
 });
 
 app.get('/', (req, res) => {
