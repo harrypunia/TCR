@@ -1,57 +1,51 @@
 <!DOCTYPE html>
 <html lang="">
 
-<link rel="stylesheet" href="shelter.css">
+<link rel="stylesheet" href="profile.html">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>TCR</title>
+    <script src="../global_assets/lib/vue.min.js"></script>
+    <link rel="stylesheet" href="../global_assets/css/globalContainer.css">
+    <link rel="stylesheet" href="../global_assets/css/define-text.css">
+    <link rel="stylesheet" href="../global_assets/css/fonts.css">
+    <link rel="stylesheet" href="../global_assets/css/globalHeader.css">
+    <link rel="stylesheet" href="../global_assets/css/global.css">
+    <link rel="stylesheet" href="../global_assets/css/contact.css">
+    <link rel="stylesheet" href="dev/css/profile.css">
+    <title>Profile</title>
 </head>
 
 <body>
-    <div class="">My Profile</div>
-    <div class="profilecont">
-        <div class="myinfocont">
-            <div class="myinfo">
-                <h2>My Information</h2>
-                <p></p>
+    <div class="header">
+        <a href="index.html">
+            <div class="header__logo">
             </div>
-            <div class="grid-container">
-                <div class="profileimg"></div>
-                <div class="item1">
-                    <div class="companyname">
-                        <input type="text" id="fullname" value="Company Name" /></div>
-                    <div class="fullname">
-                        <input type="text" id="fullname" value="Full Name" /></div>
-                    <div class="phoneemail">
-                        <input type="text" id="" value="Phone Number" />
-                        <div class="email"> <input type="text" id="" value="Email" /></div>
-                    </div>
-                    <div class="address">
-                        <input type="text" id="" value="Address" />
-                    </div>
-                </div>
-                <div class="item2">
-                    <div class="aptcity">
-                        <input type="text" id="" value="Apt/Suite" />
-                        <div class="city"><input type="text" id="" value="City" /></div>
-                    </div>
-                </div>
-                <div class="item3">
-                    <div class="password">
-                        <input type="text" id="" value="Change Password" />
-                        <div class="passwordc"><input type="text" id="" value="Confirm Password" /></div>
-                    </div>
-                </div>
-                <div class="item4">
-                    <div class="button__profile">Save Changes</div>
-                </div>
-            </div>
+        </a>
+        <hr class="header__hr" />
+
+        <div class="header__cats header__elements header__active">
+            <a href="index.html"><img src="../global_assets/SVG/cat.svg" alt="Cats"></a>
         </div>
+        <div class="header__addcat header__elements">
+            <a href="addCat.html"><img src="../global_assets/SVG/addacat.svg" alt="Add Cat"></a>
+        </div>
+        <div class="header__profile header__elements">
+            <a href="profile.html"><img src="../global_assets/SVG/profile.svg" alt="Profile" href="profile.html"></a>
+        </div>
+        <div class="header__help header__elements">
+            <a href="contact.html"><img src="../global_assets/SVG/help.svg" alt="Help"></a>
+        </div>
+
+        <div class="header__logout"> Log Out</div>
     </div>
 
+    <div class="container">
+        <div class="container__title">
+            <div class="container__title__heading define-text text-bold text-dark text__size-jumbo">Profile</div>
+        </div>
+    </div>
 
 </body>
 
