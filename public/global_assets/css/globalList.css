@@ -191,7 +191,7 @@
 
 .detail__shelterInfo {
     border-bottom: 1px #ccc solid;
-    height: 70px;
+    height: 90px;
     width: 560px;
     float: left;
     display: block;
@@ -227,4 +227,9 @@
     float: right;
     display: block;
     margin-right: 20px;
+}
+
+.fosterLink {
+    margin:0;
+    width: 200px;
 }
