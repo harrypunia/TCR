@@ -13,26 +13,28 @@ var con = mysql.createConnection({
   host     : 'catrescue.ccuxgnxok5zx.us-east-1.rds.amazonaws.com',
   user     : 'root',
   password : 'Password1234',
-  port     : 3306
-}); 
+  port     : 3306,
+  database : 'catrescue'
+});
+
+con.connect(function(err) {
+  if (err) {
+    console.error('Database connection failed: ' + err.stack);
+    return;
+  }
+
+  console.log('Connected to database.');
+});
 
 
 app.use(express.static('public'));
 
 app.post('/AddCat', (request, response) => {
   // Handles submitting a new cat.
-
-  con.connect(function(err) {
-    // Connection failed - cancel.
-    if (err) {
-      console.error('Database connection failed: ' + err.stack);
-      return;
-    }
-    console.log('Connected to database.');
-
-    // DB connected - parse request.
+    //DB connected - parse request.
     const catObj = request.body;
     console.dir(catObj);
+<<<<<<< HEAD
     
     
     
@@ -79,6 +81,47 @@ app.post('/AddCat', (request, response) => {
   
   
   
+=======
+    var shelterName = catObj.shelterName,
+        catname = catObj.catName,
+        primaryColour = catObj.primaryColour,
+        catWeight = catObj.catWeight,
+        fivTested = catObj.fivTested,
+        fvrcpdate = catObj.fvrcpdate,
+        catAge = catObj.catAge,
+        secondaryColour = catObj.secondaryColour,
+        gender = catObj.gender,
+        vaccineUpToDate = catObj.vaccineUpToDate,
+        spayneut = catObj.spayneut,
+        behaviour = catObj.behaviour,
+        medHist = catObj.medHist,
+        comments = catObj.comments;
+
+    var columnNames = "IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES";
+    var values = `shelterName,
+                  catname,
+                  primaryColour,
+                  catWeight,
+                  fivTested,
+                  fvrcpdate,
+                  catAge,
+                  secondaryColour,
+                  gender,
+                  vaccineUpToDate,
+                  spayneut,
+                  behaviour,
+                  medHist,
+                  comments
+                 `;
+
+    var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
+
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+        console.log(result);
+      });
+   response.sendFile(__dirname + '/public/Shelter/index.html');
+>>>>>>> b0baa8b971ac377bd43dc94f2903fd0c7ffcad12
   // return response.json("Looks like the cat's out of the bag now.");
 });
 
@@ -117,6 +160,6 @@ app.use((err, req, res, next) => {
 });
 
 // listen for requests.
-var listener = app.listen(process.env.PORT, function() {
+var listener = app.listen(3000, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });
