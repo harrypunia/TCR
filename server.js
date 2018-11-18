@@ -46,10 +46,10 @@ app.post('/AddCat', (request, response) => {
   // Get AddCat request.
   const catObj = request.body;
   console.dir(catObj);
-
+  response.sendFile(__dirname + '/public/Shelter/index.html');
   //TODO: Add to DB.
   
-  return response.json("Looks like the cat's out of the bag now.");
+  // return response.json("Looks like the cat's out of the bag now.");
 });
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/Shelter/addCat.html');
