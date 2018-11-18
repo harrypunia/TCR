@@ -1,15 +1,17 @@
 Vue.component('catInfo',{
   template: `
-    <div class="catInfo">
-      <p class="filter-bar--text">{{cat.name}}</p>
-      <p class="filter-bar--text">{{cat.id}}</p>
-      <p class="filter-bar--text">{{cat.ageGroup}}</p>
-      <p class="filter-bar--text">{{cat.vaccinated}}</p>
-      <p class="filter-bar--text">{{cat.neutered}}</p>
-      <p class="filter-bar--text">{{cat.breed}}</p>
-      <p class="filter-bar--text">{{cat.status}}</p>
-      <p @click="showDetails" :class="caret" class="filter-bar--text"><img src="../global_assets/SVG/arrow.svg" alt=""></p>
-      <div class="cat-profile" v-if="show">
+    <div class="reset">
+     <div class="catInfo">
+        <p class="filter-bar--text">{{cat.name}}</p>
+        <p class="filter-bar--text">{{cat.id}}</p>
+        <p class="filter-bar--text">{{cat.ageGroup}}</p>
+        <p class="filter-bar--text">{{cat.vaccinated}}</p>
+        <p class="filter-bar--text">{{cat.neutered}}</p>
+        <p class="filter-bar--text">{{cat.breed}}</p>
+        <p class="filter-bar--text">{{cat.status}}</p>
+        <p @click="showDetails" ref="test" :class="caret" class="filter-bar--text"><img src="../global_assets/SVG/arrow.svg" alt=""></p>
+      </div>
+      <div class="cat-profile" v-show="show">
         <h1> Hi </h1>
       </div>
     </div>
@@ -18,16 +20,20 @@ Vue.component('catInfo',{
   data() {
     return {
       show: false,
-      caret: "down-caret",
+      caret: "down-caret"
     }
   },
   methods: {
     showDetails(e) {
+      this.$refs.test.parentElement.parentElement.parentElement.classList.add('open');
       this.show = !this.show;
       if (this.show) {
         this.caret = "up-caret";
+        // app.onShow = 'open'
       } else {
         this.caret = "down-caret";
+        this.$refs.test.parentElement.parentElement.parentElement.classList.remove('open');
+        app.onShow = ''
       }
     }
   }
@@ -172,6 +178,7 @@ var app = new Vue({
         breed: 'PUUSSSY',
         status: 'Alive'
       }
-    ]
+    ],
+    onShow: ''
   }
 });
