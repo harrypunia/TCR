@@ -1,0 +1,24 @@
+.staff__profiles {
+    display: flex;
+}
+
+.staff__container {
+    width: 300px;
+    padding: 5px;
+}
+
+.staff__picture {
+    background-color: #336196;
+    height: 200px;
+}
+
+.staff__text{
+    background-color: white;
+    padding: 10px;
+}
+
+.messageButton {
+    width: 100px;
+    background-color: #902323;
+    height: 20px;
+}
