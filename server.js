@@ -87,7 +87,8 @@ app.get('/email', (request, response) => {
       user: 'thomas-d@hotmail.ca',
       pass: 'RdUA@doAzoPiTUsAqD@K2Xi*s$r9T4'
     }
-});
+})
+
 
 var mailOptions = {
   from: 'thomas-d@hotmail.ca',
@@ -102,6 +103,7 @@ transporter.sendMail(mailOptions, function(error, info){
   } else {
     console.log('Email sent: ' + info.response);
   }
+});
 });
 
 app.get('/api/allcats', (req,res)=>{
