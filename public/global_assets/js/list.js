@@ -50,7 +50,7 @@ Vue.component('list_bars_fosters', {
         <p class="filter-bar--text">{{info.address}}</p>
         <p class="filter-bar--text">{{info.emial}}</p>
         <p class="filter-bar--text">{{info.city}}</p>
-        <p class="filter-bar--text"><img src="../global_assets/SVG/arrow.svg"></p>
+        <p @click="showDetails" ref="test" :class="caret" class="filter-bar--text"><img src="../global_assets/SVG/arrow.svg" alt=""></p>
       </div>
       <div class="list__detail" v-show="show">
         <slot></slot>

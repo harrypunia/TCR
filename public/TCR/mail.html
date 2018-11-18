@@ -42,19 +42,18 @@
         </div>
         <div id="define-list" class="define-list">
             <div class="list-filter define-text text-dark text-bold text__size-regular">
-                <p class="filter-bar--text">name</p>
-                <p class="filter-bar--text">ID</p>
-                <p class="filter-bar--text">Age Group</p>
-                <p class="filter-bar--text">Vaccinated</p>
-                <p class="filter-bar--text">Spayed/Neutered</p>
-                <p class="filter-bar--text">Breed</p>
-                <p class="filter-bar--text">Status</p>
-                <p class="filter-bar--text"><img src="" alt=""></p>
+                <p class="filter-bar--text">From</p>
+                <p class="filter-bar--text">Name</p>
+                <p class="filter-bar--text">Subject</p>
+                <p class="filter-bar--text">Message</p>
+                <p class="filter-bar--text">Read/Unread</p>
+                <p class="filter-bar--text">Date</p>
             </div>
             <div v-for="info in infoList" class="list-elements define-text text-regular text-dark text__size-small">
                 <list_bars :info="info"></list_bars>
             </div>
         </div>
+        <p class="noMessages define-text text-dark text-regular"><em>No Messages Yet</em></p>
         <script src="../global_assets/js/list.js"></script>
         <script src="../global_assets/js/global.js"></script>
         <script src="dev/js/localList.js"></script>
