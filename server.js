@@ -29,7 +29,7 @@ con.connect(function(err) {
 
 app.use(express.static('public'));
 
-app.post('/AddCat', (request, response) => {
+app.post('/addCat', (request, response) => {
   // Handles submitting a new cat.
   //DB connected - parse request.
   const catObj = request.body;
