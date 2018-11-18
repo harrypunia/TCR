@@ -1,27 +1,8 @@
-body {
-    background-color: #f7f7f7;
-}
-
 .addCat {
     width: 1000px;
     height: auto;
     /*    background: Red;*/
     margin: 20px auto;
-}
-
-select {
-    border: none;
-    background: #eee;
-    height: 20px;
-    width: 200px;
-}
-
-input {
-    margin-top: 30px;
-}
-
-select {
-    margin-top: 30px;
 }
 
 form {
@@ -51,23 +32,10 @@ form {
     margin-left: 20px;
 }
 
-input[type="radio"] {
-    display: inline-flex;
+.spayed {
     margin-top: 30px;
-    margin-left: 20px;
-    color: #29ae9c;
-}
-
-input[type="submit"] {
-    width: 100px;
-
-}
-
-
-.containers__all > textarea {
-    height: 100px;
+    padding-left: 8px;
     width: 800px;
-    padding: 20px;
-    border: none;
+    height: 70px;
     background: #eee;
 }
