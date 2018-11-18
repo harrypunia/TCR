@@ -100,7 +100,7 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    background: url(../../TCR/dev/css/check-green.svg);
+    background: url(../SVG/check-green.svg);
 }
 
 .noSpayed:after {
@@ -108,7 +108,7 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    background: url(../../TCR/dev/css/x-red.svg);
+    background: url(../SVG/x-red.svg);
 }
 
 .yesVaccinated:after {
@@ -116,7 +116,7 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    background: url(../../TCR/dev/css/check-green.svg);
+    background: url(../SVG/check-green.svg);
 }
 
 .noVaccinated:after {
@@ -124,7 +124,7 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    background: url(../../TCR/dev/css/x-red.svg);
+    background: url(../SVG/x-red.svg);
 }
 
 .statusRed:after {
