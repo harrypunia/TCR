@@ -41,3 +41,17 @@
 .contact__form textarea {
     z-index: 100;
 }
+
+.contact__textarea {
+    width: 90%;
+   resize: vertical;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.contact__submit {
+   width: 200px;
+    height: 35px;
+    margin: 0 auto;
+    display: block;
+}
