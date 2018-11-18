@@ -175,10 +175,16 @@ var app = new Vue({
         onShow: ''
     },
     computed: {
-      weedTest() {
-        fetch('http://localhost:3000/api/allCats').then((res)=>{
-          console.log(res.body);
-          res.json();
+      populate() {
+        fetch('http://localhost:3000/api/allCats').then(response => response.json())
+        .then((data) => {
+          let catList = [];
+          for (let i = 0 ; i < data.length ; i++) {
+            catList.push({id: data[i].catID, name: data[i].name, vaccinated: data[i].age, neutered: data[i].spayNeut, breed: data[i].Breed,  status:'statusYellow'});
+          }
+          this.infoList = catList;
+        }).catch((err)=> {
+          console.log(err);
         });
       }
     }
