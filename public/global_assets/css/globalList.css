@@ -6,7 +6,6 @@
     height: auto;
     margin-top: 100px;
     margin-left: 150px;
-
 }
 
 .list-filter {
@@ -22,7 +21,6 @@
     align-items: center;
     flex-wrap: nowrap;
     padding-bottom: 200px;
-
 }
 
 .list-elements {
@@ -162,26 +160,26 @@
     padding: 10px 0 0 10px;
 }
 
-
 .detail__photo {
-    height: 250px;
-    width: 175px;
+    height: 350px;
+    width: 300px;
     background-color: #000;
     float: left;
     margin: 15px 10px 10px 15px;
-     background-image: url(../img/cat_pic.jpg);
+    background-image: url(../img/cat_pic.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.detail__col1, .detail__col2 {
+.detail__col1,
+.detail__col2 {
     display: block;
     float: left;
     margin:
 }
 
 .detail__text1 {
-/*    background-color: #fff;*/
+    /*    background-color: #fff;*/
     border-bottom: 1px #ccc solid;
     height: 30px;
     width: 275px;
@@ -193,7 +191,7 @@
 
 .detail__proposal {
     border-bottom: 1px #ccc solid;
-    height: 50px;
+    height: 80px;
     width: 560px;
     float: left;
     display: block;
@@ -202,7 +200,7 @@
 
 .detail__shelterInfo {
     border-bottom: 1px #ccc solid;
-    height: 50px;
+    height: 70px;
     width: 560px;
     float: left;
     display: block;
@@ -210,21 +208,20 @@
 }
 
 .detail__bio {
-/*    background-color: #;*/
-        border-bottom: 1px #ccc solid;
-
+    border-bottom: 1px #ccc solid;
     height: 100px;
-
     width: 200px;
     float: left;
     display: block;
     margin: 10px 5px 5px 5px;
-
     width: 840px;
     float: left;
     clear: both;
     margin: 15px 10px 10px 15px;
     display: block;
     padding: 10px;
+}
 
+.fosterLink {
+    cursor: pointer;
 }
