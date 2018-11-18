@@ -36,7 +36,7 @@ app.post('/AddCat', (request, response) => {
   console.dir(catObj);
 
   // fivTested: ['yes', 'yes']
-  // fvrcpdate: 
+  // fvrcpdate: ['2014-05-04', '2015-04-05']
   
   var values = `${moment().valueOf()}, ${catObj.catName}, ${catObj.primaryColour}, ${catObj.catWeight}, ${catObj.fivTested}, ${catObj.fvrcpdate}, ${catObj.catAge}, ${catObj.secondaryColour}, ${catObj.gender}, ${catObj.vaccineUpToDate}, ${catObj.spayneut}, ${catObj.behaviour}, ${catObj.medHist}, ${catObj.comments}`;
   console.dir(values);
