@@ -12,9 +12,9 @@ Vue.component('list_bars', {
         <p @click="showDetails" ref="test" :class="caret" class="filter-bar--text"><img src="../global_assets/SVG/arrow.svg" alt=""></p>
       </div>
       <div class="list__detail" v-show="show">
+
           <slot></slot>
       </div>
-
       </div>
     </div>
   `,

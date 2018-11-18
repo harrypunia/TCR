@@ -1,23 +1,31 @@
 .container__staff {
-    width: 100%;
-    margin: 50px;
+    width: 80%;
+    margin: 50px 0 0 150px;
     display: flex;
     align-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
+}
 
+.button-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.container__staff button {
+    margin: 0 auto !important;
 }
 
 .staff__profile {}
 
 .staff__container {
-    width: 300px;
-    padding: 10px;
+    width: 250px;
+    padding: 0 20px 40px 0;
 }
 
 .staff__picture {
-/*    background-color: #336196;*/
-    height: 200px;
+    /*    background-color: #336196;*/
+    height: 150px;
     border: none;
 }
 
@@ -35,6 +43,6 @@
 }
 
 .container__staff {
-    padding: 10px;
+    padding: 0px;
     display: flex;
 }
