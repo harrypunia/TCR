@@ -177,8 +177,16 @@ var app = new Vue({
                 neutered: 'yes',
                 breed: 'PUUSSSY',
                 status: 'Alive'
-      }
+              }
     ],
         onShow: ''
+    },
+    computed: {
+      weedTest() {
+        fetch('http://localhost:3000/api/allCats').then((res)=>{
+          console.log(res.body);
+          res.json();
+        });
+      }
     }
 });
