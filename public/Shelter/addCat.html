@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="../global_assets/css/fonts.css">
     <link rel="stylesheet" href="../global_assets/css/globalHeader.css">
     <link rel="stylesheet" href="../global_assets/css/global.css">
-    <link rel="stylesheet" href="dev/css/container.css">
-    <link rel="stylesheet" href="dev/css/header.css">
     <link rel="stylesheet" href="dev/css/addcat.css">
+    <link rel="stylesheet" href="../global_assets/css/globalButtons.css">
     <title>Shelter</title>
 </head>
 
@@ -67,7 +66,6 @@
                         <br>
                     </p>
                 </div>
-
                 <div class="containers__all container__top-half-right">
                     <p class="text-regular text__size-regular cat-name-text">
                         Age
@@ -96,8 +94,10 @@
                 <p class=" cat-name-text"></p>
                 Vaccine up to date?
                 <input type="radio" name="vaccineUpToDate" value="yes" checked>Yes
-                <input type="radio" name="vaccineUpToDate" value="no">No <br> Spayed/Neutered? <input type="radio" name="spayneut" value="yes" checked>Yes
-                <input type="radio" name="spayneut" value="no">No <br> History of being bitten? <input type="radio" name="bitten" value="yes" checked>Yes
+                <input type="radio" name="vaccineUpToDate" value="no">No <br>
+                <div class="spayed">Spayed/Neutered? <input type="radio" name="spayneut" value="yes" checked>Yes
+                    <input type="radio" name="spayneut" value="no">No </div>
+                <br> History of being bitten? <input type="radio" name="bitten" value="yes" checked>Yes
                 <input type="radio" name="bitten" value="no">No <br><br><br><br><br> Behaviour Traits and Other Characteristics <br><br>
                 <textarea name="" class="behaviour" placeholder="Write here"></textarea>
                 <br><br>Medical History <br><br>
@@ -105,11 +105,11 @@
                 <br><br> Comments <br><br>
                 <textarea name="" class="comments" placeholder="Write here"></textarea>
                 <br>
-                <input type="submit">
+                <input class="define-button" type="submit">
             </div>
         </form>
     </div>
-    <script src="dev/js/main.js"></script>
+    <script src="../global_assets/js/global.js"></script>
 </body>
 
 </html>

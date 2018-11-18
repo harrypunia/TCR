@@ -15,10 +15,15 @@
 .staff__text{
     background-color: white;
     padding: 10px;
+    height: 130px;
+    margin: 0 ;
+    padding-left: 20px;
 }
 
-.messageButton {
-    width: 100px;
-    background-color: #902323;
-    height: 20px;
+.staff__name, .staff__phoneNo {
+    margin: 10px 0 10px 0;
+}
+
+.container__staff {
+    padding: 10px;
 }
