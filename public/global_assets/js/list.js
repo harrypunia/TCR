@@ -12,11 +12,9 @@ Vue.component('list_bars', {
         <p @click="showDetails" ref="test" :class="caret" class="filter-bar--text"><img src="../global_assets/SVG/arrow.svg" alt=""></p>
       </div>
       <div class="list__detail" v-show="show">
-        <div class="list__detail__wrapper">
-        <div class="detail__photo"></div>
-        <div class="detail__name"></div>
-        <div class="detail__bio"></div>
-            </div>
+
+          <slot></slot>
+      </div>
       </div>
     </div>
   `,
@@ -172,17 +170,16 @@ var app = new Vue({
                 neutered: 'noSpayed',
                 breed: 'American Shorthair',
                 status: 'statusYellow'
-      },
-            {
-                id: 001,
-                name: 'bailey',
-                ageGroup: 10,
-                vaccinated: 'noVaccinated',
-                neutered: 'yesSpayed',
-                breed: 'Tabby',
-                status: 'statusRed'
       }
     ],
         onShow: ''
+    },
+    computed: {
+      weedTest() {
+        fetch('http://localhost:3000/api/allCats').then((res)=>{
+          console.log(res.body);
+          res.json();
+        });
+      }
     }
 });
