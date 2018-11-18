@@ -84,7 +84,7 @@ function sendEmail() {
       from: 'thomas-d@hotmail.ca',
       to: 'umbralsoul13@live.ca',
       subject: 'New Cats in Shelter',
-      html: '<p>A new kitten arrived at the South Street Shelter.<bold>PLEASE</bold></p>'
+      html: '<p>A new kitten arrived at the South Street Shelter. <bold>PLEASE</bold></p>'
     };
 
     transporter.sendMail(mailOptions, function(error, info){
