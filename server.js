@@ -46,10 +46,38 @@ app.post('/AddCat', (request, response) => {
     // DB connected - parse request.
     const catObj = request.body;
     console.dir(catObj);
-    var values = "2018, ";
+    var shelterName = catObj.shelterName,
+        catname = catObj.catName,
+        primaryColour = catObj.primaryColour,
+        catWeight = catObj.catWeight,
+        fivTested = catObj.fivTested,
+        fvrcpdate = catObj.fvrcpdate,
+        catAge = catObj.catAge,
+        secondaryColour = catObj.secondaryColour,
+        gender = catObj.gender,
+        vaccineUpToDate = catObj.vaccineUpToDate,
+        spayneut = catObj.spayneut,
+        behaviour = catObj.behaviour,
+        medHist = catObj.medHist,
+        comments = catObj.comments;
 
     var columnNames = "IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES";
-    var sql = "INSERT ("+columnNames+") CAT VALUES ()";
+    var values = [shelterName, 
+                  catname, 
+                  primaryColour, 
+                  catWeight, 
+                  fivTested, 
+                  fvrcpdate, 
+                  catAge, 
+                  secondaryColour, 
+                  gender, 
+                  vaccineUpToDate, 
+                  spayneut, 
+                  behaviour, 
+                  medHist, 
+                  comments
+                 ];
+    var sql = "INSERT ("+columnNames+") CAT VALUES ("++")";
 
     con.query(sql, function (err, result) {
       if (err) throw err;
