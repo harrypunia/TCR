@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 //TODO: Fill in DB credientials.
 var con = mysql.createConnection({
   host: "catrescue.ccuxgnxok5zx.us-east-1.rds.amazonaws.com",
+  port: "3306",
   user: "root",
   password: "Password1234",
   database: "catrescue"
