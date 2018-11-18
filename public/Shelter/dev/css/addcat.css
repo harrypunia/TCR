@@ -5,25 +5,6 @@
     margin: 20px auto;
 }
 
-select {
-    border: none;
-    background: #eee;
-    font-size: 14px;
-    height: 30px;
-    width: 200px;
-    padding: 6px 60px 6px 0;
-    margin-top: 30px;
-}
-
-input {
-    margin-top: 30px;
-    width: auto;
-    overflow: hidden;
-    padding: 6px 6px 6px 0;
-    clear: both;
-}
-
-
 form {
     /*    border: none;*/
 }
@@ -51,34 +32,10 @@ form {
     margin-left: 20px;
 }
 
-input[type="radio"] {
-    /*    display: inline-flex;*/
-    margin-top: 30px;
-    margin-left: 20px;
-    color: #29ae9c;
-
-}
-
-input[type="submit"] {
-    width: 100px;
-
-}
-
 .spayed {
     margin-top: 30px;
     padding-left: 8px;
-
     width: 800px;
     height: 70px;
-    background: #eee;
-}
-
-
-.containers__all > textarea {
-    height: 100px;
-    width: 800px;
-    margin-bottom: 40px;
-    padding: 20px;
-    border: none;
     background: #eee;
 }
