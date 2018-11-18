@@ -9,32 +9,15 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 
-var connection = mysql.createConnection({
+var con = mysql.createConnection({
   host     : 'catrescue.ccuxgnxok5zx.us-east-1.rds.amazonaws.com',
   user     : 'root',
   password : 'Password1234',
   port     : 3306
 }); 
 
-connection.connect(function(err) {
-  if (err) {
-    console.error('Database connection failed: ' + err.stack);
-    return;
-  } 
 
-  console.log('Connected to database.');
-});
 
-connection.end();
-
-//TODO: Fill in DB credientials.
-// var con = mysql.createConnection({
-//   host: "catrescue.ccuxgnxok5zx.us-east-1.rds.amazonaws.com",
-//   port: "3306",
-//   user: "root",
-//   password: "Password1234",
-//   database: "catrescue"
-// });
 
 // con.connect(function(err) {
 //   if (err) {
@@ -44,13 +27,7 @@ connection.end();
 
 //   //TODO: Parse HTML, pass into sql.
 
-//   var sql = "INSERT INTO CAT VALUES ( PetID, IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES )"
 
-//   con.query(sql, function (err, result) {
-//     if (err) throw err;
-//     console.log("1 record inserted");
-//   });
-// });
 
 
 app.use(express.static('public'));
@@ -58,12 +35,34 @@ app.use(express.static('public'));
 app.post('/AddCat', (request, response) => {
   // Handles submitting a new cat.
 
-  // Get AddCat request.
-  const catObj = request.body;
-  console.dir(catObj);
+  con.connect(function(err) {
+    // Connection failed - cancel.
+    if (err) {
+      console.error('Database connection failed: ' + err.stack);
+      return;
+    } 
+
+    // DB connected - parse request.
+    const catObj = request.body;
+    console.dir(catObj);
+
+    var columnNames = "IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES";
+    var sql = "INSERT ("+columnNames+") CAT VALUES ()";
+
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+        console.log("1 record inserted");
+      });
+
+    response.sendFile(__dirname + '/public/Shelter/index.html');
+    //TODO: Add to DB.
+
+    console.log('Connected to database.');
+  });
+
+  con.end();
   
-  response.sendFile(__dirname + '/public/Shelter/index.html');
-  //TODO: Add to DB.
+  
   
   // return response.json("Looks like the cat's out of the bag now.");
 });
