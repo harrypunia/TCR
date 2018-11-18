@@ -11,8 +11,8 @@ Vue.component('list_bars', {
         <p class="filter-bar--text">{{info.status}}</p>
         <p @click="showDetails" ref="test" :class="caret" class="filter-bar--text"><img src="../global_assets/SVG/arrow.svg" alt=""></p>
       </div>
-      <div class="cat-profile" v-show="show">
-        <div class="cat_profile"></div>
+      <div class="list__detail" v-show="show">
+        <div class="list__detail__wrapper"></div>
       </div>
     </div>
   `,

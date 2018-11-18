@@ -1,0 +1,9 @@
+
+.define-button {
+    background-color: #2bae9d;
+    color: white;
+    border-radius: 6px;
+    width: 150px;
+    padding: 5px;
+    height: 40px;
+}
