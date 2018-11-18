@@ -4,6 +4,7 @@ const express = require('express'),
       moment = require('moment'),
       mysql = require('mysql'),
       cors = require('cors');
+      axios = require('axios');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -31,24 +32,24 @@ app.use(express.static('public'));
 
 app.post('/Shelter/addCat', (request, response) => {
   // Handles submitting a new cat.
-  
+
   //DB connected - parse request.
   const catObj = request.body;
-  
+
   var values = `${moment().valueOf()}, ${catObj.catName}, ${catObj.primaryColour}, ${catObj.catWeight}, ${catObj.fivTested}, ${catObj.fvrcpdate}, ${catObj.catAge}, ${catObj.secondaryColour}, ${catObj.gender}, ${catObj.vaccineUpToDate}, ${catObj.spayneut}, ${catObj.behaviour}, ${catObj.medHist}, ${catObj.comments}`;
   var columnNames = "intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments";
   var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
 
   console.dir(sql);
-  
+
   con.query(sql, function (err, result) {
     if (err) throw err;
       console.log("Failure inserting into DB: "+result);
     });
-    
+
     con.close();
     console.log("Successfully inserted into DB.");
-    response.sendFile(__dirname + '/public/Shelter/index.html');  
+    response.sendFile(__dirname + '/public/Shelter/index.html');
 });
 
 app.get('/api/allCats', (req,res)=>{
@@ -57,27 +58,8 @@ app.get('/api/allCats', (req,res)=>{
   con.query(selectAll, (err, result)=>{
     if (err) throw err;
     console.log(result);
+    res.json(result);
   });
-
-  var obj = [  {
-        id: 001,
-        name: 'bailey',
-        ageGroup: 10,
-        vaccinated: 'no',
-        neutered: 'yes',
-        breed: 'PUUSSSY',
-        status: 'Alive'
-    },
-    {
-        id: 001,
-        name: 'bailey',
-        ageGroup: 10,
-        vaccinated: 'no',
-        neutered: 'yes',
-        breed: 'PUUSSSY',
-        status: 'Alive'
-      }];
-    res.json(obj);
 });
 
 app.get('/', (req, res) => {
