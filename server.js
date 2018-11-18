@@ -8,6 +8,25 @@ const express = require('express'),
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+
+var connection = mysql.createConnection({
+  host     : 'catrescue.ccuxgnxok5zx.us-east-1.rds.amazonaws.com',
+  user     : 'root',
+  password : 'Password1234',
+  port     : 3306
+}); 
+
+connection.connect(function(err) {
+  if (err) {
+    console.error('Database connection failed: ' + err.stack);
+    return;
+  } 
+
+  console.log('Connected to database.');
+});
+
+connection.end();
+
 //TODO: Fill in DB credientials.
 // var con = mysql.createConnection({
 //   host: "catrescue.ccuxgnxok5zx.us-east-1.rds.amazonaws.com",
