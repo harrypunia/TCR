@@ -35,19 +35,21 @@ app.post('/AddCat', (request, response) => {
   const catObj = request.body;
   console.dir(catObj);
 
+  // fivTested: ['yes', 'yes']
+  // fvrcpdate: 
+  
   var values = `${moment().valueOf()}, ${catObj.catName}, ${catObj.primaryColour}, ${catObj.catWeight}, ${catObj.fivTested}, ${catObj.fvrcpdate}, ${catObj.catAge}, ${catObj.secondaryColour}, ${catObj.gender}, ${catObj.vaccineUpToDate}, ${catObj.spayneut}, ${catObj.behaviour}, ${catObj.medHist}, ${catObj.comments}`;
-
-  var columnNames = "intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex,
-    spayNeut, breed, vaccinesUpToDate, behaviour,  medHist, bittenHistory, comments";
+  console.dir(values);
+  var columnNames = "intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments";
 
   var sql = `INSERT INTO Cat (${columnNames}) VALUES (${values})`;
 
   con.query(sql, function (err, result) {
     if (err) throw err;
-      console.log(result);
+      console.log("Failure inserting into DB: "+result);
     });
+    console.log("Successfully inserted into DB.");
    response.sendFile(__dirname + '/public/Shelter/index.html');
-  // return response.json("Looks like the cat's out of the bag now.");
 });
 
 app.get('/', (req, res) => {
