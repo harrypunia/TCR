@@ -1,5 +1,4 @@
 .contact__container {
-    background-color: #d7d9ed;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -11,14 +10,6 @@
     height: 100;
     padding: 50px 0 50px;
 }
-
-/*
-.contact-header {
-    background-color: #d7d9ed;
-    color: white;
-    padding: 10px 150px;
-}
-*/
 
 .contact__information {
     padding: 10px 50px;
