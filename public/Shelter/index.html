@@ -24,8 +24,7 @@
         <hr class="header__hr" />
         <a href="index.html" class="header__addcat header__elements header__active">
             <img src="../global_assets/SVG/addacat.svg" alt="Add Cat">
-        </a>
-        <a href="profile.html" class="header__profile header__elements">
+        </a><a href="profile.html" class="header__profile header__elements">
             <img src="../global_assets/SVG/profile.svg" alt="Profile" href="profile.html">
         </a>
         <a href="contact.html" class="header__help header__elements">
@@ -39,9 +38,10 @@
             <p class="container__title__heading title define-text text-bold text-dark text__size-jumbo">Add A Cat</p>
         </div>
         <form class="addCat" action="addCat" method="POST">
+            <h1 class="form__heading define-text text-dark text-bold text__size-large">Cat Information</h1>
             <div class="containers__all define-text text-dark text__size-small container__top-half">
                 <div class="input_section">
-                    <p class="text-regular text__size-small">Shelter</p>
+                    <p class="text-bold text__size-small">Shelter</p>
                     <select class="shelterSelect" name="shelterName" required>
                         <option value="tas">
                             <p>Toronto Animal Services</p>
@@ -55,29 +55,32 @@
                     </select>
                 </div>
                 <div class="input_section">
-                    <p class="text-regular define-text text-dark text__size-small">Cat Name</p>
-                    <input type="text" class="catName" name="catName" value="" required>
+                    <p class="text-bold define-text text-dark text__size-small">Cat Name</p>
+                    <input type="text" class="catName" name="catName" value="" placeholder="blacky" required>
                 </div>
                 <div class="input_section">
+
                     <p class="text-regular text__size-small">Cat Colours</p>
                     <input type="text" name="colours" value="" required>
+
                 </div>
                 <div class="input_section">
-                    <p class="text-regular text__size-small">Weight</p>
-                    <input type="number" name="catWeight" value="" required>
+                    <p class="text-bold text__size-small">Weight</p>
+                    <input type="number" name="catWeight" value="" placeholder="lbs" required>
                 </div>
                 <div class="input_section">
-                    <p class="text-regular text__size-small">FVRCP Date</p>
+                    <p class="text-bold text__size-small">FVRCP Date</p>
                     <input type="date" name="fvrcpdate" value="FVRCP Vaccination Date" required>
                 </div>
                 <div class="input_section">
-                    <p class="text-regular text__size-small">
+                    <p class="text-bold text__size-small">
                         Age</p>
                     <input type="number" name="catAge" value="" required><br>
                     <p class="text-regular text__size-small">Breed</p>
                     <input type="text" name="breed" value="" required>
                 </div>
                 <div class="input_section">
+                    <p class="text-bold text__size-small">Gender</p>
                     <select name="gender" required>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
@@ -85,7 +88,7 @@
                     </select>
                 </div>
                 <div class="input_section">
-                    <p class="text-regular text__size-small">FLV Tested</p>
+                    <p class="text-bold text__size-small">FLV Tested</p>
                     <select name="fivTested" required>
                         <option value="yes">Tested Positive</option>
                         <option value="no">Tested Negative</option>
@@ -93,26 +96,47 @@
                     </select>
                 </div>
                 <div class="input_section">
-                    <p class="text-regular text__size-small">Rabies Vaccination Date</p>
+                    <p class="text-bold text__size-small">Rabies Vaccination Date</p>
                     <input type="date" name="vaccine" value="Rabies Vaccination Date">
                 </div>
             </div>
             <div class="containers__all container__bottom-half text-regular text__size-regular">
-                <p class=" cat-name-text"></p>
-                Vaccine up to date?
-                <input type="radio" name="vaccineUpToDate" value="true" checked>Yes
-                <input type="radio" name="vaccineUpToDate" value="false">No <br>
-                <div class="spayed">Spayed/Neutered? <input type="radio" name="spayneut" value="true" checked>Yes
-                    <input type="radio" name="spayneut" value="false">No </div>
-                <br> History of being bitten? <input type="radio" name="bitten" value="true" checked>Yes
-                <input type="radio" name="bitten" value="false">No <br><br><br><br><br> Behaviour Traits and Other Characteristics <br><br>
-                <textarea name="behaviour" class="behaviour" placeholder="Write here"></textarea>
-                <br><br>Medical History <br><br>
-                <textarea name="medHist" class="medical" placeholder="Write here"></textarea>
-                <br><br> Comments <br><br>
-                <textarea name="comments" class="comments" placeholder="Write here"></textarea>
-                <br>
-                <input class="define-button button__size-medium" type="submit">
+                <div class="bottomInputSection">
+                    <p class="text-bold text__size-small">Vaccine up to date?</p>
+                    <div class="choices">
+                        <input type="radio" name="vaccineUpToDate" value="true" checked>Yes
+                        <input type="radio" name="vaccineUpToDate" value="false">No
+                    </div>
+                </div>
+                <div class="bottomInputSection">
+                    <p class="text-bold text__size-small">Spayed/Neutered?</p>
+                    <div class="choices">
+                        <input type="radio" name="spayneut" value="true" checked>Yes
+                        <input type="radio" name="spayneut" value="false">No
+                    </div>
+                </div>
+                <div class="bottomInputSection">
+                    <p class="text-bold text__size-small">History of being bitten?</p>
+                    <div class="choices">
+                        <input type="radio" name="bitten" value="true" checked>Yes
+                        <input type="radio" name="bitten" value="false">No
+                    </div>
+                </div>
+                <div class="bottomInputSection">
+                    <p class="text-bold text__size-small">Behaviour Traits and Other Characteristics</p>
+                    <textarea name="behaviour" class="behaviour" placeholder="Write here"></textarea>
+                </div>
+                <div class="bottomInputSection">
+                    <p class="text-bold text__size-small">Medical History</p>
+                    <textarea name="medHist" class="medical" placeholder="Write here"></textarea>
+                </div>
+                <div class="bottomInputSection">
+                    <p class="text-bold text__size-small">Comments</p>
+                    <textarea name="comments" class="comments" placeholder="Write here"></textarea>
+                </div>
+                <div class="bottomInputSection">
+                    <input class="form__button <text__size-small></text__size-small> define-button button__size-large" type="submit">
+                </div>
             </div>
         </form>
     </div>
