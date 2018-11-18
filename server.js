@@ -35,7 +35,7 @@ con.connect(function(err) {
   con.query(sql, function (err, result) {
     if (err) throw err;
     
-    console.log("Successfully inserting into DB: "+result);
+    console.log(result);
   });
     
 });
@@ -65,35 +65,6 @@ app.post('/Shelter/addCat', (request, response) => {
     
     console.log("Successfully inserted into DB.");
     response.sendFile(__dirname + '/public/Shelter/index.html');  
-});
-
-app.get('/api/allCats', (req,res)=>{
-  const selectAll = `SELECT * FROM Cat`;
-
-  con.query(selectAll, (err, result)=>{
-    if (err) throw err;
-    console.log(result);
-  });
-
-  var obj = [  {
-        id: 001,
-        name: 'bailey',
-        ageGroup: 10,
-        vaccinated: 'no',
-        neutered: 'yes',
-        breed: 'PUUSSSY',
-        status: 'Alive'
-    },
-    {
-        id: 001,
-        name: 'bailey',
-        ageGroup: 10,
-        vaccinated: 'no',
-        neutered: 'yes',
-        breed: 'PUUSSSY',
-        status: 'Alive'
-      }];
-    res.json(obj);
 });
 
 app.get('/', (req, res) => {
