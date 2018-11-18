@@ -77,7 +77,8 @@
                         <select name="gender" required>
                             <option value="female">Female</option>
                             <option value="male">Male</option>
-                        </select>
+                            <option value="unknown">Unkown</option>
+                        </select><br>
 
                         FLV Tested
                         <select name="fivTested" required>
@@ -97,17 +98,17 @@
                 <input type="radio" name="vaccineUpToDate" value="yes" checked>Yes
                 <input type="radio" name="vaccineUpToDate" value="no">No <br> Spayed/Neutered? <input type="radio" name="spayneut" value="yes" checked>Yes
                 <input type="radio" name="spayneut" value="no">No <br> History of being bitten? <input type="radio" name="bitten" value="yes" checked>Yes
-                <input type="radio" name="bitten" value="no">No <br> Behaviour Traits and Other Characteristics
-                <input class="behaviour" type="text" name="behaviour" value="" required>
-                <br> Medical History <input class="medical" type="text" name="medHist" value="" required>
-                <br> Comments <input class="comments" type="text" name="comments" value="" required>
+                <input type="radio" name="bitten" value="no">No <br><br><br><br><br> Behaviour Traits and Other Characteristics <br><br>
+                <textarea name="" class="behaviour" placeholder="Write here"></textarea>
+                <br><br>Medical History <br><br>
+                <textarea name="" class="medical" placeholder="Write here"></textarea>
+                <br><br> Comments <br><br>
+                <textarea name="" class="comments" placeholder="Write here"></textarea>
                 <br>
                 <input type="submit">
             </div>
         </form>
     </div>
-
-
     <script src="dev/js/main.js"></script>
 </body>
 
