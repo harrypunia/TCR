@@ -70,6 +70,7 @@
 .header__logout {
     text-align: center;
     font-family: sans-serif;
+    background-color: #23846e !important;
     color: #fff;
     font-size: 13px;
     cursor: pointer;
@@ -81,7 +82,7 @@
 }
 
 .header__logout:hover {
-    background-color: #23846e !important;
+    background-color: #cb4a4a !important;
 }
 
 .header__logout:active {

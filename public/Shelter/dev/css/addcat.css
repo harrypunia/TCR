@@ -1,35 +1,28 @@
 .addCat {
     width: 1000px;
     height: auto;
-    /*    background: Red;*/
     margin: 20px auto;
 }
 
-form {
-    /*    border: none;*/
-}
+form {}
 
 .containers__all {
     width: 100%;
-    padding: 20px;
+    flex-wrap: wrap;
 }
 
 .container__top-half {
-    display: inline-flex;
+    display: flex;
+    height: auto;
+    margin-top: 80px;
 }
 
-.container__top-half-left {
-    /*    background: gray;*/
+.input_section {
+    width: 50%;
 }
 
-.container__top-half-right {
-    /*    background: blue;*/
-}
-
-.container__bottom-half {
-    /*    background: wheat;*/
-    padding: 20px;
-    margin-left: 20px;
+.input_section input {
+    width: 80%;
 }
 
 .spayed {
