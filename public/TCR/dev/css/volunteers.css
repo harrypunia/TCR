@@ -1,10 +1,11 @@
-.staff__profiles {
+.container__staff {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    list-style: none;
     align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
+
+.staff__profile {}
 
 .staff__container {
     width: 300px;
