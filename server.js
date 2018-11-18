@@ -10,37 +10,13 @@ const express = require('express'),
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-
+// Database connection.
 var con = mysql.createConnection({
   host     : 'catrescue.ccuxgnxok5zx.us-east-1.rds.amazonaws.com',
   user     : 'root',
   password : 'Password1234',
   port     : 3306,
   database : 'catrescue'
-});
-
-con.connect(function(err) {
-  if (err) {
-    console.error('Database connection failed: ' + err.stack);
-    return;
-  }
-
-
-  var intakeTime = moment.valueOf();
-
-  //var values = `'${intakeTime}', '${catObj.catName}', '${catObj.primaryColour}', ${catObj.catWeight}, ${catObj.fivTested}, '${catObj.fvrcpdate}', ${catObj.catAge}, '${catObj.secondaryColour}', '${catObj.gender}', ${catObj.vaccineUpToDate}, ${catObj.spayneut}, '${catObj.behaviour}', '${catObj.medHist}', '${catObj.comments}'`;
-  var values = "'2018-05-12', 'Not my cat', 'Brown', 5, true, '2019-05-23', 5, 'Black', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3'";
-  var columnNames = "intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments";
-  var sql = `INSERT INTO Cat (intakeDate, name, primaryColor, weight, fivTested, furcpDate, age, secondaryColor, sex, vaccinesUpToDate, spayNeut, behaviour, medHist, comments) VALUES ('2018-05-12', 'Devon', 'Brown', 5, true, '2019-05-23', 5, 'Black', 'Female', true, true, 'Nothing1', 'Nothing2', 'Nothing3')`;
-
-  console.dir(sql);
-
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-
-    console.log("Successfully inserting into DB: "+result);
-  });
-
 });
 
 
