@@ -53,10 +53,10 @@ app.post('/addCat', (request, response) => {
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/Shelter/addCat.html');
+  res.sendFile(__dirname + '/public/Shelter/index.html');
 });
 app.post('/', (req, res) => {
-  res.sendFile(__dirname + '/public/Shelter/addCat.html');
+  res.sendFile(__dirname + '/public/Shelter/index.html');
 });
 
 
