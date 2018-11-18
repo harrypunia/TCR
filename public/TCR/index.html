@@ -54,12 +54,12 @@
                 <p class="filter-bar--text">Status</p>
                 <p class="filter-bar--text"><img src="" alt=""></p>
             </div>
-            <div v-for="cat in catsList"  class="list-elements define-text text-regular text-dark text__size-small">
-              <cat-Info  :cat="cat"><cat-Info/>
+            <div v-for="info in infoList" class="list-elements define-text text-regular text-dark text__size-small">
+                <list_bars :info="info"></list_bars>
             </div>
         </div>
-        <script src="./dev/js/main.js"></script>
     </div>
+    <script src="./dev/js/main.js"></script>
 </body>
 
 </html>
