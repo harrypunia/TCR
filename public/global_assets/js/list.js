@@ -13,9 +13,9 @@ Vue.component('list_bars', {
       </div>
       <div class="list__detail" v-show="show">
         <div class="list__detail__wrapper">
- <div class="detail__photo"></div>
+        <div class="detail__photo"></div>
         <div class="detail__name"></div>
-    <div class="detail__bio"></div>
+        <div class="detail__bio"></div>
             </div>
       </div>
     </div>
@@ -53,7 +53,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'noVaccinated',
                 neutered: 'yesSpayed',
-                breed: 'PUUSSSY',
+                breed: 'Persian',
                 status: 'statusRed'
        },
             {
@@ -62,7 +62,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'yesVaccinated',
                 neutered: 'noSpayed',
-                breed: 'PUUSSSY',
+                breed: 'Siamese',
                 status: 'statusGreen'
       },
             {
@@ -71,7 +71,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'noVaccinated',
                 neutered: 'yesSpayed',
-                breed: 'PUUSSSY',
+                breed: 'British Shorthair',
                 status: 'statusYellow'
       },
             {
@@ -80,7 +80,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'yesVaccinated',
                 neutered: 'yesSpayed',
-                breed: 'PUUSSSY',
+                breed: 'American Curl',
                 status: 'statusGreen'
       },
             {
@@ -89,7 +89,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'yesVaccinated',
                 neutered: 'yesSpayed',
-                breed: 'PUUSSSY',
+                breed: 'Bengal',
                 status: 'statusYellow'
       },
             {
@@ -98,7 +98,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'yesVaccinated',
                 neutered: 'noSpayed',
-                breed: 'PUUSSSY',
+                breed: 'Ragdoll',
                 status: 'statusYellow'
       },
             {
@@ -107,7 +107,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'noVaccinated',
                 neutered: 'noSpayed',
-                breed: 'PUUSSSY',
+                breed: 'Scotish Fold',
                 status: 'statusRed'
       },
             {
@@ -116,7 +116,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'noVaccinated',
                 neutered: 'yesSpayed',
-                breed: 'PUUSSSY',
+                breed: 'Ragamuffin',
                 status: 'statusRed'
       },
             {
@@ -125,7 +125,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'yesVaccinated',
                 neutered: 'yesSpayed',
-                breed: 'PUUSSSY',
+                breed: 'Bengal',
                 status: 'statusGreen'
       },
             {
@@ -134,7 +134,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'yesVaccinated',
                 neutered: 'noSpayed',
-                breed: 'PUUSSSY',
+                breed: 'American Curl',
                 status: 'statusYellow'
       },
             {
@@ -143,7 +143,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'yesVaccinated',
                 neutered: 'yesSpayed',
-                breed: 'PUUSSSY',
+                breed: 'Black',
                 status: 'statusGreen'
       },
             {
@@ -152,7 +152,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'yesVaccinated',
                 neutered: 'yesSpayed',
-                breed: 'PUUSSSY',
+                breed: 'Tabby',
                 status: 'statusGreen'
       },
             {
@@ -161,7 +161,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'noVaccinated',
                 neutered: 'noSpayed',
-                breed: 'PUUSSSY',
+                breed: 'Scottish Fold',
                 status: 'statusRed'
       },
             {
@@ -170,7 +170,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'noVaccinated',
                 neutered: 'noSpayed',
-                breed: 'PUUSSSY',
+                breed: 'American Shorthair',
                 status: 'statusYellow'
       },
             {
@@ -179,7 +179,7 @@ var app = new Vue({
                 ageGroup: 10,
                 vaccinated: 'noVaccinated',
                 neutered: 'yesSpayed',
-                breed: 'PUUSSSY',
+                breed: 'Tabby',
                 status: 'statusRed'
       }
     ],
