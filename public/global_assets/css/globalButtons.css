@@ -1,7 +1,7 @@
 .define-button {
     background-color: #2bae9d;
     color: white;
-    border-radius: 6px;
+    border-radius: 10px;
 }
 
 .button__size-medium {
@@ -17,7 +17,7 @@ input {
     margin-top: 30px;
     width: auto;
     overflow: hidden;
-    padding: 6px 6px 6px 0;
+    padding: 6px;
     clear: both;
 }
 
@@ -49,10 +49,12 @@ select {
 /*Textarea*/
 
 textarea {
+    font-family: 'Proxima Nova', sans-serif;
     height: 100px;
     width: 800px;
     margin-bottom: 40px;
     padding: 20px;
     border: none;
     background: #eee;
+    color: #000;
 }
