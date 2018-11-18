@@ -40,11 +40,13 @@ app.post('/AddCat', (request, response) => {
     if (err) {
       console.error('Database connection failed: ' + err.stack);
       return;
-    } 
+    }
+    console.log('Connected to database.');
 
     // DB connected - parse request.
     const catObj = request.body;
     console.dir(catObj);
+    var values = "2018, ";
 
     var columnNames = "IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES";
     var sql = "INSERT ("+columnNames+") CAT VALUES ()";
@@ -55,13 +57,9 @@ app.post('/AddCat', (request, response) => {
       });
 
     response.sendFile(__dirname + '/public/Shelter/index.html');
-    //TODO: Add to DB.
-
-    console.log('Connected to database.');
   });
 
   con.end();
-  
   
   
   // return response.json("Looks like the cat's out of the bag now.");
