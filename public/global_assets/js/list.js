@@ -14,6 +14,7 @@ Vue.component('list_bars', {
       <div class="list__detail" v-show="show">
           <slot></slot>
       </div>
+
       </div>
     </div>
   `,
