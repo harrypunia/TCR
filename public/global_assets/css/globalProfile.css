@@ -36,11 +36,12 @@
     width: 49%;
 }
 
-
-
 .comments {
     height: 200px;
-    width: 715px;
+    width: 90%;
     border: none;
+    display: block;
     background: white;
+    resize: vertical;
+    margin: 0 auto;
 }
