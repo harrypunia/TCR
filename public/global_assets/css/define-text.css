@@ -34,3 +34,11 @@
 .text__size-small {
     font-size: 1.6em;
 }
+
+.text__size-tiny {
+    font-size: 1.2em;
+}
+
+.text__size-nano {
+    font-size: 1em;
+}
