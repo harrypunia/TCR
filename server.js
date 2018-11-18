@@ -33,7 +33,8 @@ app.post('/AddCat', (request, response) => {
     // DB connected - parse request.
     const catObj = request.body;
     console.dir(catObj);
-    var shelterName = catObj.shelterName,
+    var intakeDate = moment.toDate(),
+        shelterName = catObj.shelterName,
         catname = catObj.catName,
         primaryColour = catObj.primaryColour,
         catWeight = catObj.catWeight,
@@ -48,11 +49,8 @@ app.post('/AddCat', (request, response) => {
         medHist = catObj.medHist,
         comments = catObj.comments;
 
-    var columnNames = "IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES";
-    var values = [shelterName, 
-                  catname, 
-                  primaryColour, 
-                  catWeight, 
+    var columnNames = "catID, IntakeDate, Name, Photo, CurrentLocation, Neutered, VaccinationStatus, DOB, Breed, Color, Size, Sex, Weight, ShelterID, FosterPlacement, BehaviouralTraits, Story, AdoptionStatus, BittenStatus, NOTES";
+    var values = `${intakeDate}, ${shelterName}, ${catname}, ${primaryColour}, ${catWeight}, 
                   fivTested, 
                   fvrcpdate, 
                   catAge, 
