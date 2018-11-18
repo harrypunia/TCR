@@ -17,14 +17,32 @@
     height: 40px;
 }
 
+.button__size-large {
+    width: 300px;
+    height: 50px;
+}
+
+.addCat {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    padding: 20px 60px;
+    border-radius: 5px;
+}
+
 /*Inputs*/
 
 input {
     margin-top: 30px;
     width: auto;
     overflow: hidden;
-    padding: 6px 6px 6px 0;
+    padding: 15px;
     clear: both;
+    bordeR: 0;
+    background: #e6e6e6;
+}
+
+input:focus {
+    outline: 0;
+    background: #e1e1e1;
 }
 
 input[type="radio"] {
@@ -52,7 +70,6 @@ select {
 textarea {
     height: 100px;
     width: 800px;
-    margin-bottom: 40px;
     padding: 20px;
     border: none;
     background: #e6e6e6;
