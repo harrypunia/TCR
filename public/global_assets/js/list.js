@@ -8,7 +8,7 @@ Vue.component('list_bars', {
         <p class="filter-bar--text">{{info.vaccinated}}</p>
         <p class="filter-bar--text">{{info.neutered}}</p>
         <p class="filter-bar--text">{{info.breed}}</p>
-        <p class="filter-bar--text">{{info.status}}</p>
+        <p class="filter-bar--text" :class="info.status"></p>
         <p @click="showDetails" ref="test" :class="caret" class="filter-bar--text"><img src="../global_assets/SVG/arrow.svg" alt=""></p>
       </div>
       <div class="list__detail" v-show="show">
@@ -50,7 +50,7 @@ var app = new Vue({
                 vaccinated: 'no',
                 neutered: 'yes',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusRed'
        },
             {
                 id: 001,
@@ -59,7 +59,7 @@ var app = new Vue({
                 vaccinated: 'no',
                 neutered: 'yes',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusGreen'
       },
             {
                 id: 001,
@@ -68,7 +68,7 @@ var app = new Vue({
                 vaccinated: 'no',
                 neutered: 'yes',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusYellow'
       },
             {
                 id: 001,
