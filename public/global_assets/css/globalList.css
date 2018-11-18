@@ -11,7 +11,7 @@
 .list-filter {
     width: 100%;
     height: 40px;
-    background: #333;
+    background: #efefef;
     display: flex;
 }
 
@@ -20,12 +20,13 @@
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    padding-bottom: 200px;
 }
 
 .list-elements {
     width: 100%;
     height: 40px;
-    background: #c2c4d6;
+    background: #efefef;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -56,7 +57,7 @@
 }
 
 .list-elements:nth-child(odd) {
-    background: #d7d9ed;
+    background: #e2e2e2;
     z-index: 2;
 }
 
@@ -76,9 +77,9 @@
 }
 
 .filter-bar--text {
-    float: left;
     height: 100%;
     width: 20%;
+    text-align: center;
 }
 
 .filter-bar--text img {
@@ -94,9 +95,128 @@
     align-items: center;
 }
 
+.yesSpayed:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url(../../TCR/dev/css/check-green.svg);
+}
+
+.noSpayed:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url(../../TCR/dev/css/x-red.svg);
+}
+
+.yesVaccinated:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url(../../TCR/dev/css/check-green.svg);
+}
+
+.noVaccinated:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url(../../TCR/dev/css/x-red.svg);
+}
+
+.statusRed:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #B20000;
+    border-radius: 50%;
+}
+
+.statusGreen:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #2BAE9D;
+    border-radius: 50%;
+}
+
+.statusYellow:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #FFBA00;
+    border-radius: 50%;
+}
+
 .list__detail__wrapper {
     width: 90%;
     height: 100%;
     background: Red;
 
+}
+
+/*
+
+default style
+
+.detail__photo {
+    height: 250px;
+    width: 175px;
+    background-color: #000;
+    float: left;
+    margin: 15px 10px 10px 15px;
+}
+
+.detail__name {
+    background-color: #fff;
+    height: 50px;
+    width: 200px;
+    float: left;
+    display: block;
+    margin: 15px 5px 5px 5px;
+}
+
+.detail__bio {
+    background-color: #ccc;
+    height: 200px;
+    width: 200px;
+    float: left;
+    display: block;
+    margin: 10px 5px 5px 5px;
+}
+*/
+
+
+/*    FROM HERE ON OUT, CUSTOMIZED DIVS DEPENDING ON LIST*/
+
+.detail__photo {
+    height: 250px;
+    width: 175px;
+    background-color: #000;
+    float: left;
+    margin: 15px 10px 10px 15px;
+}
+
+.detail__name {
+    background-color: #fff;
+    height: 50px;
+    width: 200px;
+    float: left;
+    display: block;
+    margin: 15px 5px 5px 5px;
+}
+
+.detail__bio {
+    background-color: #ccc;
+    height: 200px;
+    width: 200px;
+    float: left;
+    display: block;
+    margin: 10px 5px 5px 5px;
 }

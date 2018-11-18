@@ -40,9 +40,9 @@
             <div class="container__title__heading define-text text-dark text__size-jumbo text-bold">CATS</div>
         </div>
         <div id="define-list" class="define-list">
-            <div class="list-filter define-text text-regular text__size-regular">
-                <p class="filter-bar--text">name</p>
-                <p class="filter-bar--text">ID</p>
+            <div class="list-filter text-regular text__size-regular">
+                <p class="filter-bar--text">Name</p>
+                <p class="filter-bar--text">#ID</p>
                 <p class="filter-bar--text">Age Group</p>
                 <p class="filter-bar--text">Vaccinated</p>
                 <p class="filter-bar--text">Spayed/Neutered</p>
@@ -51,11 +51,14 @@
                 <p class="filter-bar--text"><img src="" alt=""></p>
             </div>
             <div v-for="info in infoList" class="list-elements define-text text-regular text-dark text__size-small">
-                <list_bars :info="info"></list_bars>
+                <list_bars :info="info">
+                    <div class="info__catName"></div>
+                </list_bars>
             </div>
         </div>
         <script src="../global_assets/js/list.js"></script>
         <script src="../global_assets/js/global.js"></script>
+        <script src="dev/js/localList.js"></script>
     </div>
 </body>
 

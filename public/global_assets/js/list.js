@@ -5,14 +5,18 @@ Vue.component('list_bars', {
         <p class="filter-bar--text">{{info.name}}</p>
         <p class="filter-bar--text">{{info.id}}</p>
         <p class="filter-bar--text">{{info.ageGroup}}</p>
-        <p class="filter-bar--text">{{info.vaccinated}}</p>
-        <p class="filter-bar--text">{{info.neutered}}</p>
+        <p class="filter-bar--text" :class="info.vaccinated"></p>
+        <p class="filter-bar--text" :class="info.neutered"></p>
         <p class="filter-bar--text">{{info.breed}}</p>
-        <p class="filter-bar--text">{{info.status}}</p>
+        <p class="filter-bar--text" :class="info.status"></p>
         <p @click="showDetails" ref="test" :class="caret" class="filter-bar--text"><img src="../global_assets/SVG/arrow.svg" alt=""></p>
       </div>
       <div class="list__detail" v-show="show">
-        <div class="list__detail__wrapper"></div>
+        <div class="list__detail__wrapper">
+ <div class="detail__photo"></div>
+        <div class="detail__name"></div>
+    <div class="detail__bio"></div>
+            </div>
       </div>
     </div>
   `,
@@ -47,136 +51,136 @@ var app = new Vue({
                 id: 001,
                 name: 'Tom',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'noVaccinated',
+                neutered: 'yesSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusRed'
        },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'yesVaccinated',
+                neutered: 'noSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusGreen'
       },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'noVaccinated',
+                neutered: 'yesSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusYellow'
       },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'yesVaccinated',
+                neutered: 'yesSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusGreen'
       },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'yesVaccinated',
+                neutered: 'yesSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusYellow'
       },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'yesVaccinated',
+                neutered: 'noSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusYellow'
       },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'noVaccinated',
+                neutered: 'noSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusRed'
       },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'noVaccinated',
+                neutered: 'yesSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusRed'
       },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'yesVaccinated',
+                neutered: 'yesSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusGreen'
       },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'yesVaccinated',
+                neutered: 'noSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusYellow'
       },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'yesVaccinated',
+                neutered: 'yesSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusGreen'
       },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'yesVaccinated',
+                neutered: 'yesSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusGreen'
       },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'noVaccinated',
+                neutered: 'noSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusRed'
       },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'noVaccinated',
+                neutered: 'noSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusYellow'
       },
             {
                 id: 001,
                 name: 'bailey',
                 ageGroup: 10,
-                vaccinated: 'no',
-                neutered: 'yes',
+                vaccinated: 'noVaccinated',
+                neutered: 'yesSpayed',
                 breed: 'PUUSSSY',
-                status: 'Alive'
+                status: 'statusRed'
       }
     ],
         onShow: ''
